@@ -413,15 +413,24 @@ i.social-item{
     top: 50%;
     perspective: 1500px;
     display: none;
+    transform: scale(0);
+    transition: all .3s;
+    animation: growUp;
+    animation-timing-function: ease-out;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
 }
 
 .box-area {
     position: relative;
     transform-style: preserve-3d;
+}
+
+.box-area-rotate{
     animation-name: rotate;
     animation-duration: 2s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 3;
 }
 
 .box {
@@ -465,6 +474,18 @@ i.social-item{
     transform: rotateX(90deg) rotateY(90deg);
 }
 
+.fadeOut{
+    animation-name: fadeOut;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+.smaller{
+    animation-name: smalling;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+}
+
 @keyframes rotate {
     0% {
       transform: rotate3d(0, 0, 0, 0);
@@ -496,6 +517,32 @@ i.social-item{
     }to{
         opacity: 1;
         padding-right: 0px;
+    }
+}
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+@keyframes growUp {
+    from{
+        transform: scale(0);
+
+    }to{
+        transform: scale(1);
+    }
+}
+
+@keyframes smalling {
+    from{
+        transform: scale(1);
+
+    }to{
+        transform: scale(0);
     }
 }
 
