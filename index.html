@@ -84,19 +84,19 @@
         </div>
         <div class="col">
           <ul class="gallery">
-            <li class="gallery-item">
+            <li class="gallery-item" onclick="showPresentation(1)">
               <div class="thumb-gallery">
                 <img src="img/thumbs/btn_loicas.jpg">
               </div>
               <h3>Las Loicas I</h3>
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item" onclick="showPresentation(2)">
               <div class="thumb-gallery">
                 <img src="img/thumbs/btn_plazapiedra.jpg">
               </div>
               <h3>Plaza Piedra</h3>
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item" onclick="showPresentation(3)">
               <div class="thumb-gallery">
                 <img src="img/thumbs/btn_sanluismacul.jpg">
               </div>
@@ -104,20 +104,6 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="area" >
-        <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
       </div>
     </div>
     
@@ -152,11 +138,42 @@
       </div>
     </div>
 
+    <!-- boxes  -->
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <!-- box loader -->
+    <div id="loader">
+      <div class="box-area">
+        <div id="box-front" class="box"></div>
+        <div id="box-right" class="box"></div>
+        <div id="box-back" class="box"></div>
+        <div id="box-left" class="box"></div>
+        <div id="box-top" class="box"></div>
+        <div id="box-bottom" class="box"></div>
+      </div>
+    </div>
+
+    <!-- cursor -->
     <div id="cursor"></div>
+    
+    <!-- social -->
     <div id="social">
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-facebook"></i>
-      <i class="fas fa-envelope"></i>
+      <i class="fab fa-instagram social-item"></i>
+      <i class="fab fa-facebook-f social-item"></i>
+      <i class="fas fa-envelope social-item"></i>
     </div>
 
     <!-- external js -->

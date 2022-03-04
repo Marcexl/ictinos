@@ -54,6 +54,7 @@ function logoShow(){
       logo.css("margin-top","0");
       logo.css("opacity","1");
       hamburguerShow()
+      
    },300);
 }
 
@@ -61,8 +62,8 @@ function hamburguerShow(){
    setTimeout(function(){
       hamburger.css("transform","scale(1)");
       hamburger.css("opacity","1");
+      socialAnimation(0)
    },300);
-   sectionOpen(1)
 }
 
 function menuAnimation(h){
@@ -89,10 +90,44 @@ function menuAnimation(h){
    }
 }
 
+function socialAnimation(s){
+   
+   let cnt = 1;
+   setTimeout(function(){
+      if(s == 0){
+         $(".social-item").each(function () {
+            $(this).attr('id', function (index) {
+               $(this).css("display","block");
+               $(this).attr('id', 'item-grow-' + (cnt));
+            });
+            cnt++;
+         });
+      }
+      else
+      {
+         $(".social-item").each(function () {
+            $(this).attr('id', function (index) {
+               $(this).css("display","none");
+               $(this).attr('id', '');
+            });
+         });
+        
+         cnt = 1;
+      }
+      sectionOpen(1)
+      endStartGame()
+   },500);
+}
+
+function endStartGame(){
+   setTimeout(function(){
+      $(".circles").css("display","block");
+   },5000);
+}
+
 function sectionOpen(id){
    hamburger.removeClass('active');
    $("#sidenav-1").css("margin-left","-100%");
-   menuAnimation(h);
    h = 0;
 
   const section = ["","proyectos","somos","clientes","blog","contacto"];
@@ -121,3 +156,42 @@ function showGalleryGrid(){
    },1000);
 }
 
+function hideGalleryGrid(){
+   let cnt = 1;
+   $(".gallery-item").each(function () {
+      $(this).attr('id', function (index) {
+         $(this).attr('opacity', '0');
+         $(this).attr('id', '');
+      });
+      cnt++;
+   });
+}
+
+function showPresentation(id){
+   hideWithFade(id)
+   setTimeout(function(){
+      loader()
+   },500);
+}
+
+function hideWithFade(id){
+   if(id == 1)
+   {
+      hideGalleryGrid();
+      $(".circles").css("opacity","0");
+   }
+
+   setTimeout(function(){
+      if(id == 1){
+         $("#proyectos").css("display","none");
+         $(".area").css("display","none");
+      } 
+   },300);
+}
+
+
+function loader(){
+   setTimeout(function(){
+      $("#loader").css("display","block");
+   },500);
+}
