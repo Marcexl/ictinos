@@ -3,9 +3,9 @@
 $background: #3d566e;
 $color: #757575;
 
-$height-icon: 50px;
-$width-line: 100px;
-$height-line: 8px;
+$height-icon: 30px;
+$width-line: 50px;
+$height-line: 3px;
 
 $transition-time: 0.4s;
 $rotation: 45deg;
@@ -18,12 +18,15 @@ $translateX: 0;
   height:$height-icon;
   position:relative;
   display:block;
+  opacity: 0;
   margin: 0;
   position: fixed;
   z-index: 2;
-  right: 30px;
-  top: 30px;
+  right: 80px;
+  top: 35px;
   margin: 0;
+  transition: all .5s;
+  transform: scale(0);
   
   .line {
     display:block;
