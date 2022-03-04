@@ -103,8 +103,21 @@ function sectionOpen(id){
       $("#"+section[id]).css("display","block"); 
       if(section[id] == 'proyectos'){
          $("#proyectos").css("margin-left","0");
+         showGalleryGrid()
       }
    },500);
 }
 
+function showGalleryGrid(){
+   let cnt = 1;
+   setTimeout(function(){
+      $(".gallery-item").each(function () {
+         $(this).attr('id', function (index) {
+            $(this).css('display', 'inline-block');
+            $(this).attr('id', 'item-up-' + (cnt));
+         });
+         cnt++;
+      });
+   },1000);
+}
 
