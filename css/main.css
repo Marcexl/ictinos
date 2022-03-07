@@ -56,7 +56,7 @@ div:hover ~ #cursor{
     margin-left: -100%;
     transition: all 1s;
     border-right: 1px solid #757575;
-    z-index: 2;
+    z-index: 3;
 }
 
 .sidenav-menu{
@@ -205,7 +205,6 @@ video{
 }
 
 .gallery li{
-    display: inline-block;
     position: relative;
     width: calc(33.3333% - 20px);
     height: 100%;
@@ -213,13 +212,16 @@ video{
     overflow: hidden;
     padding: 0;
     transition: all .3s;
-    bottom: -100%;
+    bottom: 0;
     opacity: 0;
     padding-top: 120px;
     display: none;
-    animation-name: fadeUp;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
     animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -251,25 +253,73 @@ video{
     padding-top: 160px;
 }
 
-.gallery li h3{
+.gallery li .thumb-gallery h5,
+.gallery li .thumb-gallery h4,
+.gallery li .thumb-gallery h3{
     position: absolute;
     z-index: 2;
     color: white;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    padding-left: 15px;
     left: 0;
     bottom: 0px;
     font-family: 'Neva-Bold', sans-serif;
-    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
-    white-space: nowrap;
     font-size: 1.2rem;
     opacity: 0;
     transition: all .5s ease-in-out;
 }
 
-.gallery li:hover h3{
+.gallery li .thumb-gallery h5,
+.gallery li .thumb-gallery h4{
+    font-family:'Neva-Light', sans-serif;
+}
+
+.gallery li .thumb-gallery h4{
+    font-size: 1rem;
+}
+
+.gallery li .thumb-gallery h5{
+    font-size: .9rem;
+}
+
+
+.gallery li .thumb-gallery:hover h5{
     opacity: 1;
     bottom: 5px;
+}
+
+.gallery li .thumb-gallery:hover h4{
+    opacity: 1;
+    bottom: 50px;
+}
+
+.gallery li .thumb-gallery:hover h3{
+    opacity: 1;
+    bottom: 25px;
+}
+
+/* somos */
+#somos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in-out;
+}
+
+.text-1{
+    display: none;
+    opacity: 0;
+    transition: all .3s;
+    animation-delay: .5s;
+}
+
+.text-2{
+    display: none;
+    opacity: 0;
+    transition: all .3s;
+    animation-delay: 1s;
+
 }
 
 /* boxes */
@@ -430,7 +480,7 @@ i.social-item{
     animation-name: rotate;
     animation-duration: 2s;
     animation-timing-function: linear;
-    animation-iteration-count: 3;
+    animation-iteration-count: 2;
 }
 
 .box {
@@ -476,10 +526,11 @@ i.social-item{
 
 .fadeOut{
     animation-name: fadeOut;
-    animation-duration: .3s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards;
 }
+
 .smaller{
     animation-name: smalling;
     animation-duration: .3s;
@@ -523,37 +574,40 @@ i.social-item{
 @keyframes fadeOut {
     from{
         opacity: 1;
+        bottom: 0;
     }to{
         opacity: 0;
+        bottom: -100%;
     }
 }
 
 @keyframes growUp {
     from{
+        opacity: 0;
         transform: scale(0);
 
     }to{
+        opacity: 1;
         transform: scale(1);
     }
 }
 
 @keyframes smalling {
     from{
+        opacity: 1;
         transform: scale(1);
 
     }to{
+        opacity: 0;
         transform: scale(0);
     }
 }
 
-@keyframes fadeUp {
+@keyframes fadeIn {
     from{
         opacity: 0;
-        bottom: -100%;
-
     }to{
         opacity: 1;
-        bottom: 0;
     }
 }
 

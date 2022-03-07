@@ -114,7 +114,7 @@ function socialAnimation(s){
         
          cnt = 1;
       }
-      sectionOpen(1)
+      sectionOpen(2)//proyectos
       endStartGame()
    },500);
 }
@@ -130,15 +130,16 @@ function sectionOpen(id){
    $("#sidenav-1").css("margin-left","-100%");
    h = 0;
 
-  const section = ["","proyectos","somos","clientes","blog","contacto"];
-
-  $(".section").addClass("hidesection");
+   const section = ["","somos","proyectos","clientes","blog","contacto"];
    setTimeout(function(){
-      $("#"+section[id]).removeClass("hidesection"); 
       $("#"+section[id]).css("display","block"); 
       if(section[id] == 'proyectos'){
          $("#proyectos").css("margin-left","0");
          showGalleryGrid()
+      }
+      if(section[id] == 'somos'){
+         $(".text-1").css("display","block");
+         $(".text-2").css("display","block");
       }
    },500);
 }
@@ -149,6 +150,7 @@ function showGalleryGrid(){
       $(".gallery-item").each(function () {
          $(this).attr('id', function (index) {
             $(this).css('display', 'inline-block');
+            $(this).addClass('fadeIn');
             $(this).attr('id', 'item-up-' + (cnt));
          });
          cnt++;
@@ -160,6 +162,7 @@ function hideGalleryGrid(){
    let cnt = 1;
    $(".gallery-item").each(function () {
       $(this).attr('id', function (index) {
+         $(this).removeClass("fadeIn");
          $(this).addClass("fadeOut");
          $(this).attr('id', '');
       });
@@ -182,11 +185,15 @@ function showPresentation(id){
          setTimeout(function(){
             $(".box-area").addClass("box-area-rotate");
             setTimeout(function(){
-               $("#loader").addClass("smaller");
-            },6000);
+               $(".box-area").removeClass("box-area-rotate");
+               $(".box-area").addClass("smaller");
+               setTimeout(function(){$("#loader").css("display","none");},300);
+            },4000);
          },500);      
       },500);
    }
+
+   
 }
 
 
