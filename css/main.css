@@ -8,6 +8,16 @@
     src: url('../fonts/Nexa/NexaDemo-Bold.otf');
 }
 
+@font-face {
+    font-family: 'Neva-Extra-Bold';
+    src: url('../fonts/Nexa/Nexa-Trial-ExtraBold.otf');
+}
+
+@font-face {
+    font-family: 'Neva-Heavy';
+    src: url('../fonts/Nexa/Nexa-Trial-Heavy.otf');
+}
+
 html,body{
     font-family: 'Neva-Light',sans-serif;
     font-size: 1rem;
@@ -15,8 +25,10 @@ html,body{
 }
 
 h1{
-    font-family: 'Neva-Bold',sans-serif;
-    text-transform: uppercase;
+    font-family: 'Neva-Light',sans-serif;
+    /*text-transform: uppercase;*/
+    font-size: 4rem;
+    line-height: 4rem;
 }
 
 #cursor{

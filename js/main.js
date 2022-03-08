@@ -5,7 +5,7 @@
 
 var cursor    = document.getElementById("cursor");
 var h         = 0;
-var hamburger = $('#hamburger-icon');
+var hamburger = $('#square');
 var logo      = $('.navbar-brand img');
 
 document.onmousemove = function(e){
