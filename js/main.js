@@ -13,6 +13,7 @@ var logo      = $('.navbar-brand img');
 /* mouse control */ 
 
 document.onmousemove = function(e){
+
    cursor.style.left = (e.pageX - 25) + "px";
    cursor.style.top = (e.pageY - 25) + "px";
    cursor.style.display = "block";
@@ -113,9 +114,7 @@ function sectionOpen(id){
    }
 
    hamburger.removeClass('active');
-   
-   $(".sidenav").css("margin-left","-100%");
-   $("#sidenav-2").css("display","none");
+   hideSideNav()
    
    h = 0;
 
@@ -177,7 +176,7 @@ function hideGalleryGrid(){
 }
 
 function showPresentation(id){
-
+   hideSideNav();
    hideGalleryGrid()
    hideBoxesBackground()
 
@@ -200,8 +199,12 @@ function showPresentation(id){
 
 }
 
-function proyectShow(id){
-
+function proyectShow(id)
+{
+   /* hide this */
+   let index = localStorage.getItem("interaction");
+   $("#"+index).addClass("fadeOut");
+ 
    const logos  = ['','loicas.jpg','piedra.jpg','macul.jpg'];
 
    let menunav  = `<li class="sidenav-item"><img src="img/logos/${logos[id]}"/></li>`;
@@ -219,17 +222,23 @@ function proyectShow(id){
    elem.classList.add("fadeLeft");
    let cnt = 1;
    setTimeout(function(){
-      if(id == 1){
+      if(id == 1)
+      {
+         $("#loicas").removeClass("fadeOut");
          $("#loicas").css("display","block");
          interaction = localStorage.setItem("interaction","loicas");
       }
 
-      if(id == 2){
+      if(id == 2)
+      {
+         $("#loicas").removeClass("fadeOut");
          $("#piedras").css("display","block");
          interaction = localStorage.setItem("interaction","piedras");
       }
 
-      if(id == 3){
+      if(id == 3)
+      {
+         $("#loicas").removeClass("fadeOut");
          $("#macul").css("display","block");
          interaction = localStorage.setItem("interaction","macul");
       }
@@ -257,6 +266,10 @@ function hideBoxesBackground(){
       $(".area").css("display","none");
       $(".circles").css("display","none");
    },500);
+}
 
+function hideSideNav(){
+   $(".sidenav").css("margin-left","-100%");
+   $("#sidenav-2").css("display","none");
 }
 

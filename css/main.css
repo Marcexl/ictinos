@@ -1,4 +1,9 @@
 @font-face {
+    font-family: 'Material Icons Outlined';
+    src: url('../fonts/Material/MaterialIconsOutlined-Regular.otf');
+}
+
+@font-face {
   font-family: 'Neva-Light';
   src: url('../fonts/Nexa/NexaDemo-Light.otf');
 }
@@ -45,6 +50,7 @@ h1{
     transform: scale(1);
 }
 
+video:hover ~ #cursor,
 span:hover ~ #cursor,
 i:hover ~ #cursor,
 h1:hover ~ #cursor,
@@ -129,9 +135,11 @@ div:hover ~ #cursor{
 #sidenav-2 ul li{
     text-align: left;
 }
+
 #sidenav-2 ul li img{
     width: 100%;
 }
+
 #sidenav-2 ul li a{
     text-align: left;
     display: none;
@@ -249,6 +257,10 @@ div:hover ~ #cursor{
 
 
 /* proyectos */
+.p-container{
+    z-index: 2;
+}
+
 #macul,
 #piedras,
 #loicas,
@@ -276,6 +288,76 @@ div:hover ~ #cursor{
 }
 .central-col{
     text-align: center;
+}
+
+.arrows{
+    position: absolute;
+    width: 80%;
+    height: 50px;
+    left: 20%;
+    top: calc(50% - 25px);
+    z-index: 2;
+}
+
+.arrows .a-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.arrows .a-container .a-c-next,
+.arrows .a-container .a-c-prev{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.arrows .a-container .a-c-next i,
+.arrows .a-container .a-c-prev i{
+    font-size: 3rem;
+    color: white;
+    transition: all .3s;
+}
+
+.arrows .a-container .a-c-next .arrow-text,
+.arrows .a-container .a-c-prev .arrow-text{
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    height: 30px;
+    top: calc(50% - 15px);
+    opacity: 0;
+    white-space: nowrap;
+    transition: all .3s;
+    padding: 0;
+}
+.arrows .a-container .a-c-prev .arrow-text{
+    left: 30px;
+}
+
+.arrows .a-container .a-c-next .arrow-text{
+    right: 30px;
+}
+
+.arrows .a-container .a-c-next{
+    right:15px;
+}
+
+.arrows .a-container .a-c-prev{
+    left:15px;
+}
+
+.arrows .a-container .a-c-next:hover #next-project{
+    opacity: 1;
+    padding-right: 15px;
+}
+
+.arrows .a-container .a-c-prev:hover #prev-project{
+    opacity: 1;
+    padding-left: 15px;
 }
 
 /* gallery grid */

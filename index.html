@@ -10,6 +10,8 @@
     <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="fonts/fontawesome/css/all.css" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="css/material-icons.css" />
     <!-- Google Fonts Roboto -->
     <link
       rel="stylesheet"
@@ -131,6 +133,25 @@
             <source src="video/loicas.mp4" type="video/mp4"/>
           </video>
         </div>
+
+        <!-- navigator -->
+        <div class="arrows">
+          <div class="a-container">
+            <div class="a-c-next" onclick="showPresentation(2)">
+              <i class="material-icons">
+                chevron_right
+              </i>
+              <span id="next-project" class="arrow-text">Plaza Piedra</span>
+            </div>
+            <div class="a-c-prev" onclick="showPresentation(3)">
+              <i class="material-icons">
+                chevron_left
+              </i>
+              <span id="prev-project" class="arrow-text" >San Luis Macul</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -140,6 +161,24 @@
           <video  autoplay controls muted id="piedrasvid">
             <source src="video/piedras.mp4" type="video/mp4"/>
           </video>
+        </div>
+        
+        <!-- navigator -->
+        <div class="arrows">
+          <div class="a-container">
+            <div class="a-c-next" onclick="showPresentation(3)"> 
+              <i class="material-icons">
+                chevron_right
+              </i>
+              <span id="next-project" class="arrow-text">San Luis Macul</span>
+            </div>
+            <div class="a-c-prev" onclick="showPresentation(1)">
+              <i class="material-icons">
+                chevron_left
+              </i>
+              <span id="prev-project" class="arrow-text">Las Loicas I</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -151,6 +190,25 @@
             <source src="video/macul.mp4" type="video/mp4"/>
           </video>
         </div>
+
+         <!-- navigator -->
+         <div class="arrows">
+          <div class="a-container">
+            <div class="a-c-next" onclick="showPresentation(1)">
+              <i class="material-icons">
+                chevron_right
+              </i>
+              <span id="next-project" class="arrow-text">Las Loicas I</span>
+            </div>
+            <div class="a-c-prev" onclick="showPresentation(2)">
+              <i class="material-icons">
+                chevron_left
+              </i>
+              <span id="prev-project" class="arrow-text">Plaza Piedra</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
     
