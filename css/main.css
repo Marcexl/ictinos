@@ -107,6 +107,14 @@ div:hover ~ #cursor{
     letter-spacing: 2px;
 }
 
+#sidenav-2{
+    display: none;
+    width: 20%;
+    backdrop-filter: none;
+    border-right: none;
+    background: orange;
+}
+
 .navbar-brand{
     max-width: 250px;
     overflow: hidden;
@@ -543,6 +551,13 @@ i.social-item{
     animation-fill-mode: backwards;
 }
 
+.fadeLeft{
+    animation-name: fadeLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards; 
+}
+
 .smaller{
     animation-name: smalling;
     animation-duration: .3s;
@@ -590,6 +605,16 @@ i.social-item{
     }to{
         opacity: 0;
         bottom: -100%;
+    }
+}
+
+@keyframes fadeLeft {
+    from{
+        opacity: 0;
+        margin-left: -100%;
+    }to{
+        opacity: 1;
+        margin-left: 0;
     }
 }
 

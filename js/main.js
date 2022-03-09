@@ -187,13 +187,23 @@ function showPresentation(id){
             setTimeout(function(){
                $(".box-area").removeClass("box-area-rotate");
                $(".box-area").addClass("smaller");
-               setTimeout(function(){$("#loader").css("display","none");},300);
+               setTimeout(function(){
+                  $("#loader").css("display","none");
+                  proyectMenu();
+               },300);
             },4000);
          },500);      
       },500);
    }
+}
 
-   
+function proyectMenu(){
+   const array1  = ["condominio","terminaciones","galería","casas","entorno","conectividad","domótica","video"];
+   const menunav = array1.map(v => '<li class="sidenav-item"><a href="#">' + v + '</a></li>');
+   let elem = document.querySelector("#sidenav-2"); 
+   elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
+   elem.style.display = 'block';
+   elem.classList.add("fadeLeft");
 }
 
 
