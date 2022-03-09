@@ -110,6 +110,7 @@ div:hover ~ #cursor{
 #sidenav-1{
     z-index: 4;
 }
+
 #sidenav-2{
     display: none;
     width: 20%;
@@ -236,6 +237,8 @@ div:hover ~ #cursor{
     transition: all 1s ease-out;
 }
 
+#piedrasvid,
+#maculvid,
 #loicasvid{
     display: block;
     min-width:80%;
@@ -246,6 +249,8 @@ div:hover ~ #cursor{
 
 
 /* proyectos */
+#macul,
+#piedras,
 #loicas,
 #proyectos{
     position: absolute;
@@ -260,6 +265,8 @@ div:hover ~ #cursor{
     margin-left: 60px;
 }
 
+#macul .row .col,
+#piedras .row .col,
 #loicas .row .col{
     padding: 0;
 }
@@ -540,8 +547,8 @@ i.social-item{
 /* loader */
 #loader {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
     perspective: 1500px;
     display: none;
     transform: scale(0);
@@ -609,7 +616,7 @@ i.social-item{
     animation-name: fadeOut;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
 }
 
 .fadeLeft{

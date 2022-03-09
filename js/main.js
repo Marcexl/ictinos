@@ -3,10 +3,14 @@
  * version 03032022
  */ 
 
+var interaction;
+var index;
 var cursor    = document.getElementById("cursor");
 var h         = 0;
 var hamburger = $('#square');
 var logo      = $('.navbar-brand img');
+
+/* mouse control */ 
 
 document.onmousemove = function(e){
    cursor.style.left = (e.pageX - 25) + "px";
@@ -15,7 +19,14 @@ document.onmousemove = function(e){
 }
 
 $( document ).ready(function() {
-     hamburger.click(function() {
+   /* clean cache */
+   if(localStorage.getItem("interaction"))
+   {
+      localStorage.removeItem("interaction");
+   }
+   
+   /* menu */
+   hamburger.click(function() {
       if(h == 0)
       {
          hamburger.toggleClass('active');
@@ -23,7 +34,9 @@ $( document ).ready(function() {
          menuAnimation(h);
          h = 1;   
          return false;
-      }else{
+      }
+      else
+      {
          hamburger.removeClass('active');
          $("#sidenav-1").css("margin-left","-100%");
          menuAnimation(h);
@@ -31,14 +44,15 @@ $( document ).ready(function() {
          return false;
       } 
    });
- 
+   
+   /* video logo intro */
    document.getElementById('myVideo').play();
    document.getElementById('myVideo').addEventListener('ended',myHandler,false);
    function myHandler(e) {
       startGame(); 
    }
-});
 
+});
 
 function startGame(){
    let elem = document.getElementById("main");
@@ -53,8 +67,7 @@ function logoShow(){
    setTimeout(function(){
       logo.css("margin-top","0");
       logo.css("opacity","1");
-      hamburguerShow()
-      
+      hamburguerShow()//menu
    },300);
 }
 
@@ -62,8 +75,9 @@ function hamburguerShow(){
    setTimeout(function(){
       hamburger.css("transform","scale(1)");
       hamburger.css("opacity","1");
-      socialAnimation(0)
    },300);
+   sectionOpen(2)//proyectos
+   showBoxesBackground()
 }
 
 function menuAnimation(h){
@@ -88,68 +102,55 @@ function menuAnimation(h){
      
       cnt = 1;
    }
-}
 
-function socialAnimation(s){
-   
-   let cnt = 1;
-   setTimeout(function(){
-      if(s == 0){
-         $(".social-item").each(function () {
-            $(this).attr('id', function (index) {
-               $(this).css("display","block");
-               $(this).attr('id', 'item-grow-' + (cnt));
-            });
-            cnt++;
-         });
-      }
-      else
-      {
-         $(".social-item").each(function () {
-            $(this).attr('id', function (index) {
-               $(this).css("display","none");
-               $(this).attr('id', '');
-            });
-         });
-        
-         cnt = 1;
-      }
-      sectionOpen(2)//proyectos
-      endStartGame()
-   },500);
-}
-
-function endStartGame(){
-   setTimeout(function(){
-      $(".circles").css("display","block");
-   },5000);
 }
 
 function sectionOpen(id){
+   if(localStorage.getItem("interaction"))
+   {
+      index = localStorage.getItem("interaction");
+      sectionClose(index);
+   }
+
    hamburger.removeClass('active');
-   $("#sidenav-1").css("margin-left","-100%");
+   
+   $(".sidenav").css("margin-left","-100%");
+   $("#sidenav-2").css("display","none");
+   
    h = 0;
 
    const section = ["","somos","proyectos","clientes","blog","contacto"];
+   interaction = section[id]
+   localStorage.setItem("interaction",interaction);
+
    setTimeout(function(){
-      $("#"+section[id]).css("display","block"); 
-      if(section[id] == 'proyectos'){
+      $("#"+interaction).css("display","block"); 
+      if(section[id] == 'proyectos')
+      {
          $("#proyectos").css("margin-left","0");
          showGalleryGrid()
+         showBoxesBackground()
       }
-      if(section[id] == 'somos'){
+      if(section[id] == 'somos')
+      {
          $(".text-1").css("display","block");
          $(".text-2").css("display","block");
       }
    },500);
 }
 
+function sectionClose(index){
+   $("#"+index).css("display","none");
+}
+
 function showGalleryGrid(){
+   $("#proyectos h1").removeClass("fadeOut");
    let cnt = 1;
    setTimeout(function(){
       $(".gallery-item").each(function () {
          $(this).attr('id', function (index) {
             $(this).css('display', 'inline-block');
+            $(this).removeClass('fadeOut');
             $(this).addClass('fadeIn');
             $(this).attr('id', 'item-up-' + (cnt));
          });
@@ -160,6 +161,7 @@ function showGalleryGrid(){
 
 function hideGalleryGrid(){
    let cnt = 1;
+   $("#proyectos h1").addClass("fadeOut");
    $(".gallery-item").each(function () {
       $(this).attr('id', function (index) {
          $(this).removeClass("fadeIn");
@@ -168,36 +170,38 @@ function hideGalleryGrid(){
       });
       cnt++;
    });
+   setTimeout(function(){
+      $("#proyectos").css("margin-left","100%");
+      $(".gallery-item").css("display","none");
+   },1000);
 }
 
 function showPresentation(id){
-   if(id == 1)
-   {
-      hideGalleryGrid();
-      $(".circles").addClass("fadeOut");
 
+   hideGalleryGrid()
+   hideBoxesBackground()
+
+   setTimeout(function(){
+      $("#proyectos").css("display","none");   
+      $("#loader").css("display","block");
       setTimeout(function(){
-         if(id == 1){
-            $("#proyectos").css("display","none");
-            $(".area").css("display","none");
-         }
-         $("#loader").css("display","block");
+         $(".box-area").removeClass("smaller");
+         $(".box-area").addClass("box-area-rotate");
          setTimeout(function(){
-            $(".box-area").addClass("box-area-rotate");
+            $(".box-area").removeClass("box-area-rotate");
+            $(".box-area").addClass("smaller");
             setTimeout(function(){
-               $(".box-area").removeClass("box-area-rotate");
-               $(".box-area").addClass("smaller");
-               setTimeout(function(){
-                  $("#loader").css("display","none");
-                  proyectMenu(id);
-               },300);
-            },4000);
-         },500);      
-      },500);
-   }
+               $("#loader").css("display","none");
+               proyectShow(id);
+            },300);
+         },4000);
+      },500);      
+   },500);
+
 }
 
-function proyectMenu(id){
+function proyectShow(id){
+
    const logos  = ['','loicas.jpg','piedra.jpg','macul.jpg'];
 
    let menunav  = `<li class="sidenav-item"><img src="img/logos/${logos[id]}"/></li>`;
@@ -215,7 +219,21 @@ function proyectMenu(id){
    elem.classList.add("fadeLeft");
    let cnt = 1;
    setTimeout(function(){
-      $("#loicas").css("display","block");
+      if(id == 1){
+         $("#loicas").css("display","block");
+         interaction = localStorage.setItem("interaction","loicas");
+      }
+
+      if(id == 2){
+         $("#piedras").css("display","block");
+         interaction = localStorage.setItem("interaction","piedras");
+      }
+
+      if(id == 3){
+         $("#macul").css("display","block");
+         interaction = localStorage.setItem("interaction","macul");
+      }
+
       $("#sidenav-2 ul li a").each(function () {
          $(this).attr('id', function (index) {
             $(this).css("display","block");
@@ -226,4 +244,19 @@ function proyectMenu(id){
    },500);
 }
 
+function showBoxesBackground(){
+   setTimeout(function(){
+      $(".area").css("display","block");
+      $(".circles").removeClass("fadeOut");
+      $(".circles").css("display","block");
+   },5000);
+}
+function hideBoxesBackground(){
+   $(".circles").addClass("fadeOut");
+   setTimeout(function(){
+      $(".area").css("display","none");
+      $(".circles").css("display","none");
+   },500);
+
+}
 
