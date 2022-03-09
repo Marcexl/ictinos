@@ -189,7 +189,7 @@ function showPresentation(id){
                $(".box-area").addClass("smaller");
                setTimeout(function(){
                   $("#loader").css("display","none");
-                  proyectMenu();
+                  proyectMenu(id);
                },300);
             },4000);
          },500);      
@@ -197,13 +197,33 @@ function showPresentation(id){
    }
 }
 
-function proyectMenu(){
-   const array1  = ["condominio","terminaciones","galería","casas","entorno","conectividad","domótica","video"];
-   const menunav = array1.map(v => '<li class="sidenav-item"><a href="#">' + v + '</a></li>');
+function proyectMenu(id){
+   const logos  = ['','loicas.jpg','piedra.jpg','macul.jpg'];
+
+   let menunav  = `<li class="sidenav-item"><img src="img/logos/${logos[id]}"/></li>`;
+       menunav += '<li class="sidenav-item"><a href="#">Terminaciones</a></li>';
+       menunav += '<li class="sidenav-item"><a href="#">Equipamiento</a></li>';
+       menunav += '<li class="sidenav-item"><a href="#">Casas</a></li>';
+       menunav += '<li class="sidenav-item"><a href="#">Plantas</a></li>';
+       menunav += '<li class="sidenav-item"><a href="#">Piloto</a></li>';
+       menunav += '<li class="sidenav-item"><a href="#">Entorno</a></li>';
+       menunav += '<li class="sidenav-item"><a href="#">Cotizar</a></li>';
+
    let elem = document.querySelector("#sidenav-2"); 
    elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
    elem.style.display = 'block';
    elem.classList.add("fadeLeft");
+   let cnt = 1;
+   setTimeout(function(){
+      $("#loicas").css("display","block");
+      $("#sidenav-2 ul li a").each(function () {
+         $(this).attr('id', function (index) {
+            $(this).css("display","block");
+            $(this).attr('id', 'item-grow-' + (cnt));
+         });
+         cnt++;
+      });
+   },500);
 }
 
 

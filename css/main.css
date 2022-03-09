@@ -107,14 +107,46 @@ div:hover ~ #cursor{
     letter-spacing: 2px;
 }
 
+#sidenav-1{
+    z-index: 4;
+}
 #sidenav-2{
     display: none;
     width: 20%;
     backdrop-filter: none;
     border-right: none;
-    background: orange;
+    background: rgb(255,153,0);
+    background: linear-gradient(180deg, rgba(255,153,0,1) 0%, rgba(66,43,7,1) 100%);
 }
 
+#sidenav-2 ul{
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#sidenav-2 ul li{
+    text-align: left;
+}
+#sidenav-2 ul li img{
+    width: 100%;
+}
+#sidenav-2 ul li a{
+    text-align: left;
+    display: none;
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    letter-spacing: normal;
+}
+
+#sidenav-2 ul li a:hover{
+    letter-spacing: normal;
+}
+
+/* logo */
 .navbar-brand{
     max-width: 250px;
     overflow: hidden;
@@ -160,6 +192,18 @@ div:hover ~ #cursor{
     animation-delay: 1.5s;
 }
 
+#item-grow-6{
+    animation-delay: 2s;
+}
+
+#item-grow-7{
+    animation-delay: 2.5s;
+}
+
+#item-grow-8{
+    animation-delay: 3s;
+}
+
 /* sections */
 .row{
     height: 100%;
@@ -184,13 +228,25 @@ div:hover ~ #cursor{
     transition: all 1s ease-in-out;
 }
 
-video{
+/* videos */
+#myVideo{
     display: block;
     max-width: 960px;
     margin: 0 auto;
     transition: all 1s ease-out;
 }
 
+#loicasvid{
+    display: block;
+    min-width:80%;
+    min-height: 100%; 
+    margin-left: 20%;
+    transition: all 1s ease-out;
+}
+
+
+/* proyectos */
+#loicas,
 #proyectos{
     position: absolute;
     top: 0;
@@ -204,12 +260,17 @@ video{
     margin-left: 60px;
 }
 
+#loicas .row .col{
+    padding: 0;
+}
+
 .right-container{
     margin-left: 100%;
 }
 .central-col{
     text-align: center;
 }
+
 /* gallery grid */
 
 .gallery{
@@ -505,38 +566,38 @@ i.social-item{
 
 .box {
     position: absolute;
-    width:100px;
-    height: 100px;
+    width:80px;
+    height: 80px;
     border: 1px solid #262626;
 }
   
 #box-front {
-    transform: translateX(-50px) translateY(-50px) translateZ(50px);
-    background: rgba(216, 152, 50, 0.8);
+    transform: translateX(-40px) translateY(-40px) translateZ(40px);
+    background: rgba(216, 152, 40, 0.8);
 }
   
 #box-back {
-    transform: translateX(-50px) translateY(-50px) translateZ(-50px);
-    background: rgba(216, 152, 50, 0.8);
+    transform: translateX(-40px) translateY(-40px) translateZ(-40px);
+    background: rgba(216, 152, 40, 0.8);
 }
   
 #box-right {
-    transform: translateY(-50px) rotateY(90deg);
+    transform: translateY(-40px) rotateY(90deg);
     background: rgb(163, 129, 0, 0.8);
 }
   
 #box-left {
-    transform: translateY(-50px) translateX(-100px) rotateY(90deg);
+    transform: translateY(-40px) translateX(-80px) rotateY(90deg);
     background: rgb(163, 129, 16, 0.8);
 }
   
 #box-top {
-    transform: translateX(-50px) translateY(-100px) rotateX(90deg);
+    transform: translateX(-40px) translateY(-80px) rotateX(90deg);
     background: rgba(231, 176, 56, 0.8);
 }
   
 #box-bottom {
-    transform: translateX(-50px) rotateX(90deg);
+    transform: translateX(-40px) rotateX(90deg);
     background: rgba(54, 29, 5, 0.8);
 }
   
@@ -555,7 +616,7 @@ i.social-item{
     animation-name: fadeLeft;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: backwards; 
+    animation-fill-mode: forwards; 
 }
 
 .smaller{
