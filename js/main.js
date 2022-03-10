@@ -126,6 +126,7 @@ function sectionOpen(id){
       $("#"+interaction).css("display","block"); 
       if(section[id] == 'proyectos')
       {
+         $("#proyectos").removeClass("fadeOut");
          $("#proyectos").css("margin-left","0");
          showGalleryGrid()
          showBoxesBackground()
@@ -179,6 +180,9 @@ function showPresentation(id){
    hideSideNav();
    hideGalleryGrid()
    hideBoxesBackground()
+   /* hide this */
+   let index = localStorage.getItem("interaction");
+   $("#"+index).addClass("fadeOut");
 
    setTimeout(function(){
       $("#proyectos").css("display","none");   
@@ -191,6 +195,7 @@ function showPresentation(id){
             $(".box-area").addClass("smaller");
             setTimeout(function(){
                $("#loader").css("display","none");
+               $("#"+index).css("display","none");
                proyectShow(id);
             },300);
          },4000);
@@ -201,9 +206,6 @@ function showPresentation(id){
 
 function proyectShow(id)
 {
-   /* hide this */
-   let index = localStorage.getItem("interaction");
-   $("#"+index).addClass("fadeOut");
  
    const logos  = ['','loicas.jpg','piedra.jpg','macul.jpg'];
 
@@ -219,6 +221,7 @@ function proyectShow(id)
    let elem = document.querySelector("#sidenav-2"); 
    elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
    elem.style.display = 'block';
+   elem.classList.remove("fadeLeftOut");
    elem.classList.add("fadeLeft");
    let cnt = 1;
    setTimeout(function(){
@@ -231,14 +234,14 @@ function proyectShow(id)
 
       if(id == 2)
       {
-         $("#loicas").removeClass("fadeOut");
+         $("#piedras").removeClass("fadeOut");
          $("#piedras").css("display","block");
          interaction = localStorage.setItem("interaction","piedras");
       }
 
       if(id == 3)
       {
-         $("#loicas").removeClass("fadeOut");
+         $("#macul").removeClass("fadeOut");
          $("#macul").css("display","block");
          interaction = localStorage.setItem("interaction","macul");
       }
@@ -269,7 +272,11 @@ function hideBoxesBackground(){
 }
 
 function hideSideNav(){
-   $(".sidenav").css("margin-left","-100%");
-   $("#sidenav-2").css("display","none");
+   $("#sidenav-1").css("margin-left","-100%");
+   $("#sidenav-2").removeClass("fadeLeft");
+   $("#sidenav-2").addClass("fadeLeftOut");
+   setTimeout(function(){
+      $("#sidenav-2").css("display","none");
+   },1000);
 }
 

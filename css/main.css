@@ -708,6 +708,13 @@ i.social-item{
     animation-fill-mode: forwards; 
 }
 
+.fadeLeftOut{
+    animation-name: fadeLeftOut;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
 .smaller{
     animation-name: smalling;
     animation-duration: .3s;
@@ -765,6 +772,16 @@ i.social-item{
     }to{
         opacity: 1;
         margin-left: 0;
+    }
+}
+
+@keyframes fadeLeftOut {
+    from{
+        opacity: 1;
+        margin-left: 0;
+    }to{
+        opacity: 0;
+        margin-left: -100%;
     }
 }
 
