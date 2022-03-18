@@ -31,16 +31,23 @@ $( document ).ready(function() {
       if(h == 0)
       {
          hamburger.toggleClass('active');
-         $("#sidenav-1").css("margin-left","0");
-         menuAnimation(h);
+         var elem = document.documentElement;
+         if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+         } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+         } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+         } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+         }
          h = 1;   
          return false;
       }
       else
       {
          hamburger.removeClass('active');
-         $("#sidenav-1").css("margin-left","-100%");
-         menuAnimation(h);
+         document.exitFullscreen()
          h = 0;
          return false;
       } 
@@ -79,31 +86,6 @@ function hamburguerShow(){
    },300);
    sectionOpen(2)//proyectos
    showBoxesBackground()
-}
-
-function menuAnimation(h){
-   let cnt = 1;
-   if(h == 0){
-      $(".sidenav-link").each(function () {
-         $(this).attr('id', function (index) {
-            $(this).css("display","block");
-            $(this).attr('id', 'item-grow-' + (cnt));
-         });
-         cnt++;
-      });
-   }
-   else
-   {
-      $(".sidenav-link").each(function () {
-         $(this).attr('id', function (index) {
-            $(this).css("display","none");
-            $(this).attr('id', '');
-         });
-      });
-     
-      cnt = 1;
-   }
-
 }
 
 function sectionOpen(id){
@@ -187,8 +169,8 @@ function showPresentation(id){
    setTimeout(function(){
       $("#proyectos").css("display","none");   
       $(".progress").css("display","block");
-      $("#progress-bar").addClass("loading");
       setTimeout(function(){
+         $("#progress-bar").addClass("loading");
          setTimeout(function(){
             setTimeout(function(){
                $(".progress").css("display","none");
@@ -208,15 +190,15 @@ function proyectShow(id)
    const logos  = ['','loicas.jpg','piedra.jpg','macul.jpg'];
 
    let menunav  = `<li class="sidenav-item s-i-1"><img src="img/logos/${logos[id]}"/></li>`;
-       menunav += '<li class="sidenav-item s-i-2"><a href="#">Terminaciones</a></li>';
-       menunav += '<li class="sidenav-item s-i-3"><a href="#">Galeria</a></li>';
-       menunav += '<li class="sidenav-item s-i-4"><a href="#">Condominio</a></li>';
-       menunav += '<li class="sidenav-item s-i-5"><a href="#">Domotica</a></li>';
-       menunav += '<li class="sidenav-item s-i-6"><a href="#">Casas</a></li>';
-       menunav += '<li class="sidenav-item s-i-7"><a href="#">Entorno</a></li>';
-       menunav += '<li class="sidenav-item s-i-8"><a href="#">Adress</a></li>';
-       menunav += '<li class="sidenav-item s-i-9"><a href="#">Video</a></li>';
-       menunav += '<li class="sidenav-item s-i-10"><a href="#">...</a></li>';
+       menunav += '<li class="sidenav-item s-i-2" onclick="goInside(2)"><a href="#">Terminaciones</a></li>';
+       menunav += '<li class="sidenav-item s-i-3" onclick="goInside(3)"><a href="#">Galeria</a></li>';
+       menunav += '<li class="sidenav-item s-i-4" onclick="goInside(4)"><a href="#">Condominio</a></li>';
+       menunav += '<li class="sidenav-item s-i-5" onclick="goInside(5)"><a href="#">Domotica</a></li>';
+       menunav += '<li class="sidenav-item s-i-6" onclick="goInside(6)"><a href="#">Casas</a></li>';
+       menunav += '<li class="sidenav-item s-i-7" onclick="goInside(7)"><a href="#">Entorno</a></li>';
+       menunav += '<li class="sidenav-item s-i-8" onclick="goInside(8)"><a href="#">Adress</a></li>';
+       menunav += '<li class="sidenav-item s-i-9" onclick="goInside(9)"><a href="#">Video</a></li>';
+       menunav += '<li class="sidenav-item s-i-10" onclick="goInside(10)"><a href="#"></a></li>';
 
    let elem = document.querySelector("#sidenav-2"); 
    elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
@@ -224,11 +206,25 @@ function proyectShow(id)
    elem.classList.remove("fadeLeftOut");
    elem.classList.add("fadeLeft");
    let cnt = 1;
+   let maps = '';
+       maps += '<img src="img/icons-maps.png">';
+       maps += '<h4>Condominio</h4>';
+       maps += '<h3>Las Loicas I</h3>';
+       maps += '<h5>Santa Elena Chicureo</h5>';
+      
    setTimeout(function(){
       if(id == 1)
       {
          $("#loicas").removeClass("fadeOut");
          $("#loicas").css("display","block");
+         $(".s-i-2 a").css('background-image','url(img/loicas/thumbs/terminaciones.jpg)');
+         $(".s-i-3 a").css('background-image','url(img/loicas/thumbs/galeria.jpg');
+         $(".s-i-4 a").css('background-image','url(img/loicas/thumbs/condominio.jpg');
+         $(".s-i-6 a").css('background-image','url(img/loicas/thumbs/casas.jpg');
+         $(".s-i-9 a").css('background-image','url(img/loicas/thumbs/entrada.jpg');
+         $(".s-i-10 a").css('background-image','url(img/loicas/thumbs/patio.jpg');
+         
+         $(".s-i-8 a").html(maps);
          interaction = localStorage.setItem("interaction","loicas");
       }
 
@@ -248,7 +244,7 @@ function proyectShow(id)
 
       $("#sidenav-2 ul li a").each(function () {
          $(this).attr('id', function (index) {
-            $(this).css("display","block");
+            $(this).css("display","flex");
             $(this).attr('id', 'item-grow-' + (cnt));
          });
          cnt++;
@@ -280,3 +276,32 @@ function hideSideNav(){
    },1000);
 }
 
+function goInside(id){
+   showArrows();
+   $("#sidenav-2 ul li").removeClass("expand");
+   $("#sidenav-2 ul li").addClass("small");
+   
+   setTimeout(function(){
+      $("#sidenav-2 ul li.s-i-"+id).addClass("expand");
+   },100);
+
+    /*setTimeout(function(){
+      $(".s-i-"+id).addClass("expand");
+   },1000);*/
+}
+
+function showArrows(){
+   setTimeout(function(){
+      $("#back").css("transform","scale(1)");
+      $("#back").css("opacity","1");
+      $(".arrows").css("display","block");
+   },300);
+}
+
+function goOutside(){
+   $("#sidenav-2 ul li").removeClass("small");
+   $("#sidenav-2 ul li").removeClass("expand");
+   $(".arrows").css("display","none");
+   $("#back").css("transform","scale(0)");
+   $("#back").css("opacity","0");
+}

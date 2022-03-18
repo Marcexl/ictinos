@@ -26,6 +26,11 @@
 
   </head>
   <body>
+    <!-- loader -->
+    <div class="progress">
+      <div id="progress-bar" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
     <!-- Header Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -42,49 +47,21 @@
       </div>
     </nav>
 
-    <!-- side nav -->
-    <nav id="sidenav-1" class="sidenav" data-mdb-hidden="false">
-      <ul class="sidenav-menu">
-        <li class="sidenav-item">
-          <a class="sidenav-link" onclick="sectionOpen(1)">SOMOS</a>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link" onclick="sectionOpen(2)">PROYECTOS</a>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link" onclick="sectionOpen(3)">CLIENTES </a>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link" onclick="sectionOpen(4)">BLOG</a>
-        </li>
-        <li class="sidenav-item">
-          <a class="sidenav-link" onclick="sectionOpen(5)">CONTACTO</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- proyectos menu -->
+    <!-- header menu -->
     <nav id="sidenav-2" class="sidenav" data-mdb-hidden="false"></nav>
 
-    <!--a id="square" class="square-icon" href="#" title="Menu">
+    <a id="square" class="square-icon" href="#" title="Menu">
       <div class="square-content">
         <span class="box-part" id="box-1"></span>
         <span class="box-part" id="box-2"></span>
         <span class="box-part" id="box-3"></span>
         <span class="box-part" id="box-4"></span>
       </div>
-    </a-->
+    </a>
 
-    <div class="progress">
-      <div
-        id="progress-bar"
-        class="progress-bar bg-warning"
-        role="progressbar"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-      </div>
-    </div>
+    <a id="back" class="back-icon" href="#" title="Menu" onclick="goOutside()">
+      <img src="img/undo_black_24dp.svg" />
+    </a>
 
     <!-- logo intro -->
     <div class="container-fluid main-container" id="main">
@@ -93,7 +70,6 @@
         </video>
     </div>
 
-     
 
     <!-- proyectos -->
     <div class="container-fluid right-container" id="proyectos">
@@ -132,121 +108,24 @@
       </div>
     </div>
 
-    <div class="container-fluid p-container" id="loicas">
-      <div class="row">
-        <div class="col">
-          <video  controls muted id="loicasvid" style="display:none;">
-            <source src="video/loicas.mp4" type="video/mp4"/>
-          </video>
+    <!-- arrows -->
+    <div class="arrows">
+      <div class="a-container">
+        <div class="a-c-next">
+          <i class="material-icons">
+            chevron_right
+          </i>
+          <span id="next-project" class="arrow-text">Siguiente</span>
         </div>
-
-        <!-- navigator -->
-        <div class="arrows">
-          <div class="a-container">
-            <div class="a-c-next" onclick="showPresentation(2)">
-              <i class="material-icons">
-                chevron_right
-              </i>
-              <span id="next-project" class="arrow-text">Plaza Piedra</span>
-            </div>
-            <div class="a-c-prev" onclick="showPresentation(3)">
-              <i class="material-icons">
-                chevron_left
-              </i>
-              <span id="prev-project" class="arrow-text" >San Luis Macul</span>
-            </div>
-          </div>
+        <div class="a-c-prev">
+          <i class="material-icons">
+            chevron_left
+          </i>
+          <span id="prev-project" class="arrow-text" >Atras</span>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid p-container" id="piedras">
-      <div class="row">
-        <div class="col">
-          <video  autoplay controls muted id="piedrasvid">
-            <source src="video/piedras.mp4" type="video/mp4"/>
-          </video>
-        </div>
-        
-        <!-- navigator -->
-        <div class="arrows">
-          <div class="a-container">
-            <div class="a-c-next" onclick="showPresentation(3)"> 
-              <i class="material-icons">
-                chevron_right
-              </i>
-              <span id="next-project" class="arrow-text">San Luis Macul</span>
-            </div>
-            <div class="a-c-prev" onclick="showPresentation(1)">
-              <i class="material-icons">
-                chevron_left
-              </i>
-              <span id="prev-project" class="arrow-text">Las Loicas I</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid p-container" id="macul">
-      <div class="row">
-        <div class="col">
-          <video  autoplay controls muted id="maculvid">
-            <source src="video/macul.mp4" type="video/mp4"/>
-          </video>
-        </div>
-
-         <!-- navigator -->
-         <div class="arrows">
-          <div class="a-container">
-            <div class="a-c-next" onclick="showPresentation(1)">
-              <i class="material-icons">
-                chevron_right
-              </i>
-              <span id="next-project" class="arrow-text">Las Loicas I</span>
-            </div>
-            <div class="a-c-prev" onclick="showPresentation(2)">
-              <i class="material-icons">
-                chevron_left
-              </i>
-              <span id="prev-project" class="arrow-text">Plaza Piedra</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    
-    <!-- somos -->
-    <div class="container-fluid left-container" id="somos">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col central-col">
-          <div class="text-1">
-          <p>Desde 1995 que Ictinos ha puesto el foco de su trabajo en la calidad cómo signo distintivo. La filosofía presente en cada una de nuestros proyectos es poner énfasis en el cuidado y respeto por el entorno. Es por esto que aplicamos rigurosos estándares de calidad, diseño y construcción en todas nuestras intervenciones urbanas.</p></div>
-          <div class="text-2"><p>Nuestros proyectos en las comunas de La Reina, Lo Barnechea, La Florida, Peñalolén, Colina, Huechuraba y Providencia, avalan nuestra vasta experiencia en el sector inmobiliario.</p></div>
-        </div>
-        <div class="col"></div>
-      </div>
-    </div>
-     
-    <!-- blog -->
-     <div class="container-fluid right-container" id="blog">
-      <div class="row">
-        <div class="col">
-          <h1>Blog</h1>
-        </div>
-      </div>
-    </div>
-
-    <!-- clientes -->
-    <div class="container-fluid right-container" id="clientes">
-      <div class="row">
-        <div class="col">
-          <h1>Clientes</h1>
-        </div>
-      </div>
-    </div>
 
     <!-- boxes  -->
     <div class="area">
@@ -264,27 +143,9 @@
       </ul>
     </div>
 
-    <!-- box loader -->
-    <div id="loader">
-      <div class="box-area">
-        <div id="box-front" class="box"></div>
-        <div id="box-right" class="box"></div>
-        <div id="box-back" class="box"></div>
-        <div id="box-left" class="box"></div>
-        <div id="box-top" class="box"></div>
-        <div id="box-bottom" class="box"></div>
-      </div>
-    </div>
-
     <!-- cursor -->
-    <!--div id="cursor"></div-->
+    <div id="cursor"></div>
     
-    <!-- social -->
-    <!--div id="social">
-      <i class="fab fa-instagram social-item"></i>
-      <i class="fab fa-facebook-f social-item"></i>
-      <i class="fas fa-envelope social-item"></i>
-    </div-->
 
     <!-- external js -->
     <script type="text/javascript" src="js/mdb.min.js"></script>

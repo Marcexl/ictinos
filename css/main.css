@@ -140,6 +140,9 @@ div:hover ~ #cursor{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    transform: scale(1);
 }
 
 #sidenav-2 ul li img{
@@ -148,20 +151,26 @@ div:hover ~ #cursor{
 }
 
 #sidenav-2 ul li a{
-    text-align: center;
     display: none;
     width: 100%;
+    height: 100%;
     color: white;
     letter-spacing: normal;
     text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    transform: scale(1);
+    padding: 0;
 }
 
 #sidenav-2 ul li a:hover{
     letter-spacing: normal;
+    transform: scale(1.1);
 }
 
 li.s-i-1{
-    background: #d4d4d4;
+    background: #303030;
 }
 
 li.s-i-6,
@@ -187,6 +196,21 @@ li.s-i-5,
 li.s-i-7{
     background: #f3b840;
 }
+li.s-i-8 a{
+    flex-direction: column;
+}
+
+li.s-i-8 a img{
+    max-width:3rem;
+    margin-bottom: 15px;
+}
+
+li.s-i-8 a h4,
+li.s-i-8 a h5,
+li.s-i-8 a h3{
+    color: rgb(41, 41, 41);
+}
+
 /* logo */
 .navbar-brand{
     max-width: 250px;
@@ -332,11 +356,13 @@ li.s-i-7{
 
 .arrows{
     position: absolute;
-    width: 80%;
+    width: 100%;
     height: 50px;
-    left: 20%;
+    left: 0;
     top: calc(50% - 25px);
-    z-index: 2;
+    z-index: 3;
+    margin-top: 50px;
+    display: none;
 }
 
 .arrows .a-container {
@@ -353,13 +379,16 @@ li.s-i-7{
     width: 50px;
     height: 50px;
     cursor: pointer;
+    background: #f2f2f2;
+    border-radius: 50%;
 }
 
 .arrows .a-container .a-c-next i,
 .arrows .a-container .a-c-prev i{
     font-size: 3rem;
-    color: white;
+    color: #303030;
     transition: all .3s;
+    padding: 0 2px;
 }
 
 .arrows .a-container .a-c-next .arrow-text,
@@ -392,12 +421,12 @@ li.s-i-7{
 
 .arrows .a-container .a-c-next:hover #next-project{
     opacity: 1;
-    padding-right: 15px;
+    padding-right: 30px;
 }
 
 .arrows .a-container .a-c-prev:hover #prev-project{
     opacity: 1;
-    padding-left: 15px;
+    padding-left: 30px;
 }
 
 /* gallery grid */
@@ -677,16 +706,19 @@ i.social-item{
     width: 20%;
     margin: 0 auto;
     height: 0.75rem;
+    z-index: 1111;
 }
 
-.progress-bar{
+.progress .progress-bar{
     width: 0;
-    transition: all .3s;
+    height: 0.75rem;
+    transition: all 3.5s ease-in-out;
 }
 
-.loading{
-    animation: load 3s ease-in-out 0.3s forwards;
+.progress .progress-bar.loading{
+    width: 100%;
 }
+
 /*#loader {
     position: absolute;
     left: calc(50% - 40px);
@@ -781,7 +813,15 @@ i.social-item{
     animation-timing-function: ease-in-out;
 }
 
+#sidenav-2 ul li.small{
+    width: 0;
+    height: 0;
+}
 
+#sidenav-2 ul li.expand{
+    width: 100%;
+    height: 100%;
+}
 
 @keyframes load {
     from{
