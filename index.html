@@ -66,19 +66,25 @@
     <!-- proyectos menu -->
     <nav id="sidenav-2" class="sidenav" data-mdb-hidden="false"></nav>
 
-    <!--a id="hamburger-icon" class="hamburguer-icon" href="#" title="Menu">
-      <span class="line line-1"></span>
-      <span class="line line-2"></span>
-      <span class="line line-3"></span>
-    </a-->
-    <a id="square" class="square-icon" href="#" title="Menu">
+    <!--a id="square" class="square-icon" href="#" title="Menu">
       <div class="square-content">
         <span class="box-part" id="box-1"></span>
         <span class="box-part" id="box-2"></span>
         <span class="box-part" id="box-3"></span>
         <span class="box-part" id="box-4"></span>
       </div>
-    </a>
+    </a-->
+
+    <div class="progress">
+      <div
+        id="progress-bar"
+        class="progress-bar bg-warning"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+      </div>
+    </div>
 
     <!-- logo intro -->
     <div class="container-fluid main-container" id="main">
@@ -129,7 +135,7 @@
     <div class="container-fluid p-container" id="loicas">
       <div class="row">
         <div class="col">
-          <video  autoplay controls muted id="loicasvid">
+          <video  controls muted id="loicasvid" style="display:none;">
             <source src="video/loicas.mp4" type="video/mp4"/>
           </video>
         </div>
@@ -151,7 +157,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -272,7 +277,7 @@
     </div>
 
     <!-- cursor -->
-    <div id="cursor"></div>
+    <!--div id="cursor"></div-->
     
     <!-- social -->
     <!--div id="social">

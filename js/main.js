@@ -186,15 +186,13 @@ function showPresentation(id){
 
    setTimeout(function(){
       $("#proyectos").css("display","none");   
-      $("#loader").css("display","block");
+      $(".progress").css("display","block");
+      $("#progress-bar").addClass("loading");
       setTimeout(function(){
-         $(".box-area").removeClass("smaller");
-         $(".box-area").addClass("box-area-rotate");
          setTimeout(function(){
-            $(".box-area").removeClass("box-area-rotate");
-            $(".box-area").addClass("smaller");
             setTimeout(function(){
-               $("#loader").css("display","none");
+               $(".progress").css("display","none");
+               $("#progress-bar").removeClass("loading");
                $("#"+index).css("display","none");
                proyectShow(id);
             },300);
@@ -209,14 +207,16 @@ function proyectShow(id)
  
    const logos  = ['','loicas.jpg','piedra.jpg','macul.jpg'];
 
-   let menunav  = `<li class="sidenav-item"><img src="img/logos/${logos[id]}"/></li>`;
-       menunav += '<li class="sidenav-item"><a href="#">Terminaciones</a></li>';
-       menunav += '<li class="sidenav-item"><a href="#">Equipamiento</a></li>';
-       menunav += '<li class="sidenav-item"><a href="#">Casas</a></li>';
-       menunav += '<li class="sidenav-item"><a href="#">Plantas</a></li>';
-       menunav += '<li class="sidenav-item"><a href="#">Piloto</a></li>';
-       menunav += '<li class="sidenav-item"><a href="#">Entorno</a></li>';
-       menunav += '<li class="sidenav-item"><a href="#">Cotizar</a></li>';
+   let menunav  = `<li class="sidenav-item s-i-1"><img src="img/logos/${logos[id]}"/></li>`;
+       menunav += '<li class="sidenav-item s-i-2"><a href="#">Terminaciones</a></li>';
+       menunav += '<li class="sidenav-item s-i-3"><a href="#">Galeria</a></li>';
+       menunav += '<li class="sidenav-item s-i-4"><a href="#">Condominio</a></li>';
+       menunav += '<li class="sidenav-item s-i-5"><a href="#">Domotica</a></li>';
+       menunav += '<li class="sidenav-item s-i-6"><a href="#">Casas</a></li>';
+       menunav += '<li class="sidenav-item s-i-7"><a href="#">Entorno</a></li>';
+       menunav += '<li class="sidenav-item s-i-8"><a href="#">Adress</a></li>';
+       menunav += '<li class="sidenav-item s-i-9"><a href="#">Video</a></li>';
+       menunav += '<li class="sidenav-item s-i-10"><a href="#">...</a></li>';
 
    let elem = document.querySelector("#sidenav-2"); 
    elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
