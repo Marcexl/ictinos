@@ -26,6 +26,14 @@
 
   </head>
   <body>
+    
+    <!-- logo intro -->
+    <div class="container-fluid main-container" id="main">
+      <video  autoplay muted id="myVideo">
+        <source src="video/logo-intro.mp4" type="video/mp4"/>
+      </video>
+    </div>
+
     <!-- loader -->
     <div class="progress">
       <div id="progress-bar" class="progress-bar bg-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
@@ -47,16 +55,11 @@
       </div>
     </nav>
 
+    <!-- logo center -->
+    <div class="logo-center" id="logo-center"></div>
     <!-- header menu -->
-    <nav id="sidenav-2" class="sidenav" data-mdb-hidden="false"></nav>
-
     <a id="square" class="square-icon" href="#" title="Menu">
-      <div class="square-content">
-        <span class="box-part" id="box-1"></span>
-        <span class="box-part" id="box-2"></span>
-        <span class="box-part" id="box-3"></span>
-        <span class="box-part" id="box-4"></span>
-      </div>
+      <img src="img/expand.png" />
     </a>
 
     <a id="back" class="back-icon" href="#" title="Menu" onclick="goOutside()">
@@ -66,12 +69,11 @@
       <img src="img/home-icon.png" />
     </a>
 
-    <!-- logo intro -->
-    <div class="container-fluid main-container" id="main">
-        <video  autoplay muted id="myVideo">
-          <source src="video/logo-intro.mp4" type="video/mp4"/>
-        </video>
-    </div>
+    <!-- botton menu -->
+    <nav id="sidenav-2" class="sidenav" data-mdb-hidden="false"></nav>
+
+    <!-- video container -->
+    <div class="container-fluid" id="proyectos-container"></div>
 
     <!-- proyectos -->
     <div class="container-fluid right-container" id="proyectos">

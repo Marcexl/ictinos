@@ -7,7 +7,7 @@
     position: fixed;
     z-index: 4;
     right: 80px;
-    top: 35px;
+    top: 40px;
     transition: all .5s;
     transform: scale(0);
 }
@@ -115,7 +115,7 @@
     position: fixed;
     z-index: 4;
     right: 220px;
-    top: 35px;
+    top: 40px;
     transition: all .5s;
     transform: scale(0);
 }
@@ -134,10 +134,12 @@
     position: fixed;
     z-index: 4;
     right: 150px;
-    top: 26px;
+    top: 40px;
     transition: all .5s;
     transform: scale(0);
 }
+
+#square img,
 #home img{
     width: 40px;
 }

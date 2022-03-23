@@ -123,53 +123,50 @@ div:hover ~ #cursor{
     backdrop-filter: none;
     border-right: none;
     background: none;
+    height: 80px;
+    top:initial;
+    bottom: 60px;
+    background: rgb(237,185,73);
+    background: linear-gradient(180deg, rgba(237,185,73,1) 0%, rgba(218,140,39,1) 100%);
 }
 
 #sidenav-2 ul{
     width: 100%;
-    height: calc(100% - 110px);
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 110px;
+    justify-content: space-around;
+    margin-top: 0px;
     padding: 0;
 }
 
 #sidenav-2 ul li{
-    text-align: center;
-    height: 33.3333333%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     transition: all .5s ease-in-out;
     transform: scale(1);
-}
-
-#sidenav-2 ul li img{
     width: 100%;
-    max-height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #sidenav-2 ul li a{
     display: none;
     width: 100%;
-    height: 100%;
     color: white;
     letter-spacing: normal;
     text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
     transform: scale(1);
-    padding: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+    border-right: 1px solid #b36e06;
 }
 
 #sidenav-2 ul li a:hover{
     letter-spacing: normal;
-    transform: scale(1.1);
 }
 
+/*
 li.s-i-1{
     background: #303030;
 }
@@ -196,7 +193,7 @@ li.s-i-10{
 li.s-i-5,
 li.s-i-7{
     background: #f3b840;
-}
+}9
 li.s-i-8 a{
     flex-direction: column;
 }
@@ -211,6 +208,17 @@ li.s-i-8 a h5,
 li.s-i-8 a h3{
     color: #090909;
     font-size: 1rem;
+}*/
+.logo-center{
+    position: fixed;
+    width: 300px;
+    left: calc(50% - 150px);
+    top: -20px;
+    z-index: 2;
+}
+
+.logo-center img{
+    width: 100%;
 }
 
 /* logo */
@@ -327,6 +335,17 @@ li.s-i-8 a h3{
     z-index: 2;
 }
 
+#proyectos-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
 #macul,
 #piedras,
 #loicas,
@@ -431,6 +450,22 @@ li.s-i-8 a h3{
     padding-left: 30px;
 }
 
+#proyectos-container .row{
+    padding-top: 150px;
+}
+
+#proyectos-container .row .col{
+    padding: 15px 60px;
+}
+
+#proyectos-container .row .col .card{
+    padding: 30px;
+}
+
+#proyectos-container .row .col .card h4{
+    color:#ebb547;
+    margin-bottom: 30px;
+}
 /* gallery grid */
 
 .gallery{
@@ -540,27 +575,9 @@ li.s-i-8 a h3{
     bottom: 25px;
 }
 
-/* somos */
-#somos{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 1s ease-in-out;
-}
-
-.text-1{
-    display: none;
-    opacity: 0;
-    transition: all .3s;
-    animation-delay: .5s;
-}
-
-.text-2{
-    display: none;
-    opacity: 0;
-    transition: all .3s;
-    animation-delay: 1s;
-
+.w-100{
+    min-height: 100vh;
+    max-height: 100vh;
 }
 
 /* boxes */

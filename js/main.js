@@ -9,7 +9,7 @@ var cursor    = document.getElementById("cursor");
 var h         = 0;
 var hamburger = $('#square');
 var logo      = $('.navbar-brand img');
-
+var logocenter = document.getElementById("logo-center");
 /* mouse control */ 
 
 document.onmousemove = function(e){
@@ -31,7 +31,7 @@ $( document ).ready(function() {
       if(h == 0)
       {
          hamburger.toggleClass('active');
-         $("video").css('margin-top','-45px');
+         //$("video").css('margin-top','-45px');
          var elem = document.documentElement;
          if (elem.requestFullscreen) {
             elem.requestFullscreen();
@@ -47,7 +47,7 @@ $( document ).ready(function() {
       }
       else
       {
-         $("video").css('margin-top','0');
+        // $("video").css('margin-top','0');
          hamburger.removeClass('active');
          document.exitFullscreen()
          h = 0;
@@ -111,11 +111,6 @@ function sectionOpen(id){
          $("#proyectos").css("margin-left","0");
          showGalleryGrid()
          showBoxesBackground()
-      }
-      if(section[id] == 'somos')
-      {
-         $(".text-1").css("display","block");
-         $(".text-2").css("display","block");
       }
    },500);
 }
@@ -185,19 +180,18 @@ function showPresentation(id){
 
 function proyectShow(id)
 {
- 
-   const logos  = ['','loicas.jpg','piedra.jpg','macul.jpg'];
 
-   let menunav  = `<li class="sidenav-item s-i-1"><img src="img/logos/${logos[id]}"/></li>`;
+
+   const logos  = ['','loicas.png','piedra.jpg','macul.jpg'];
+   logocenter.innerHTML = `<img src="img/logos/${logos[id]}"/>`;
+
+   let menunav  = '<li class="sidenav-item s-i-1" onclick="goInside(1,1)"><a href="#">Galeria</a></li>';
        menunav += '<li class="sidenav-item s-i-2" onclick="goInside(1,2)"><a href="#">Terminaciones</a></li>';
-       menunav += '<li class="sidenav-item s-i-3" onclick="goInside(1,3)"><a href="#">Galeria</a></li>';
+       menunav += '<li class="sidenav-item s-i-3" onclick="goInside(1,3)"><a href="#">Domotica</a></li>';
        menunav += '<li class="sidenav-item s-i-4" onclick="goInside(1,4)"><a href="#">Condominio</a></li>';
-       menunav += '<li class="sidenav-item s-i-5" onclick="goInside(1,5)"><a href="#">Domotica</a></li>';
-       menunav += '<li class="sidenav-item s-i-6" onclick="goInside(1,6)"><a href="#">Casas</a></li>';
-       menunav += '<li class="sidenav-item s-i-7" onclick="goInside(1,7)"><a href="#">Entorno</a></li>';
-       menunav += '<li class="sidenav-item s-i-8" onclick="goInside(1,8)"><a href="#">Adress</a></li>';
-       menunav += '<li class="sidenav-item s-i-9" onclick="goInside(1,9)"><a href="#">Video</a></li>';
-       menunav += '<li class="sidenav-item s-i-10" onclick="goInside(10)"><a href="#"></a></li>';
+       menunav += '<li class="sidenav-item s-i-5" onclick="goInside(1,5)"><a href="#">Casas</a></li>';
+       menunav += '<li class="sidenav-item s-i-6" onclick="goInside(1,6)"><a href="#">Entorno</a></li>';
+       menunav += '<li class="sidenav-item s-i-7" onclick="goInside(1,7)"><a href="#">Video</a></li>';
 
    let elem = document.querySelector("#sidenav-2"); 
    elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
@@ -214,7 +208,7 @@ function proyectShow(id)
 
       $("#sidenav-2 ul li a").each(function () {
          $(this).attr('id', function (index) {
-            $(this).css("display","flex");
+            $(this).css("display","block");
             $(this).attr('id', 'item-grow-' + (cnt));
          });
          cnt++;
@@ -229,6 +223,7 @@ function showBoxesBackground(){
       $(".circles").css("display","block");
    },5000);
 }
+
 function hideBoxesBackground(){
    $(".circles").addClass("fadeOut");
    setTimeout(function(){
@@ -237,45 +232,157 @@ function hideBoxesBackground(){
    },500);
 }
 
-function hideSideNav(){
-   $("#sidenav-1").css("margin-left","-100%");
-   $("#sidenav-2").removeClass("fadeLeft");
-   $("#sidenav-2").addClass("fadeLeftOut");
-   setTimeout(function(){
-      $("#sidenav-2").css("display","none");
-   },1000);
-}
 
 function goInside(s,id){
-   let video = '';
+   //showArrows();
+   $("#proyectos-container").fadeOut();
+   $("#proyectos-container").html('');
 
-   showArrows();
-   $("#sidenav-2 ul li").removeClass("expand");
-   $("#sidenav-2 ul li").addClass("small");
-   
-   setTimeout(function(){
-      $("#sidenav-2 ul li.s-i-"+id).addClass("expand");
-   },100);
-
-   if(id == 9)
+   let data = '';
+   if(id == 1)
    {
-
       if(s == 1)
       {
-         setTimeout(function(){
-            $(".s-i-9").html(video);
-            video += '<video controls id="loicasvid" poster="images/">';
-            video += '<source src="video/loicas.mp4" type="video/mp4"/>';
-            video += '</video>';
-            $(".s-i-9").html(video);
-         },500);
+         data += '<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">';
+         data += '<div class="carousel-indicators">';
+         
+         for (let index = 0; index < 13; index++) 
+         {
+            if(index == 0)
+            {
+               data += '<button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="'+index+'" class="active" aria-current="true" aria-label="Slide 1"></button>';                  
+            }
+            else
+            {
+               data += '<button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="'+index+'" class="" aria-current="true" aria-label="Slide 1"></button>';                  
+            }
+         } 
+         
+         data += '</div>';
+         data += '<div class="carousel-inner">';
+         
+         for (let index = 0; index < 13; index++) 
+         {
+            if(index == 0)
+            {
+               data += '<div class="carousel-item active" data-mdb-interval="5000">';
+               data += '<img src="img/loicas/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
+               data += '<div class="carousel-caption d-none d-md-block">';
+               data += '<h5>First slide label</h5>';
+               data += '<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>';
+               data += '</div>';
+               data += '</div>';
+            }
+            else
+            {
+               data += '<div class="carousel-item" data-mdb-interval="5000">';
+               data += '<img src="img/loicas/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
+               data += '<div class="carousel-caption d-none d-md-block">';
+               data += '<h5>First slide label</h5>';
+               data += '<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>';
+               data += '</div>';
+               data += '</div>';
+            }
+         }
 
+         data += '</div>';
+         data += '<button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">';
+         data += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+         data += '<span class="visually-hidden">Previous</span>';
+         data += '</button>';
+         data += '<button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">';
+         data += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+         data += '<span class="visually-hidden">Next</span>';
+         data += '</button>';
+         data += '</div>';
+        
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      }
+   }
+   if(id == 2)//terminaciones
+   {
+      if(s == 1)
+      { 
+         data += '<div class="row">';
+         data += '<div class="col">';
+         data += '<div class="card">';
+         data += "<h4>TERMINACIONES</h4>";
+         data += "<p>Ventanas PVC con Termopanel, foliada tipo madera</p>";
+         data += "<p>Porcelanato en Living Comerdor, Hall de acceso, Terrazas, baños y cocina</p>";
+         data += "<p>Piso flotante en dormitorios y Sala de estar</p>";
+         data += "<p>Cocina equipada con encimera, horno con convector y campana piramidal</p>";
+         data += "<p>Cubierta de cocina Quarztone Blanco</p>";
+         data += "<p>Griferia Wasser en Baños y Roca en Cocina</p>";
+         data += "</div>";
+         data += "</div>";
+         data += '<div class="col">';
+         data += '<div class="card">';
+         data += "<h4>ESPACIOS INTEGRADOS</h4>";
+         data += "<p>Cocinas integradas y semi-integradas con el living comedor.</p>";
+         data += "<p>Amplio ventanal en living comedor que conecta con la terraza.</p>";
+         data += "<p>Cocina conectada directamente con zona de quincho (OPCIONAL).</p>";
+         data += "</div>";
+         data += "</div>";
+         data += "</div>";
+         
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
       }
    }
 
-    /*setTimeout(function(){
-      $(".s-i-"+id).addClass("expand");
-   },1000);*/
+   if(id == 3)//domotica
+   {
+      if(s == 1)
+      { 
+         data += '<div class="row">';
+         data += '<div class="col">';
+         data += '<div class="card">';
+         data += "<h4>DOMÓTICA</h4>";
+         data += "<p>Incluye: Kit Tamed con equipos FIBARO</p>";
+         data += "<p>Todas las casas incluyen cerradura eléctrica AUTOMATÍZATE</p>";
+         data += "<p>Home Center Lite 2</p>";
+         data += "<p>Motion Sensor: Sensor de movimiento, acelerómetro, temperatura y luminosidad</p>";
+         data += "<p>5 Dimmer 2 de FIBARO</p>";
+         data += "<p>Cámara IP Exterior D-LINK</p>";
+         data += "<p>Google Home Mini</p>";
+         data += "</div>";
+         data += "</div>";
+         data += '<div class="col">';
+         data += '<div class="card">';
+         data += "<h4>SEGURIDAD</h4>";
+         data += "<p>Control de acceso con App SafeCard en acceso comunidad Tierras Lindas.</p>";
+         data += "<p>Sistema de detector de patentes en acceso condominio Las Loicas I.</p>";
+         data += "<p> Sistema Foxtrot Seguridad en comunidad Tierras Lindas.</p>";
+         data += "</div>";
+         data += "</div>";
+
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      }
+   }
+
+   if(id == 7)//video
+   {
+      if(s == 1)
+      {    
+         data += '<video autoplay id="loicasvid" poster="img/play-icon.png">';
+         data += '<source src="video/loicas.mp4" type="video/mp4"/>';
+         data += '</video>';
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      }
+   }
+
+  
 }
 
 function goOutside(){
@@ -288,28 +395,23 @@ function goOutside(){
    interaction = localStorage.setItem("interaction","loicas");
 }
 
-function buildLoicas(){
-   
-   let maps = '';
-   maps += '<img src="img/icons-maps.png">';
-   maps += '<h4>Av. Santa Elena 200</h4>';
-   maps += '<h5>Barrio Santa Elena Chicureo</h5>';
+function hideSideNav(){
+   $("#sidenav-1").css("margin-left","-100%");
+   $("#sidenav-2").removeClass("fadeLeft");
+   $("#sidenav-2").addClass("fadeLeftOut");
+   $("#proyectos-container").fadeOut();
+   $("#proyectos-container").html("");
+   logocenter.innerHTML = '';
+   setTimeout(function(){
+      $("#sidenav-2").css("display","none");
+   },1000);
+}
 
+function buildLoicas(){
    $("#loicas").removeClass("fadeOut");
    $("#loicas").css("display","block");
-   $(".s-i-2 a").css('background-image','url(img/loicas/thumbs/terminaciones.jpg)');
-   $(".s-i-3 a").css('background-image','url(img/loicas/thumbs/galeria.jpg');
-   $(".s-i-4 a").css('background-image','url(img/loicas/thumbs/condominio.jpg');
-   $(".s-i-6 a").css('background-image','url(img/loicas/thumbs/casas.jpg');
-   $(".s-i-10 a").css('background-image','url(img/loicas/thumbs/patio.jpg');
-  
-   $(".s-i-9").html('');
-   $(".s-i-9").html('<a href="#">Video</a>');
-   $(".s-i-9 a").css('display','flex');
-   $(".s-i-9 a").css('background-image','url(img/loicas/thumbs/entrada.jpg');
-
-   $(".s-i-8 a").html(maps);
    interaction = localStorage.setItem("interaction","loicasinside");
+   goInside(1,7);
    showHome();
 }
 
