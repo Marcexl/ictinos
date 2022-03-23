@@ -580,6 +580,17 @@ li.s-i-8 a h3{
     max-height: 100vh;
 }
 
+.carousel{
+    background: url(../img/spinner.gif) no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 100px 100px;
+}
+
+.carousel-caption{
+    bottom:130px;
+}
+
 /* boxes */
 .circles{
     position: absolute;
