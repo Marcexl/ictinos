@@ -246,9 +246,9 @@ function goInside(s,id){
          data += '<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">';
          data += '<div class="carousel-indicators">';
          
-         for (let index = 0; index < 13; index++) 
+         for (let index = 1; index <= 16; index++) 
          {
-            if(index == 0)
+            if(index == 1)
             {
                data += '<button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="'+index+'" class="active" aria-current="true" aria-label="Slide 1"></button>';                  
             }
@@ -261,12 +261,12 @@ function goInside(s,id){
          data += '</div>';
          data += '<div class="carousel-inner">';
          
-         for (let index = 0; index < 13; index++) 
+         for (let index = 1; index <= 16; index++) 
          {
-            if(index == 0)
+            if(index == 1)
             {
                data += '<div class="carousel-item active" data-mdb-interval="5000">';
-               data += '<img src="img/loicas/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
+               data += '<img src="img/loicas/galeria/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
                data += '<div class="carousel-caption d-none d-md-block">';
                data += '<h5>First slide label</h5>';
                data += '<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>';
@@ -276,7 +276,7 @@ function goInside(s,id){
             else
             {
                data += '<div class="carousel-item" data-mdb-interval="5000">';
-               data += '<img src="img/loicas/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
+               data += '<img src="img/loicas/galeria/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
                data += '<div class="carousel-caption d-none d-md-block">';
                data += '<h5>First slide label</h5>';
                data += '<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>';
@@ -340,26 +340,25 @@ function goInside(s,id){
       if(s == 1)
       { 
          data += '<div class="row">';
-         data += '<div class="col">';
+         data += '<div class="col-4">';
          data += '<div class="card">';
-         data += "<h4>DOMÓTICA</h4>";
-         data += "<p>Incluye: Kit Tamed con equipos FIBARO</p>";
-         data += "<p>Todas las casas incluyen cerradura eléctrica AUTOMATÍZATE</p>";
-         data += "<p>Home Center Lite 2</p>";
-         data += "<p>Motion Sensor: Sensor de movimiento, acelerómetro, temperatura y luminosidad</p>";
-         data += "<p>5 Dimmer 2 de FIBARO</p>";
-         data += "<p>Cámara IP Exterior D-LINK</p>";
-         data += "<p>Google Home Mini</p>";
-         data += "</div>";
-         data += "</div>";
-         data += '<div class="col">';
-         data += '<div class="card">';
-         data += "<h4>SEGURIDAD</h4>";
-         data += "<p>Control de acceso con App SafeCard en acceso comunidad Tierras Lindas.</p>";
-         data += "<p>Sistema de detector de patentes en acceso condominio Las Loicas I.</p>";
-         data += "<p> Sistema Foxtrot Seguridad en comunidad Tierras Lindas.</p>";
-         data += "</div>";
-         data += "</div>";
+         data += '<h4>VIVE TU HOGAR SMART</h4>';
+         data += '<p><img src="img/logos/tamed.png"></p>';
+         data += '<p>Todas las casas incluyen cerradura eléctrica AUTOMATÍZATE</p>';
+         data += '<p>Home Center Lite 2</p>';
+         data += '<p>Motion Sensor: Sensor de movimiento, acelerómetro, temperatura y luminosidad</p>';
+         data += '<p>5 Dimmer 2 de FIBARO</p>';
+         data += '<p>Cámara IP Exterior D-LINK</p>';
+         data += '<p>Google Home Mini</p>';
+         data += '</div>';
+         data += '</div>';
+         data += '<div class="col-4">';
+         data += '<img src="img/domotica/001_1.jpg">';
+         data += '</div>';
+         data += '<div class="col-4">';
+         data += '<img src="img/domotica/001_2.jpg">';
+         data += '</div>';
+         data += '</div>';
 
          setTimeout(function(){
             $("#proyectos-container").html(data);

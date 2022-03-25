@@ -125,7 +125,7 @@ div:hover ~ #cursor{
     background: none;
     height: 80px;
     top:initial;
-    bottom: 60px;
+    bottom: 0;
     background: rgb(237,185,73);
     background: linear-gradient(180deg, rgba(237,185,73,1) 0%, rgba(218,140,39,1) 100%);
 }
@@ -591,6 +591,9 @@ li.s-i-8 a h3{
     bottom:130px;
 }
 
+.carousel-indicators{
+    bottom: 100px;
+}
 /* boxes */
 .circles{
     position: absolute;
