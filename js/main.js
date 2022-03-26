@@ -362,9 +362,9 @@ function goInside(s,id){
          data += '<div class="col-9">';
          data += '<img src="img/loicas/domotica.png">';
          data += '<div id="d-c-1" class="dom-circle" onclick="showPopover(1,\'Motion Sensor\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
-         data += '<div class="dom-circle" id="d-c-2"></div>';
-         data += '<div class="dom-circle" id="d-c-3"></div>';
-         data += '<div class="dom-circle" id="d-c-4"></div>';
+         data += '<div class="dom-circle" id="d-c-2" onclick="showPopover(2,\'Google Home Mini\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
+         data += '<div class="dom-circle" id="d-c-3" onclick="showPopover(3,\'Home Center 2\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
+         data += '<div class="dom-circle" id="d-c-4" onclick="showPopover(4,\'Camara IP Exterior\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
          data += '<p><img src="img/logos/tamed.png"></p>';
          data += '</div>';
          data += '</div>';
@@ -438,12 +438,34 @@ function showHome(){
    },300);
 }
 
-function showPopover(id,title,text){
+function showPopover(id,title,text)
+{
+   $(".pophover").fadeOut();
+
    if(pophover == 0)
    {
-      let idCircle = 'd-c-'+id;
-      $( "#"+idCircle  ).append( '<div class="pophover"><div class="pophover-header">'+title+'</div><p>'+text+'</p></div>' );
+      for (let index = 1; index < 5; index++) 
+      {
+         if(index < 4){
+            $( "#d-c-"+index).append( '<div class="pophover popleft" id="p-'+index+'" style="display:none;"><div class="pophover-header"></div><p></p></div>' );
+         }
+         else
+         {
+            $( "#d-c-"+index).append( '<div class="pophover poptop" id="p-'+index+'" style="display:none;"><div class="pophover-header"></div><p></p></div>' );
+         }
+      }
       pophover = 1;
+      
+      $("#p-"+id).css("display","block");
+      $("#p-"+id+" .pophover-header").html(title);
+      $("#p-"+id+" p").html(text);
+
+   }
+   else
+   {
+      $("#p-"+id).css("display","block");
+      $("#p-"+id + " .pophover-header").html(title);
+      $("#p-"+id + " p").html(text);
    }
 
 }
