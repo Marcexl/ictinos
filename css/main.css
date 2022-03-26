@@ -454,6 +454,24 @@ li.s-i-8 a h3{
     padding-top: 150px;
 }
 
+#proyectos-container .row.domotica{
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+#proyectos-container .row.domotica .col-3{
+    padding-right: 0;
+}
+
+#proyectos-container .row.domotica .col-9{
+    position: relative;
+    padding-left: 0;
+}
+
+#proyectos-container .row.domotica .col-9 img{
+    max-width: 100%;
+}
+
 #proyectos-container .row .col{
     padding: 15px 60px;
 }
@@ -466,8 +484,98 @@ li.s-i-8 a h3{
     color:#ebb547;
     margin-bottom: 30px;
 }
-/* gallery grid */
+.domotica h5,
+.domotica h4{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px auto;
+    width: 300px;
+}
 
+.domotica h4{
+    border-bottom: 3px solid #ebb346;
+}
+
+.domotica h5{
+    font-size: 1rem;
+}
+
+.domotica-list{
+    list-style-position: inside;
+    padding-top: 15px;
+    list-style-type: disc;
+}
+
+.domotica-list li{
+    font-size: 1.2rem;
+}
+
+.dom-circle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #ebb346;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.dom-circle:hover{
+    border: 3px solid #ff9900;
+}
+
+#d-c-1{
+    top: 145px;
+    left: 91px;
+}
+
+#d-c-2{
+    top: 446px;
+    left: 120px;
+}
+
+#d-c-3{
+    top: 520px;
+    left: 562px;
+}
+
+#d-c-4{
+    top: 165px;
+    left: 1031px;
+}
+
+.pophover{
+    position: relative;
+    animation: pop 1s ease-in-out 0s forwards;
+    background: white;
+    width: 300px;
+    border-radius: 0.5rem;
+    padding: 10px 10px;
+    margin-left: 0;
+    box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.39);
+    -webkit-box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.39);
+    -moz-box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.39);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.pophover-header{
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--mdb-gray-400);
+    margin-bottom: 5px;
+}
+
+.pophover::before{
+    content: '\25B2';
+    color: white;
+    position: absolute;
+    left: -11px;
+    transform: rotate(154deg);
+}
+
+/* gallery grid */
 .gallery{
     position: absolute;
     right: 140px;
@@ -854,6 +962,16 @@ i.social-item{
 #sidenav-2 ul li.expand{
     width: 100%;
     height: 100%;
+}
+
+@keyframes pop {
+    from{
+        opacity: 0;
+        margin-left: 0;
+    }to{
+        opacity: 1;
+        margin-left: 50px;
+    }
 }
 
 @keyframes load {

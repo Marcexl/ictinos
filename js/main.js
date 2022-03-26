@@ -5,6 +5,7 @@
 
 var interaction;
 var index;
+var pophover = 0;
 var cursor    = document.getElementById("cursor");
 var h         = 0;
 var hamburger = $('#square');
@@ -19,7 +20,8 @@ document.onmousemove = function(e){
    cursor.style.display = "block";
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
+
    /* clean cache */
    if(localStorage.getItem("interaction"))
    {
@@ -61,6 +63,7 @@ $( document ).ready(function() {
    function myHandler(e) {
       startGame(); 
    }
+
 
 });
 
@@ -239,7 +242,7 @@ function goInside(s,id){
    $("#proyectos-container").html('');
 
    let data = '';
-   if(id == 1)
+   if(id == 1)//galeria
    {
       if(s == 1)
       {
@@ -302,6 +305,7 @@ function goInside(s,id){
          },500);
       }
    }
+
    if(id == 2)//terminaciones
    {
       if(s == 1)
@@ -339,24 +343,29 @@ function goInside(s,id){
    {
       if(s == 1)
       { 
-         data += '<div class="row">';
-         data += '<div class="col-4">';
+         data += '<div class="row domotica">';
+         data += '<div class="col-3">';
          data += '<div class="card">';
          data += '<h4>VIVE TU HOGAR SMART</h4>';
+         data += '<h5>TODAS LAS CASAS INCLUYEN KIT DE DOMOTICA FIBARO</h5>';
+         data += '<ul class="domotica-list">';
+         data += '<li>Home Center Lite 2</li>';
+         data += '<li>Motion Sensor</li>';
+         data += '<li>Acelerómetro</li>';
+         data += '<li>Temperatura y luminosidad</li>';
+         data += '<li>5 Dimmer 2 de FIBARO</li>';
+         data += '<li>Cámara IP Exterior D-LINK</li>';
+         data += '<li>Google Home Mini</li>';
+         data += '</ul>';
+         data += '</div>';
+         data += '</div>';
+         data += '<div class="col-9">';
+         data += '<img src="img/loicas/domotica.png">';
+         data += '<div id="d-c-1" class="dom-circle" onclick="showPopover(1,\'Motion Sensor\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
+         data += '<div class="dom-circle" id="d-c-2"></div>';
+         data += '<div class="dom-circle" id="d-c-3"></div>';
+         data += '<div class="dom-circle" id="d-c-4"></div>';
          data += '<p><img src="img/logos/tamed.png"></p>';
-         data += '<p>Todas las casas incluyen cerradura eléctrica AUTOMATÍZATE</p>';
-         data += '<p>Home Center Lite 2</p>';
-         data += '<p>Motion Sensor: Sensor de movimiento, acelerómetro, temperatura y luminosidad</p>';
-         data += '<p>5 Dimmer 2 de FIBARO</p>';
-         data += '<p>Cámara IP Exterior D-LINK</p>';
-         data += '<p>Google Home Mini</p>';
-         data += '</div>';
-         data += '</div>';
-         data += '<div class="col-4">';
-         data += '<img src="img/domotica/001_1.jpg">';
-         data += '</div>';
-         data += '<div class="col-4">';
-         data += '<img src="img/domotica/001_2.jpg">';
          data += '</div>';
          data += '</div>';
 
@@ -429,3 +438,12 @@ function showHome(){
    },300);
 }
 
+function showPopover(id,title,text){
+   if(pophover == 0)
+   {
+      let idCircle = 'd-c-'+id;
+      $( "#"+idCircle  ).append( '<div class="pophover"><div class="pophover-header">'+title+'</div><p>'+text+'</p></div>' );
+      pophover = 1;
+   }
+
+}
