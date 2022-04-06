@@ -241,11 +241,15 @@ function goInside(s,id){
    $("#proyectos-container").fadeOut();
    $("#proyectos-container").html('');
 
-   let data = '';
+   let data    = '';
+   let proyect = '';
+   let caption = '';
    if(id == 1)//galeria
    {
       if(s == 1)
       {
+         proyect = 'Loicas';
+
          data += '<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">';
          data += '<div class="carousel-indicators">';
          
@@ -266,13 +270,13 @@ function goInside(s,id){
          
          for (let index = 1; index <= 16; index++) 
          {
+
             if(index == 1)
             {
                data += '<div class="carousel-item active" data-mdb-interval="5000">';
                data += '<img src="img/loicas/galeria/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
                data += '<div class="carousel-caption d-none d-md-block">';
-               data += '<h5>First slide label</h5>';
-               data += '<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>';
+               data += '<h5 id="loicas-caption-'+index+'"></h5>';
                data += '</div>';
                data += '</div>';
             }
@@ -281,8 +285,7 @@ function goInside(s,id){
                data += '<div class="carousel-item" data-mdb-interval="5000">';
                data += '<img src="img/loicas/galeria/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
                data += '<div class="carousel-caption d-none d-md-block">';
-               data += '<h5>First slide label</h5>';
-               data += '<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>';
+               data += '<h5 id="loicas-caption-'+index+'"></h5>';
                data += '</div>';
                data += '</div>';
             }
@@ -301,6 +304,7 @@ function goInside(s,id){
         
          setTimeout(function(){
             $("#proyectos-container").html(data);
+            loadCaption(16,proyect);
             $("#proyectos-container").fadeIn();
          },500);
       }
@@ -469,3 +473,24 @@ function showPopover(id,title,text)
    }
 
 }
+
+function loadCaption(cant,proyect){
+
+   let elem = '';
+   let dataString = '';
+   for (let index = 1; index <= cant; index++) 
+   {
+      dataString = '?id='+index+'&proyect='+proyect;
+      fetch('fetch/getCaption.php'+dataString)
+      .then(response => response.json())
+      .then(json => {
+         if(json['success'] == true)
+         {
+            elem = document.querySelector("#loicas-caption-"+index);
+            elem.innerHTML = json['caption'];
+         }
+      })
+   }
+   
+}
+ 

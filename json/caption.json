@@ -1,0 +1,57 @@
+{
+    "Loicas":{
+        "1":{"caption":"Cocina comedor - Casa C"},
+        "2":{"caption":"Fachada - Casa C"},
+        "3":{"caption":"Living comedor - Casa C"},
+        "4":{"caption":"Sala de estar segundo piso - Casa C"},
+        "5":{"caption":"Patio - Casa C"},
+        "6":{"caption":"Baño principal - Casa A"},
+        "7":{"caption":"Cocina - Casa A"},
+        "8":{"caption":"Cocina comedor - Casa A"},
+        "9":{"caption":"Dormitorio principal - Casa A"},
+        "10":{"caption":"Dormitorio niños - Casa A"},
+        "11":{"caption":"Fachada - Casa A"},
+        "12":{"caption":"Hall Acceso - Casa A"},
+        "13":{"caption":"Living - Casa A"},
+        "14":{"caption":"Patio - Casa A"},
+        "15":{"caption":"Sala de estar segundo piso Casa A"},
+        "16":{"caption":"Fachada - Casa A"}
+    },
+    "Piedras":{
+        "1":{"caption":"Cocina comedor - Casa C"},
+        "2":{"caption":"Fachada - Casa C"},
+        "3":{"caption":"Living comedor - Casa C"},
+        "4":{"caption":"Sala de estar segundo piso - Casa C"},
+        "5":{"caption":"Patio - Casa C"},
+        "6":{"caption":"Baño principal - Casa A"},
+        "7":{"caption":"Cocina - Casa A"},
+        "8":{"caption":"Cocina comedor - Casa A"},
+        "9":{"caption":"Dormitorio principal - Casa A"},
+        "10":{"caption":"Dormitorio niños - Casa A"},
+        "11":{"caption":"Fachada - Casa A"},
+        "12":{"caption":"Hall Acceso - Casa A"},
+        "13":{"caption":"Living - Casa A"},
+        "14":{"caption":"Patio - Casa A"},
+        "15":{"caption":"Sala de estar segundo piso Casa A"},
+        "16":{"caption":"Fachada - Casa A"}
+    },
+    "Macul":{
+        "1":{"caption":"Cocina comedor - Casa C"},
+        "2":{"caption":"Fachada - Casa C"},
+        "3":{"caption":"Living comedor - Casa C"},
+        "4":{"caption":"Sala de estar segundo piso - Casa C"},
+        "5":{"caption":"Patio - Casa C"},
+        "6":{"caption":"Baño principal - Casa A"},
+        "7":{"caption":"Cocina - Casa A"},
+        "8":{"caption":"Cocina comedor - Casa A"},
+        "9":{"caption":"Dormitorio principal - Casa A"},
+        "10":{"caption":"Dormitorio niños - Casa A"},
+        "11":{"caption":"Fachada - Casa A"},
+        "12":{"caption":"Hall Acceso - Casa A"},
+        "13":{"caption":"Living - Casa A"},
+        "14":{"caption":"Patio - Casa A"},
+        "15":{"caption":"Sala de estar segundo piso Casa A"},
+        "16":{"caption":"Fachada - Casa A"}
+    }
+
+}       

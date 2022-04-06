@@ -109,7 +109,6 @@ div:hover ~ #cursor{
 
 .sidenav-menu li a:hover{
     color:#ff9900;
-    background: rgb(242 242 242 / 30%);
     letter-spacing: 2px;
 }
 
@@ -147,6 +146,11 @@ div:hover ~ #cursor{
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+
+#sidenav-2 ul li:hover{
+    background: rgb(242 242 242 / 30%);
 }
 
 #sidenav-2 ul li a{
@@ -718,11 +722,19 @@ li.s-i-8 a h3{
 }
 
 .carousel-caption{
-    bottom:130px;
+    bottom:80px;
+}
+
+.carousel-caption h5{
+    font-size: 2.25rem;
 }
 
 .carousel-indicators{
     bottom: 100px;
+}
+
+.carousel-indicators{
+    display: none;
 }
 /* boxes */
 .circles{
