@@ -169,7 +169,9 @@ div:hover ~ #cursor{
 #sidenav-2 ul li a:hover{
     letter-spacing: normal;
 }
-
+#sidenav-2 ul li.active{
+    background: rgb(45, 45, 45);
+}
 /*
 li.s-i-1{
     background: #303030;
@@ -213,6 +215,7 @@ li.s-i-8 a h3{
     color: #090909;
     font-size: 1rem;
 }*/
+
 .logo-center{
     position: fixed;
     width: 300px;
@@ -735,6 +738,55 @@ li.s-i-8 a h3{
 
 .carousel-indicators{
     display: none;
+}
+/* casas */
+#v-tabs-tab{
+    margin-top: 50px;
+}
+
+.nav-tabs .nav-link{
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active {
+    background: linear-gradient(180deg, rgba(237,185,73,1) 0%, rgba(218,140,39,1) 100%);
+    border:none;
+    color: white;
+    background-color: #f5f5f5;
+}
+
+.casas{
+    max-width: 100%;
+
+}
+#proyectos-container .casas-row{
+    padding-top: 250px;
+}
+
+#proyectos-container .casas-tab{
+    padding-top: 0;
+}
+
+.casas-tab .col-3 h4{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.casas-tab .col-3 h4:first-child{
+    margin-top: 50px;
+    padding-top: 100px;
+}
+
+.casas-tab .col-3 ul{
+    padding: 0;
+    list-style: none;
+}
+
+.casas-tab .col-3 ul li {
+    font-size: 1.2rem;
+    padding: 5px 0;
 }
 /* boxes */
 .circles{

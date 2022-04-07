@@ -238,12 +238,17 @@ function hideBoxesBackground(){
 
 function goInside(s,id){
    //showArrows();
+   $(".sidenav-item").removeClass("active");
+   $(".s-i-"+id).addClass("active");
    $("#proyectos-container").fadeOut();
    $("#proyectos-container").html('');
 
    let data    = '';
    let proyect = '';
    let caption = '';
+   let clas = '';
+   let c = 0;
+
    if(id == 1)//galeria
    {
       if(s == 1)
@@ -380,6 +385,78 @@ function goInside(s,id){
       }
    }
 
+   if(id == 5)//casas
+   {
+      if(s == 1)
+      {    
+         fetch('json/casas.json')
+         .then(response => response.json())
+         .then(json => {
+            data += '<div class="row casas-row">';
+            data += '<div class="col-2" style="width:15%;padding-right:0;">';
+            data += '<div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">';
+            for(var clave in json['Loicas'])
+            {
+               c++
+               if(c == 1)
+               {
+                  data += '<a class="nav-link active" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-'+c+'" role="tab" aria-controls="v-tabs-'+c+'" aria-selected="true">'+json['Loicas'][clave]['title']+'</a>';
+               }
+               else
+               {
+                  data += '<a class="nav-link" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-'+c+'" role="tab" aria-controls="v-tabs-'+c+'" aria-selected="true">'+json['Loicas'][clave]['title']+'</a>';
+               }
+            }
+            data += '</div></div>';
+            data += '<div class="col-10" style="width:85%;">';
+            data += '<div class="tab-content" id="v-tabs-tabContent">';  
+            c = 0;
+            for(var clave in json['Loicas'])
+            {
+               c++
+               if(c == 1)
+               {
+                  clas = 'show active'; 
+               }
+               else
+               {
+                  clas = '';
+               }
+
+               data += '<div class="tab-pane fade '+clas+'" id="v-tabs-'+c+'" role="tabpanel" aria-labelledby="v-tabs-'+c+'">';
+               data += '<div class="row casas-tab">';
+               data += '<div class="col-9">';
+               data += '<img src="img/loicas/casas/'+c+'.jpg" class="casas">';
+               data += '</div>';  
+               data += '<div class="col-3">';
+               data += '<h4>'+json['Loicas'][clave]['ambientes']+'</h4>';
+               data += '<h4>'+json['Loicas'][clave]['banos']+'</h4>';
+               data += '<h5>'+json['Loicas'][clave]['subtitle']+'</h5>';
+               data += '<ul>';
+               for(var subclave in json['Loicas'][clave]['superficie'])
+               {
+                  data += '<li>'+json['Loicas'][clave]['superficie'][subclave]+'</li>';
+               }
+               data += '</ul>';
+               data += '</div></div></div>';  
+            }
+
+            data +='</div></div></div>';
+            setTimeout(function(){
+               $("#proyectos-container").html(data);
+               $("#proyectos-container").fadeIn();
+            },500);
+         })
+
+        
+         fetch('json/casas.json')
+         .then(response => response.json())
+         .then(json => {
+         })
+         
+      }
+   }
+
    if(id == 7)//video
    {
       if(s == 1)
@@ -393,8 +470,6 @@ function goInside(s,id){
          },500);
       }
    }
-
-  
 }
 
 function goOutside(){
@@ -491,6 +566,6 @@ function loadCaption(cant,proyect){
          }
       })
    }
-   
 }
+
  

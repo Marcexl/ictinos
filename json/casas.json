@@ -1,0 +1,224 @@
+{
+    "Loicas":{
+        "1":{
+            "title":"Casa A",
+            "ambientes":"3 Dormitorios",
+            "banos":"4 Baños",
+            "subtitle":"Casa A - 139",
+            "superficie": [
+                "Superficie Piso 1: 90,65 m2 aprox",
+                "Superficie Piso 2: 49,97 m2 aprox",
+                "Superficie Útil Total: 140,62 m2 aprox",
+                "Superficie Municipal: 139,51 m2 aprox"
+                ]
+        },
+        "2":{
+            "title":"Casa A1",
+            "ambientes":"3 Dormitorios",
+            "banos":"4 Baños",
+            "subtitle":"Casa A1 - 139",
+            "superficie": [
+                "Superficie Piso 1: 90,65 m2 aprox",
+                "Superficie Piso 2: 49,97 m2 aprox",
+                "Superficie Útil Total: 140,62 m2 aprox",
+                "Superficie Municipal: 139,51 m2 aprox"
+                ]
+        },
+        "3":{
+            "title":"Casa B",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa B - 127",
+            "superficie": [
+                "Superficie Piso 1: 83,84 m2 aprox",
+                "Superficie Piso 2: 44,99 m2 aprox",
+                "Superficie Útil Total: 128,83 m2 aprox",
+                "Superficie Municipal: 126,98 m2 aprox"
+                ]
+        },
+        "4":{
+            "title":"Casa B1",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa B1 - 127",
+            "superficie":[
+                "Superficie Piso 1: 83,84 m2 aprox",
+                "Superficie Piso 2: 44,99 m2 aprox",
+                "Superficie Útil Total: 128,83 m2 aprox",
+                "Superficie Municipal: 126,98 m2 aprox"
+                ]
+        },
+        "5":{
+            "title":"Casa C",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa C - 116",
+            "superficie": [
+                "Superficie Piso 1: 74,32 m2 aprox",
+                "Superficie Piso 2: 45,67 m2 aprox",
+                "Superficie Útil Total: 119,99 m2 aprox",
+                "Superficie Municipal: 116,53 m2 aprox"
+                ]
+        },
+        "6":{
+            "title":"Casa C1",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa C1 - 116",
+            "superficie": [
+                "Superficie Piso 1: 74,32 m2 aprox",
+                "Superficie Piso 2: 45,67 m2 aprox",
+                "Superficie Útil Total: 119,99 m2 aprox",
+                "Superficie Municipal: 116,53 m2 aprox"
+                ]
+        }
+    },
+    "Piedras":{
+        "1":{
+            "title":"Casa A",
+            "ambientes":"3 Dormitorios",
+            "banos":"4 Baños",
+            "subtitle":"Casa A - 139",
+            "superficie:": [
+                "Superficie Piso 1: 90,65 m2 aprox",
+                "Superficie Piso 2: 49,97 m2 aprox",
+                "Superficie Útil Total: 140,62 m2 aprox",
+                "Superficie Municipal: 139,51 m2 aprox"
+                ]
+        },
+        "2":{
+            "title":"Casa A1",
+            "ambientes":"3 Dormitorios",
+            "banos":"4 Baños",
+            "subtitle":"Casa A1 - 139",
+            "superficie:": [
+                "Superficie Piso 1: 90,65 m2 aprox",
+                "Superficie Piso 2: 49,97 m2 aprox",
+                "Superficie Útil Total: 140,62 m2 aprox",
+                "Superficie Municipal: 139,51 m2 aprox"
+                ]
+        },
+        "3":{
+            "title":"Casa B",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa B - 127",
+            "superficie:": [
+                "Superficie Piso 1: 83,84 m2 aprox",
+                "Superficie Piso 2: 44,99 m2 aprox",
+                "Superficie Útil Total: 128,83 m2 aprox",
+                "Superficie Municipal: 126,98 m2 aprox"
+                ]
+        },
+        "4":{
+            "title":"Casa B1",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa B1 - 127",
+            "superficie:": [
+                "Superficie Piso 1: 83,84 m2 aprox",
+                "Superficie Piso 2: 44,99 m2 aprox",
+                "Superficie Útil Total: 128,83 m2 aprox",
+                "Superficie Municipal: 126,98 m2 aprox"
+                ]
+        },
+        "5":{
+            "title":"Casa C",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa C - 116",
+            "superficie:": [
+                "Superficie Piso 1: 74,32 m2 aprox",
+                "Superficie Piso 2: 45,67 m2 aprox",
+                "Superficie Útil Total: 119,99 m2 aprox",
+                "Superficie Municipal: 116,53 m2 aprox"
+                ]
+        },
+        "6":{
+            "title":"Casa C1",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa C1 - 116",
+            "superficie:": [
+                "Superficie Piso 1: 74,32 m2 aprox",
+                "Superficie Piso 2: 45,67 m2 aprox",
+                "Superficie Útil Total: 119,99 m2 aprox",
+                "Superficie Municipal: 116,53 m2 aprox"
+                ]
+        }
+    },
+    "Macul":{
+        "1":{
+            "title":"Casa A",
+            "ambientes":"3 Dormitorios",
+            "banos":"4 Baños",
+            "subtitle":"Casa A - 139",
+            "superficie:": [
+                "Superficie Piso 1: 90,65 m2 aprox",
+                "Superficie Piso 2: 49,97 m2 aprox",
+                "Superficie Útil Total: 140,62 m2 aprox",
+                "Superficie Municipal: 139,51 m2 aprox"
+                ]
+        },
+        "2":{
+            "title":"Casa A1",
+            "ambientes":"3 Dormitorios",
+            "banos":"4 Baños",
+            "subtitle":"Casa A1 - 139",
+            "superficie:": [
+                "Superficie Piso 1: 90,65 m2 aprox",
+                "Superficie Piso 2: 49,97 m2 aprox",
+                "Superficie Útil Total: 140,62 m2 aprox",
+                "Superficie Municipal: 139,51 m2 aprox"
+                ]
+        },
+        "3":{
+            "title":"Casa B",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa B - 127",
+            "superficie:": [
+                "Superficie Piso 1: 83,84 m2 aprox",
+                "Superficie Piso 2: 44,99 m2 aprox",
+                "Superficie Útil Total: 128,83 m2 aprox",
+                "Superficie Municipal: 126,98 m2 aprox"
+                ]
+        },
+        "4":{
+            "title":"Casa B1",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa B1 - 127",
+            "superficie:": [
+                "Superficie Piso 1: 83,84 m2 aprox",
+                "Superficie Piso 2: 44,99 m2 aprox",
+                "Superficie Útil Total: 128,83 m2 aprox",
+                "Superficie Municipal: 126,98 m2 aprox"
+                ]
+        },
+        "5":{
+            "title":"Casa C",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa C - 116",
+            "superficie:": [
+                "Superficie Piso 1: 74,32 m2 aprox",
+                "Superficie Piso 2: 45,67 m2 aprox",
+                "Superficie Útil Total: 119,99 m2 aprox",
+                "Superficie Municipal: 116,53 m2 aprox"
+                ]
+        },
+        "6":{
+            "title":"Casa C1",
+            "ambientes":"3 Dormitorios",
+            "banos":"3 Baños",
+            "subtitle":"Casa C1 - 116",
+            "superficie:": [
+                "Superficie Piso 1: 74,32 m2 aprox",
+                "Superficie Piso 2: 45,67 m2 aprox",
+                "Superficie Útil Total: 119,99 m2 aprox",
+                "Superficie Municipal: 116,53 m2 aprox"
+                ]
+        }
+    }
+}    
