@@ -461,9 +461,9 @@ li.s-i-8 a h3{
     padding-top: 150px;
 }
 
-#proyectos-container .row.domotica{
-    padding-right: 5px;
-    padding-left: 10px;
+#proyectos-container .domotica-col{
+    display: flex;
+    justify-content: center;
 }
 
 #proyectos-container .row.domotica .col-3{
@@ -483,7 +483,7 @@ li.s-i-8 a h3{
 }
 
 #proyectos-container .row .col{
-    padding: 15px 60px;
+    padding: 15px 0px;
 }
 
 #proyectos-container .row .col .card{
@@ -520,6 +520,23 @@ li.s-i-8 a h3{
     font-size: 1.2rem;
 }
 
+.domotica-back{
+    width: 1871px;
+    display: block;
+    margin: 0;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.dom-circle-container{
+    width: 1871px;
+    height: 609px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+}
+
 .dom-circle{
     position: absolute;
     width: 50px;
@@ -529,37 +546,18 @@ li.s-i-8 a h3{
     z-index: 1;
     cursor: pointer;
     transition: all .3s;
+    animation: shining 3s ease-in-out 0s infinite;
 }
 
 .dom-circle:hover{
     border: 3px solid #ff9900;
 }
 
-#d-c-1{
-    top: 153px;
-    left: 96px;
-}
-
-#d-c-2{
-    top: 469px;
-    left: 126px;
-}
-
-#d-c-3{
-    top: 547px;
-    left: 589px;
-}
-
-#d-c-4{
-    top: 174px;
-    left: 1080px;
-}
-
 .pophover{
     position: relative;
     background: white;
     width: 300px;
-    height: 140px;
+    min-height: 140px;
     border-radius: 0.5rem;
     padding: 10px 10px;
     box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.39);
@@ -578,6 +576,12 @@ li.s-i-8 a h3{
     animation: poptop .5s ease-in-out 0s forwards;
     margin-left: -125px;
     margin-top: -195px;
+}
+
+.pophover.popbottom{
+    animation: popbottom .5s ease-in-out 0s forwards;
+    margin-left: -125px;
+    margin-top: 10px;
 }
 
 .pophover-header{
@@ -603,6 +607,16 @@ li.s-i-8 a h3{
     bottom: -18px;
     transform: rotate(180deg);
 }
+
+.pophover.popbottom::before{
+    content: '\25B2';
+    color: white;
+    position: absolute;
+    top: -18px;
+    left: 140px;
+    transform: rotate(0deg);
+}
+
 
 /* gallery grid */
 .gallery{
@@ -1070,6 +1084,16 @@ i.social-item{
     }
 }
 
+@keyframes popbottom {
+    from{
+        opacity: 0;
+        margin-top: 10px;
+    }to{
+        opacity: 1;
+        margin-top: 60px;
+    }
+}
+
 @keyframes load {
     from{
         width: 0;
@@ -1182,3 +1206,14 @@ i.social-item{
     }
 }
 
+@keyframes shining {
+    0%{
+        border: 3px solid #ebb346;
+    }
+    50%{
+        border: 3px solid #dbbe85;
+    }
+    100%{
+        border: 3px solid #ebb346;
+    }
+}

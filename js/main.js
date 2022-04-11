@@ -248,6 +248,7 @@ function goInside(s,id){
    let caption = '';
    let clas = '';
    let c = 0;
+   let d = 0;
 
    if(id == 1)//galeria
    {
@@ -352,36 +353,28 @@ function goInside(s,id){
    {
       if(s == 1)
       { 
-         data += '<div class="row domotica">';
-         data += '<div class="col-3">';
-         data += '<div class="card">';
-         data += '<h4>VIVE TU HOGAR SMART</h4>';
-         data += '<h5>TODAS LAS CASAS INCLUYEN KIT DE DOMOTICA FIBARO</h5>';
-         data += '<ul class="domotica-list">';
-         data += '<li>Home Center Lite 2</li>';
-         data += '<li>Motion Sensor</li>';
-         data += '<li>Acelerómetro</li>';
-         data += '<li>Temperatura y luminosidad</li>';
-         data += '<li>5 Dimmer 2 de FIBARO</li>';
-         data += '<li>Cámara IP Exterior D-LINK</li>';
-         data += '<li>Google Home Mini</li>';
-         data += '</ul>';
-         data += '</div>';
-         data += '</div>';
-         data += '<div class="col-9">';
-         data += '<img src="img/loicas/domotica.png">';
-         data += '<div id="d-c-1" class="dom-circle" onclick="showPopover(1,\'Motion Sensor\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
-         data += '<div class="dom-circle" id="d-c-2" onclick="showPopover(2,\'Google Home Mini\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
-         data += '<div class="dom-circle" id="d-c-3" onclick="showPopover(3,\'Home Center 2\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
-         data += '<div class="dom-circle" id="d-c-4" onclick="showPopover(4,\'Camara IP Exterior\',\'Lorem Ipsum is simply dummy text of the printing and typesetting industry\')"></div>';
-         data += '<p><img src="img/logos/tamed.png"></p>';
-         data += '</div>';
-         data += '</div>';
 
-         setTimeout(function(){
-            $("#proyectos-container").html(data);
-            $("#proyectos-container").fadeIn();
-         },500);
+         fetch('json/domotica.json')
+         .then(response => response.json())
+         .then(json => {
+            data += '<div class="row domotica">';
+            data += '<div class="col domotica-col">';
+            data += '<img src="img/loicas/domotica/1.png" class="domotica-back">';
+            data += '<div class="dom-circle-container">';
+            for(var clave in json['Loicas']){
+               d++;
+               data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json['Loicas'][clave]['style']+'" onclick="showPopover('+d+',\''+json['Loicas'][clave]['title']+'\',\''+json['Loicas'][clave]['description']+'\')">';
+               data += '<div class="pophover '+json['Loicas'][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+               
+            }
+            data += '</div>';
+            data += '</div>';
+            data += '</div>';
+            setTimeout(function(){
+               $("#proyectos-container").html(data);
+               $("#proyectos-container").fadeIn();
+            },500);
+         })
       }
    }
 
@@ -446,12 +439,6 @@ function goInside(s,id){
                $("#proyectos-container").html(data);
                $("#proyectos-container").fadeIn();
             },500);
-         })
-
-        
-         fetch('json/casas.json')
-         .then(response => response.json())
-         .then(json => {
          })
          
       }
@@ -520,33 +507,9 @@ function showHome(){
 function showPopover(id,title,text)
 {
    $(".pophover").fadeOut();
-
-   if(pophover == 0)
-   {
-      for (let index = 1; index < 5; index++) 
-      {
-         if(index < 4){
-            $( "#d-c-"+index).append( '<div class="pophover popleft" id="p-'+index+'" style="display:none;"><div class="pophover-header"></div><p></p></div>' );
-         }
-         else
-         {
-            $( "#d-c-"+index).append( '<div class="pophover poptop" id="p-'+index+'" style="display:none;"><div class="pophover-header"></div><p></p></div>' );
-         }
-      }
-      pophover = 1;
-      
-      $("#p-"+id).css("display","block");
-      $("#p-"+id+" .pophover-header").html(title);
-      $("#p-"+id+" p").html(text);
-
-   }
-   else
-   {
-      $("#p-"+id).css("display","block");
-      $("#p-"+id + " .pophover-header").html(title);
-      $("#p-"+id + " p").html(text);
-   }
-
+   $("#p-"+id).css("display","block");
+   $("#p-"+id+" .pophover-header").html(title);
+   $("#p-"+id+" p").html(text);
 }
 
 function loadCaption(cant,proyect){
