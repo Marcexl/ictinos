@@ -617,6 +617,23 @@ li.s-i-8 a h3{
     transform: rotate(0deg);
 }
 
+/* conectividad */
+
+.conect-img{
+    display: block;
+    margin: 0 auto;
+}
+.accesos{
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-top: 150px;
+}
+
+.accesos li{
+    padding: 5px 0;
+    font-size: 1.3rem;
+}
+
 
 /* gallery grid */
 .gallery{

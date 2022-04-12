@@ -188,13 +188,14 @@ function proyectShow(id)
    const logos  = ['','loicas.png','piedra.jpg','macul.jpg'];
    logocenter.innerHTML = `<img src="img/logos/${logos[id]}"/>`;
 
-   let menunav  = '<li class="sidenav-item s-i-1" onclick="goInside(1,1)"><a href="#">Galeria</a></li>';
-       menunav += '<li class="sidenav-item s-i-2" onclick="goInside(1,2)"><a href="#">Terminaciones</a></li>';
-       menunav += '<li class="sidenav-item s-i-3" onclick="goInside(1,3)"><a href="#">Domotica</a></li>';
-       menunav += '<li class="sidenav-item s-i-4" onclick="goInside(1,4)"><a href="#">Condominio</a></li>';
-       menunav += '<li class="sidenav-item s-i-5" onclick="goInside(1,5)"><a href="#">Casas</a></li>';
-       menunav += '<li class="sidenav-item s-i-6" onclick="goInside(1,6)"><a href="#">Entorno</a></li>';
-       menunav += '<li class="sidenav-item s-i-7" onclick="goInside(1,7)"><a href="#">Video</a></li>';
+   let menunav  = '<li class="sidenav-item s-i-1" onclick="goInside('+id+',1)"><a href="#">Galeria</a></li>';
+       menunav += '<li class="sidenav-item s-i-2" onclick="goInside('+id+',2)"><a href="#">Terminaciones</a></li>';
+       menunav += '<li class="sidenav-item s-i-3" onclick="goInside('+id+',3)"><a href="#">Domotica</a></li>';
+       menunav += '<li class="sidenav-item s-i-4" onclick="goInside('+id+',4)"><a href="#">Condominio</a></li>';
+       menunav += '<li class="sidenav-item s-i-5" onclick="goInside('+id+',5)"><a href="#">Casas</a></li>';
+       menunav += '<li class="sidenav-item s-i-6" onclick="goInside('+id+',6)"><a href="#">Entorno</a></li>';
+       menunav += '<li class="sidenav-item s-i-8" onclick="goInside('+id+',8)"><a href="#">Conectividad</a></li>';
+       menunav += '<li class="sidenav-item s-i-7" onclick="goInside('+id+',7)"><a href="#">Video</a></li>';
 
    let elem = document.querySelector("#sidenav-2"); 
    elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
@@ -457,6 +458,36 @@ function goInside(s,id){
          },500);
       }
    }
+
+   if(id == 8)//video
+   {
+      if(s == 1)
+      {    
+         fetch('json/conectividad.json')
+         .then(response => response.json())
+         .then(json => {
+            data += '<div class="row">';
+            data += '<div class="col-6">';
+            data += '<img src="img/loicas/conectividad/1.jpg" class="conect-img">';
+            data += '</div>';  
+            data += '<div class="col-6">';
+            data += '<ul class="accesos">';
+            for(var clave in json['Loicas'][1]['accesos'])
+            {
+               data += '<li>'+json['Loicas'][1]['accesos'][clave]+'</li>';
+            }
+            data += '</ul>';
+            data += '</div></div>';  
+            
+            setTimeout(function(){
+               $("#proyectos-container").html(data);
+               $("#proyectos-container").fadeIn();
+            },500);
+         })
+      }
+   }
+
+
 }
 
 function goOutside(){
