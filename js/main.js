@@ -321,32 +321,39 @@ function goInside(s,id){
    {
       if(s == 1)
       { 
-         data += '<div class="row">';
-         data += '<div class="col">';
-         data += '<div class="card">';
-         data += "<h4>TERMINACIONES</h4>";
-         data += "<p>Ventanas PVC con Termopanel, foliada tipo madera</p>";
-         data += "<p>Porcelanato en Living Comerdor, Hall de acceso, Terrazas, baños y cocina</p>";
-         data += "<p>Piso flotante en dormitorios y Sala de estar</p>";
-         data += "<p>Cocina equipada con encimera, horno con convector y campana piramidal</p>";
-         data += "<p>Cubierta de cocina Quarztone Blanco</p>";
-         data += "<p>Griferia Wasser en Baños y Roca en Cocina</p>";
-         data += "</div>";
-         data += "</div>";
-         data += '<div class="col">';
-         data += '<div class="card">';
-         data += "<h4>ESPACIOS INTEGRADOS</h4>";
-         data += "<p>Cocinas integradas y semi-integradas con el living comedor.</p>";
-         data += "<p>Amplio ventanal en living comedor que conecta con la terraza.</p>";
-         data += "<p>Cocina conectada directamente con zona de quincho (OPCIONAL).</p>";
-         data += "</div>";
-         data += "</div>";
-         data += "</div>";
-         
-         setTimeout(function(){
-            $("#proyectos-container").html(data);
-            $("#proyectos-container").fadeIn();
-         },500);
+
+         fetch('json/terminaciones.json')
+         .then(response => response.json())
+         .then(json => {
+            data += '<div class="row">';
+            data += '<div class="col">';
+            data += '<div class="card" style="margin:30px">';
+            data += "<h4>TERMINACIONES</h4>";
+            for(var clave in json['Loicas']['terminaciones'])
+            {
+               data += '<p>'+json['Loicas']['terminaciones'][clave]+'</p>';
+            }
+            data += '</div>';
+            data += '</div>';
+            
+            data += '<div class="col">';
+            data += '<div class="card" style="margin:30px">';
+            data += "<h4>ESPACIOS INTEGRADOS</h4>";
+
+            for(var clave in json['Loicas']['espacios'])
+            {
+               data += '<p>'+json['Loicas']['espacios'][clave]+'</p>';
+            }
+
+            data += "</div>";
+            data += "</div>";
+            data += "</div>";
+
+            setTimeout(function(){
+               $("#proyectos-container").html(data);
+               $("#proyectos-container").fadeIn();
+            },500);
+         })
       }
    }
 
@@ -374,6 +381,76 @@ function goInside(s,id){
             setTimeout(function(){
                $("#proyectos-container").html(data);
                $("#proyectos-container").fadeIn();
+            },500);
+         })
+      }
+   }
+
+   if(id == 4)//condominio
+   {
+      if(s == 1)
+      { 
+
+         fetch('json/condominio.json')
+         .then(response => response.json())
+         .then(json => {
+            data += '<div class="row condo-row" style="padding-top:250px;">';
+            data += '<div class="col-6" style="padding:30px;text-align: center;">';
+            data += json['Loicas']['title'];
+            data += '<div class="line"></div>';
+            data += json['Loicas']['subtitle'];
+            data += '</div>';
+            data += '<div class="col-6" style="padding:30px;">';
+            data += '<ul class="condominio-list">';
+            for(var clave in json['Loicas']['entorno'])
+            {
+               data += '<li>'+json['Loicas']['entorno'][clave]+'</li>';
+            }
+            data += '</ul>';
+
+            data += '<h5>SEGURIDAD</h5>';
+            data += '<ul class="condominio-list">';
+            for(var clave in json['Loicas']['seguridad'])
+            {
+               data += '<li>'+json['Loicas']['seguridad'][clave]+'</li>';
+            }
+
+            data += '</ul>';
+            data += '</div>';
+            data += '</div>';
+            data += '<div class="row condo-row">';
+            data += '<div class="col">';
+            data += '<div class="owl-carousel owl-theme">';
+
+            for (let index = 1; index <= 6; index++) 
+            {
+               data += '<div class="item">';
+               data += '<img src="img/loicas/thumbs/'+index+'.jpg" alt="Table Full of Spices"/>';
+               data += '</div>';               
+            }  
+            data += '</div>';
+            data += '</div>';
+            data += '</div>';
+
+            setTimeout(function(){
+               $("#proyectos-container").html(data);
+               $("#proyectos-container").fadeIn();
+               $('.owl-carousel').owlCarousel({
+                  loop:true,
+                  margin:10,
+                  nav:true,
+                  responsive:{
+                      0:{
+                          items:1
+                      },
+                      600:{
+                          items:3
+                      },
+                      1000:{
+                          items:5
+                      }
+                  }
+              })
             },500);
          })
       }
@@ -445,6 +522,34 @@ function goInside(s,id){
       }
    }
 
+   if(id == 6) //entorno
+   {
+      if(s == 1)
+      {    
+         fetch('json/entorno.json')
+         .then(response => response.json())
+         .then(json => {
+            data += '<div class="row">';
+            data += '<div class="col-8">';
+            data += '<img src="img/loicas/entorno/1.jpg" class="conect-img">';
+            data += '</div>';  
+            data += '<div class="col-4">';
+            data += '<ul class="accesos">';
+            for(var clave in json['Loicas']['accesos'])
+            {
+               data += '<li>'+json['Loicas']['accesos'][clave]+'</li>';
+            }
+            data += '</ul>';
+            data += '</div></div>';  
+            
+            setTimeout(function(){
+               $("#proyectos-container").html(data);
+               $("#proyectos-container").fadeIn();
+            },500);
+         })
+      }
+   }
+
    if(id == 7)//video
    {
       if(s == 1)
@@ -459,7 +564,7 @@ function goInside(s,id){
       }
    }
 
-   if(id == 8)//video
+   if(id == 8)//conectividad
    {
       if(s == 1)
       {    
@@ -472,9 +577,9 @@ function goInside(s,id){
             data += '</div>';  
             data += '<div class="col-6">';
             data += '<ul class="accesos">';
-            for(var clave in json['Loicas'][1]['accesos'])
+            for(var clave in json['Loicas']['accesos'])
             {
-               data += '<li>'+json['Loicas'][1]['accesos'][clave]+'</li>';
+               data += '<li>'+json['Loicas']['accesos'][clave]+'</li>';
             }
             data += '</ul>';
             data += '</div></div>';  
@@ -486,6 +591,8 @@ function goInside(s,id){
          })
       }
    }
+
+
 
 
 }

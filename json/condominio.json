@@ -1,0 +1,41 @@
+{
+    "Loicas":{
+        "title":"<h3>AMPLIOS ESPACIOS</h3> <h4>PARA TODA TU FAMILIA</h4>",
+        "subtitle":"<h4>VIVE EN UN BARRIO EXCLUSIVO</h4><h4>A MINUTOS DE SANTIAGO</h4>",
+        "entorno": [
+            "Entorno privilegiado",
+            "Areas de juegos infantiles"
+        ],
+        "seguridad": [
+            "Control de acceso de APP SafeCard a comunidad Tierras Lindas",
+            "Sistema de lector de patentes en Acceso Condominio Las Loicas 1",
+            "Seguridad por Foxtrot  en comunidad Tierras Lindas"
+        ]
+    },
+    "Piedras":{
+        "title":"<h3>AMPLIOS ESPACIOS</h3> <h4>PARA TODA TU FAMILIA</h4>",
+        "subtitle":"<h4>VIVE EN UN BARRIO EXCLUSIVO</h4><h4>A MINUTOS DE SANTIAGO</h4>",
+        "entorno": [
+            "Entorno privilegiado",
+            "Areas de juegos infantiles"
+        ],
+        "seguridad": [
+            "Control de acceso de APP SafeCard a comunidad Tierras Lindas",
+            "Sistema de lector de patentes en Acceso Condominio Las Loicas 1",
+            "Seguridad por Foxtrot  en comunidad Tierras Lindas"
+        ]  
+    },
+    "Macul":{
+        "title":"<h3>AMPLIOS ESPACIOS</h3> <h4>PARA TODA TU FAMILIA</h4>",
+        "subtitle":"<h4>VIVE EN UN BARRIO EXCLUSIVO</h4><h4>A MINUTOS DE SANTIAGO</h4>",
+        "entorno": [
+            "Entorno privilegiado",
+            "Areas de juegos infantiles"
+        ],
+        "seguridad": [
+            "Control de acceso de APP SafeCard a comunidad Tierras Lindas",
+            "Sistema de lector de patentes en Acceso Condominio Las Loicas 1",
+            "Seguridad por Foxtrot  en comunidad Tierras Lindas"
+        ]
+    }
+}    

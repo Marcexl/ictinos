@@ -1,0 +1,35 @@
+{
+    "Loicas":{
+        "accesos": [
+            "Cerros con circuitos para trekking (administrado por la Asociación de Parques Cordillera)",
+            "Flora y fauna nativa",
+            "Petroglifos en zona de farellones",
+            "Laguna con parque",
+            "Parques naturales Tierras Lindas diseñado por paisajista Royston Hanamoto Alley & Abey",
+            "Strip center Go Market",
+            "Club deportivo Santa Elena (tenis, futbol, futbolito, gimnasio)",
+            "Colegio Pumahue",
+            "Jardín infantil y sala cuna Arboleda"
+        ]
+    },
+    "Piedras":{
+        "accesos": [
+            "Excelente conectividad y a solo 25 minutos de Santiago por la autopista Los Libertadores",
+            "Autopista Los Libertadores enlace Santa Elena",
+            "Buses de acercamiento a estaciones de Metro Los Libertadores (Línea 3) y Vespucio Norte (Línea 2)", 
+            "Autopista Ruta 5 Norte vía ruta Liray o Ruta Santa María - Lo Pinto",
+            "Autopista vespucio Norte a minutos",
+            "Acceso a sector oriente vía Autopista Nororiente"
+        ]
+    },
+    "Macul":{
+        "accesos": [
+            "Excelente conectividad y a solo 25 minutos de Santiago por la autopista Los Libertadores",
+            "Autopista Los Libertadores enlace Santa Elena",
+            "Buses de acercamiento a estaciones de Metro Los Libertadores (Línea 3) y Vespucio Norte (Línea 2)", 
+            "Autopista Ruta 5 Norte vía ruta Liray o Ruta Santa María - Lo Pinto",
+            "Autopista vespucio Norte a minutos",
+            "Acceso a sector oriente vía Autopista Nororiente"
+        ]
+    }
+}    

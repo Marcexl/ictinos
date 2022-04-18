@@ -298,6 +298,11 @@ li.s-i-8 a h3{
 .row{
     height: 100%;
 }
+
+.row.condo-row{
+    height: auto;
+}
+
 .main-container{
     position: absolute;
     left: 0;
@@ -743,9 +748,37 @@ li.s-i-8 a h3{
     bottom: 25px;
 }
 
-.w-100{
+.carousel-inner .carousel-item .w-100{
     min-height: 100vh;
     max-height: 100vh;
+}
+
+/*.owl-carousel .item{
+    width: 20%;
+}*/
+
+.owl-theme .owl-dots{
+    display: none;
+}
+
+.owl-theme .owl-nav{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc(50% - 45px);
+    text-align: left;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+    color: white;
+    background: transparent!important;
+    padding: 5px 15px!important;
+    font-size: 3rem;
+    text-align: left;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    right: 0;
 }
 
 .carousel{
@@ -770,6 +803,15 @@ li.s-i-8 a h3{
 .carousel-indicators{
     display: none;
 }
+
+.line{
+    display: block;
+    height: 5px;
+    margin: 15px auto;
+    width: 400px;
+    background: orange;
+}
+
 /* casas */
 #v-tabs-tab{
     margin-top: 50px;
