@@ -158,7 +158,7 @@ function hideGalleryGrid(){
 function showPresentation(id){
    hideSideNav();
    hideGalleryGrid()
-   hideBoxesBackground()
+   //hideBoxesBackground()
    /* hide this */
    let index = localStorage.getItem("interaction");
    $("#"+index).addClass("fadeOut");
@@ -183,8 +183,6 @@ function showPresentation(id){
 
 function proyectShow(id)
 {
-
-
    const logos  = ['','loicas.png','piedra.jpg','macul.jpg'];
    logocenter.innerHTML = `<img src="img/logos/${logos[id]}"/>`;
 
@@ -255,65 +253,52 @@ function goInside(s,id){
    {
       if(s == 1)
       {
-         proyect = 'Loicas';
 
-         data += '<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">';
-         data += '<div class="carousel-indicators">';
-         
-         for (let index = 1; index <= 16; index++) 
-         {
-            if(index == 1)
-            {
-               data += '<button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="'+index+'" class="active" aria-current="true" aria-label="Slide 1"></button>';                  
-            }
-            else
-            {
-               data += '<button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="'+index+'" class="" aria-current="true" aria-label="Slide 1"></button>';                  
-            }
-         } 
-         
-         data += '</div>';
-         data += '<div class="carousel-inner">';
-         
-         for (let index = 1; index <= 16; index++) 
-         {
+         fetch('json/caption.json')
+         .then(response => response.json())
+         .then(json => {
+            data += '<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">';
+            data += '<div class="carousel-inner">';
 
-            if(index == 1)
+            for (var clave in json['Loicas']) 
             {
-               data += '<div class="carousel-item active" data-mdb-interval="5000">';
-               data += '<img src="img/loicas/galeria/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
-               data += '<div class="carousel-caption d-none d-md-block">';
-               data += '<h5 id="loicas-caption-'+index+'"></h5>';
-               data += '</div>';
-               data += '</div>';
+               c++
+               if(c == 1)
+               {
+                  data += '<div class="carousel-item active" >';
+                  data += '<img src="img/loicas/galeria/'+c+'.jpg" class="d-block w-100" alt="'+json['Loicas'][clave]['caption']+'"/>';
+                  data += '<div class="carousel-caption d-none d-md-block">';
+                  data += '<h5 id="loicas-caption-'+c+'">'+json['Loicas'][clave]['caption']+'</h5>';
+                  data += '</div>';
+                  data += '</div>';
+               }
+               else
+               {
+                  data += '<div class="carousel-item">';
+                  data += '<img src="img/loicas/galeria/'+c+'.jpg" class="d-block w-100" alt="'+json['Loicas'][clave]['caption']+'"/>';
+                  data += '<div class="carousel-caption d-none d-md-block">';
+                  data += '<h5 id="loicas-caption-'+c+'">'+json['Loicas'][clave]['caption']+'</h5>';
+                  data += '</div>';
+                  data += '</div>';
+               }
             }
-            else
-            {
-               data += '<div class="carousel-item" data-mdb-interval="5000">';
-               data += '<img src="img/loicas/galeria/'+index+'.jpg" class="d-block w-100" alt="Wild Landscape"/>';
-               data += '<div class="carousel-caption d-none d-md-block">';
-               data += '<h5 id="loicas-caption-'+index+'"></h5>';
-               data += '</div>';
-               data += '</div>';
-            }
-         }
-
-         data += '</div>';
-         data += '<button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">';
-         data += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
-         data += '<span class="visually-hidden">Previous</span>';
-         data += '</button>';
-         data += '<button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">';
-         data += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
-         data += '<span class="visually-hidden">Next</span>';
-         data += '</button>';
-         data += '</div>';
-        
-         setTimeout(function(){
-            $("#proyectos-container").html(data);
-            loadCaption(16,proyect);
-            $("#proyectos-container").fadeIn();
-         },500);
+   
+            data += '</div>';
+            data += '<button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">';
+            data += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+            data += '<span class="visually-hidden">Previous</span>';
+            data += '</button>';
+            data += '<button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">';
+            data += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+            data += '<span class="visually-hidden">Next</span>';
+            data += '</button>';
+            data += '</div>';
+            
+            setTimeout(function(){
+               $("#proyectos-container").html(data);
+               $("#proyectos-container").fadeIn();
+            },500);
+         })
       }
    }
 
@@ -591,10 +576,6 @@ function goInside(s,id){
          })
       }
    }
-
-
-
-
 }
 
 function goOutside(){
@@ -623,7 +604,7 @@ function buildLoicas(){
    $("#loicas").removeClass("fadeOut");
    $("#loicas").css("display","block");
    interaction = localStorage.setItem("interaction","loicasinside");
-   goInside(1,7);
+   goInside(1,1);
    showHome();
 }
 
@@ -649,24 +630,4 @@ function showPopover(id,title,text)
    $("#p-"+id+" .pophover-header").html(title);
    $("#p-"+id+" p").html(text);
 }
-
-function loadCaption(cant,proyect){
-
-   let elem = '';
-   let dataString = '';
-   for (let index = 1; index <= cant; index++) 
-   {
-      dataString = '?id='+index+'&proyect='+proyect;
-      fetch('fetch/getCaption.php'+dataString)
-      .then(response => response.json())
-      .then(json => {
-         if(json['success'] == true)
-         {
-            elem = document.querySelector("#loicas-caption-"+index);
-            elem.innerHTML = json['caption'];
-         }
-      })
-   }
-}
-
  

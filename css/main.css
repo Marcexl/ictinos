@@ -789,11 +789,18 @@ li.s-i-8 a h3{
 }
 
 .carousel-caption{
-    bottom:80px;
+    bottom:120px;
 }
 
 .carousel-caption h5{
-    font-size: 2.25rem;
+    font-size: 2.2rem;
+    background: white;
+    padding: 10px 15px;
+    color: black;
+    width: 775px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: 'Neva-Bold';
 }
 
 .carousel-indicators{
@@ -811,7 +818,9 @@ li.s-i-8 a h3{
     width: 400px;
     background: orange;
 }
-
+.carousel-control-next-icon:after, .carousel-control-prev-icon:after{
+    font-size: 2.5rem;
+}
 /* casas */
 #v-tabs-tab{
     margin-top: 50px;
