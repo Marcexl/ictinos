@@ -627,9 +627,17 @@ li.s-i-8 a h3{
 .conect-img{
     display: block;
     margin: 0 auto;
+    max-width: 600px;
 }
+
+.conect-img-2{
+    display: block;
+    margin: 0 auto;
+    max-width: 960px; 
+}
+
 .accesos{
-    list-style-type: disc;
+    list-style:none;
     list-style-position: outside;
     padding-top: 150px;
 }
@@ -639,7 +647,27 @@ li.s-i-8 a h3{
     font-size: 1.3rem;
 }
 
+.accesos li::before{
+    content: "»";
+    color: #f38c23;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
 
+/* condominio */
+.condo-row h3{
+    font-size: 2rem;
+}
+
+.condo-row h4{
+    font-size: 1.75rem;
+}
+
+.condominio-list li{
+    font-size: 1.5rem;
+}
 /* gallery grid */
 .gallery{
     position: absolute;
@@ -751,6 +779,8 @@ li.s-i-8 a h3{
 .carousel-inner .carousel-item .w-100{
     min-height: 100vh;
     max-height: 100vh;
+    width: auto!important;
+    margin: 0 auto;
 }
 
 /*.owl-carousel .item{
@@ -772,15 +802,18 @@ li.s-i-8 a h3{
     color: white;
     background: transparent!important;
     padding: 5px 15px!important;
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: left;
+    line-height: 2rem;
 }
 
 .owl-carousel .owl-nav button.owl-next{
     position: absolute;
     right: 0;
 }
-
+.owl-carousel .owl-item{
+    cursor:grab;
+}
 .carousel{
     background: url(../img/spinner.gif) no-repeat;
     background-position-x: 50%;
@@ -815,12 +848,20 @@ li.s-i-8 a h3{
     display: block;
     height: 5px;
     margin: 15px auto;
-    width: 400px;
+    width: 440px;
     background: orange;
 }
+
 .carousel-control-next-icon:after, .carousel-control-prev-icon:after{
     font-size: 2.5rem;
+    color: #db8e2a;
 }
+
+.carousel-control-next, .carousel-control-prev{
+    color: #db8e2a;
+    width: 8%;
+}
+
 /* casas */
 #v-tabs-tab{
     margin-top: 50px;

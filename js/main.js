@@ -403,7 +403,7 @@ function goInside(s,id){
             data += '</ul>';
             data += '</div>';
             data += '</div>';
-            data += '<div class="row condo-row">';
+            data += '<div class="row condo-row" style="padding-top:60px;">';
             data += '<div class="col">';
             data += '<div class="owl-carousel owl-theme">';
 
@@ -424,6 +424,9 @@ function goInside(s,id){
                   loop:true,
                   margin:10,
                   nav:true,
+                  autoplay:true,
+                  autoplayTimeout:5000,
+                  autoplayHoverPause:true,
                   responsive:{
                       0:{
                           items:1
@@ -516,10 +519,10 @@ function goInside(s,id){
          .then(json => {
             data += '<div class="row">';
             data += '<div class="col-8">';
-            data += '<img src="img/loicas/entorno/1.jpg" class="conect-img">';
+            data += '<img src="img/loicas/entorno/1.jpg" class="conect-img-2">';
             data += '</div>';  
             data += '<div class="col-4">';
-            data += '<ul class="accesos">';
+            data += '<ul class="accesos" style="padding:60px 30px 0 0">';
             for(var clave in json['Loicas']['accesos'])
             {
                data += '<li>'+json['Loicas']['accesos'][clave]+'</li>';
