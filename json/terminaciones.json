@@ -1,47 +1,96 @@
 {
     "Loicas":{
-        "terminaciones": [
-            "Ventanas PVC con Termopanel, foliada tipo madera",
-            "Porcelanato en Living Comerdor, Hall de acceso, Terrazas, baños y cocina",
-            "Piso flotante en dormitorios y Sala de estar",
-            "Cocina equipada con encimera, horno con convector y campana piramidal",
-            "Cubierta de cocina Quarztone Blanco",
-            "Griferia Wasser en Baños y Roca en Cocina"
-        ],
-        "espacios": [
-            "Cocinas integradas y semi-integradas con el living comedor",
-            "Amplio ventanal en living comedor que conecta con la terraza",
-            "Cocina conectada directamente con zona de quincho (OPCIONAL)"
-        ]
+        "1":{
+            "title":"Revestimiento de Porcelanato",
+            "description":"En muros de cocina.",
+            "orientation":"poptop",
+            "style":"top:335px;left:150px;"
+        },
+        "2":{
+            "title":"Pisos de Porcelanato",
+            "description":"En living, comedor, terrazas, baños, cocina.",
+            "orientation":"popleft",
+            "style":"top:660px;left:225px;"
+        },
+        "3":{
+            "title":"Cocina equipada",
+            "description":"Con encimera, horno con convector y campana piramidal.",
+            "orientation":"poptop",
+            "style":"top:392px;left:377px;"
+        },
+        "4":{
+            "title":"Griferia Roca",
+            "description":"En cocina",
+            "orientation":"poptop",
+            "style":"top:362px;left:575px;}"
+        },
+        "5":{
+            "title":"Muros estructurales y perimetrales de albañileria",
+            "description":"Panel interior tipo VOLCAPOL, poliestireno expandido y yeso-carton",
+            "orientation":"popright",
+            "style":"top:335px;left:718px;"
+        },
+        "6":{
+            "title":"Mesones y cubiertas de quarztone blanco",
+            "description":"",
+            "orientation":"popbottom",
+            "style":"top:477px;left:720px;"
+        },
+        "7":{
+            "title":"Ventanas de termopanel con marco de PVC foliado tipo madera",
+            "description":"",
+            "orientation":"popright",
+            "style":"top:250px;left:1012px;"
+        },
+        "8":{
+            "title":"Terraza",
+            "description":"Incluye porcelanato en pisos y pilares estructurales",
+            "orientation":"popright",
+            "style":"top:555px;left:1240px;"
+        }
     },
     "Piedras":{
-        "terminaciones": [
-            "Ventanas PVC con Termopanel, foliada tipo madera",
-            "Porcelanato en Living Comerdor, Hall de acceso, Terrazas, baños y cocina",
-            "Piso flotante en dormitorios y Sala de estar",
-            "Cocina equipada con encimera, horno con convector y campana piramidal",
-            "Cubierta de cocina Quarztone Blanco",
-            "Griferia Wasser en Baños y Roca en Cocina"
-        ],
-        "espacios": [
-            "Cocinas integradas y semi-integradas con el living comedor",
-            "Amplio ventanal en living comedor que conecta con la terraza",
-            "Cocina conectada directamente con zona de quincho (OPCIONAL)"
-        ]
+        "1":{
+            "title":"Motion Sensor",
+            "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz."
+        },
+        "2":{
+            "title":"Home center 2",
+            "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva."
+        },
+        "3":{
+            "title":"Dimmer y Bypass",
+            "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo."
+        },
+        "4":{
+            "title":"Google Home Mini",
+            "description":"Asistente de voz compatible con el Sistema domotico TAMED"
+        },
+        "5":{
+            "title":"Camara Exterior",
+            "description":"Monitoreo en tiempo real de tu vivienda"
+        }
     },
     "Macul":{
-        "terminaciones": [
-            "Ventanas PVC con Termopanel, foliada tipo madera",
-            "Porcelanato en Living Comerdor, Hall de acceso, Terrazas, baños y cocina",
-            "Piso flotante en dormitorios y Sala de estar",
-            "Cocina equipada con encimera, horno con convector y campana piramidal",
-            "Cubierta de cocina Quarztone Blanco",
-            "Griferia Wasser en Baños y Roca en Cocina"
-        ],
-        "espacios": [
-            "Cocinas integradas y semi-integradas con el living comedor",
-            "Amplio ventanal en living comedor que conecta con la terraza",
-            "Cocina conectada directamente con zona de quincho (OPCIONAL)"
-        ]
+        "1":{
+            "title":"Motion Sensor",
+            "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz."
+        },
+        "2":{
+            "title":"Home center 2",
+            "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva."
+        },
+        "3":{
+            "title":"Dimmer y Bypass",
+            "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo."
+        },
+        "4":{
+            "title":"Google Home Mini",
+            "description":"Asistente de voz compatible con el Sistema domotico TAMED"
+        },
+        "5":{
+            "title":"Camara Exterior",
+            "description":"Monitoreo en tiempo real de tu vivienda"
+        }
     }
 }    

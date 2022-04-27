@@ -310,30 +310,18 @@ function goInside(s,id){
          fetch('json/terminaciones.json')
          .then(response => response.json())
          .then(json => {
-            data += '<div class="row">';
-            data += '<div class="col">';
-            data += '<div class="card" style="margin:30px">';
-            data += "<h4>TERMINACIONES</h4>";
-            for(var clave in json['Loicas']['terminaciones'])
-            {
-               data += '<p>'+json['Loicas']['terminaciones'][clave]+'</p>';
+            data += '<div class="row domotica">';
+            data += '<div class="col domotica-col">';
+            data += '<img src="img/loicas/terminaciones/1.jpg" class="terminaciones-back">';
+            data += '<div class="dom-circle-container" style="width:1333px;height:750px;">';
+            for(var clave in json['Loicas']){
+               d++;
+               data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json['Loicas'][clave]['style']+'" onclick="showPopover('+d+',\''+json['Loicas'][clave]['title']+'\',\''+json['Loicas'][clave]['description']+'\')">';
+               data += '<div class="pophover '+json['Loicas'][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
             }
             data += '</div>';
             data += '</div>';
-            
-            data += '<div class="col">';
-            data += '<div class="card" style="margin:30px">';
-            data += "<h4>ESPACIOS INTEGRADOS</h4>";
-
-            for(var clave in json['Loicas']['espacios'])
-            {
-               data += '<p>'+json['Loicas']['espacios'][clave]+'</p>';
-            }
-
-            data += "</div>";
-            data += "</div>";
-            data += "</div>";
-
+            data += '</div>';
             setTimeout(function(){
                $("#proyectos-container").html(data);
                $("#proyectos-container").fadeIn();
@@ -631,6 +619,13 @@ function showPopover(id,title,text)
    $(".pophover").fadeOut();
    $("#p-"+id).css("display","block");
    $("#p-"+id+" .pophover-header").html(title);
-   $("#p-"+id+" p").html(text);
+   if(text != '')
+   {
+      $("#p-"+id+" p").html(text);
+   }
+   else
+   {
+      $("#p-"+id+" p").remove();
+   }
 }
  

@@ -533,6 +533,15 @@ li.s-i-8 a h3{
     position: absolute;
 }
 
+.terminaciones-back{
+    width: auto;
+    display: block;
+    margin: 0;
+    margin-top: 50px;
+    position: absolute;
+    min-height: 750px;
+}
+
 .dom-circle-container{
     width: 1871px;
     height: 609px;
@@ -571,10 +580,14 @@ li.s-i-8 a h3{
     opacity: 0;
     transition: all .3s;
 }
+.pophover.popright{
+    animation: popright .5s ease-in-out 0s forwards;
+    margin-left: 0;
+}
+
 .pophover.popleft{
     animation: popleft .5s ease-in-out 0s forwards;
-    margin-left: 0;
-
+    margin-left: -345px;
 }
 
 .pophover.poptop{
@@ -596,7 +609,16 @@ li.s-i-8 a h3{
     margin-bottom: 5px;
 }
 
-.pophover.popleft::before{
+.pophover.popleft::before {
+    content: '\25B2';
+    color: white;
+    position: absolute;
+    top: 7px;
+    left: 295px;
+    transform: rotate(90deg);
+}
+
+.pophover.popright::before{
     content: '\25B2';
     color: white;
     position: absolute;
@@ -1174,6 +1196,16 @@ i.social-item{
 }
 
 @keyframes popleft {
+    from{
+        opacity: 0;
+        margin-left: -365px;
+    }to{
+        opacity: 1;
+        margin-left: -315px;
+    }
+}
+
+@keyframes popright {
     from{
         opacity: 0;
         margin-left: 0;
