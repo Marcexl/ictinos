@@ -310,7 +310,7 @@ function goInside(s,id){
          fetch('json/terminaciones.json')
          .then(response => response.json())
          .then(json => {
-            data += '<div class="row domotica">';
+            data += '<div class="row domotica align-items-center">';
             data += '<div class="col domotica-col">';
             data += '<img src="img/loicas/terminaciones/1.jpg" class="terminaciones-back">';
             data += '<div class="dom-circle-container" style="width:1333px;height:750px;">';
@@ -338,7 +338,7 @@ function goInside(s,id){
          fetch('json/domotica.json')
          .then(response => response.json())
          .then(json => {
-            data += '<div class="row domotica">';
+            data += '<div class="row domotica align-items-center">';
             data += '<div class="col domotica-col">';
             data += '<img src="img/loicas/domotica/1.png" class="domotica-back">';
             data += '<div class="dom-circle-container">';
@@ -367,7 +367,9 @@ function goInside(s,id){
          fetch('json/condominio.json')
          .then(response => response.json())
          .then(json => {
-            data += '<div class="row condo-row" style="padding-top:250px;">';
+           
+            data += '<div class="row  align-items-center"><div class="col">';
+            data += '<div class="row condo-row">';
             data += '<div class="col-6" style="padding:30px;text-align: center;">';
             data += json['Loicas']['title'];
             data += '<div class="line"></div>';
@@ -404,6 +406,7 @@ function goInside(s,id){
             data += '</div>';
             data += '</div>';
             data += '</div>';
+            data += '</div></div>';//end of row--col--first
 
             setTimeout(function(){
                $("#proyectos-container").html(data);
@@ -439,7 +442,7 @@ function goInside(s,id){
          fetch('json/casas.json')
          .then(response => response.json())
          .then(json => {
-            data += '<div class="row casas-row">';
+            data += '<div class="row align-items-center">';
             data += '<div class="col-2" style="width:15%;padding-right:0;">';
             data += '<div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">';
             for(var clave in json['Loicas'])
@@ -505,7 +508,7 @@ function goInside(s,id){
          fetch('json/entorno.json')
          .then(response => response.json())
          .then(json => {
-            data += '<div class="row">';
+            data += '<div class="row align-items-center">';
             data += '<div class="col-8">';
             data += '<img src="img/loicas/entorno/1.jpg" class="conect-img-2">';
             data += '</div>';  
@@ -547,7 +550,7 @@ function goInside(s,id){
          fetch('json/conectividad.json')
          .then(response => response.json())
          .then(json => {
-            data += '<div class="row">';
+            data += '<div class="row align-items-center">';
             data += '<div class="col-6">';
             data += '<img src="img/loicas/conectividad/1.jpg" class="conect-img">';
             data += '</div>';  
