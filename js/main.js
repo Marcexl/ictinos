@@ -369,28 +369,30 @@ function goInside(s,id){
          .then(json => {
            
             data += '<div class="row  align-items-center"><div class="col">';
-            data += '<div class="row condo-row">';
-            data += '<div class="col-6" style="padding:30px;text-align: center;">';
+            data += '<div class="row condo-row" style="flex-direction: column;justify-content:center">';
+            data += '<div class="col" style="padding:0px;">';
             data += json['Loicas']['title'];
-            data += '<div class="line"></div>';
             data += json['Loicas']['subtitle'];
             data += '</div>';
-            data += '<div class="col-6" style="padding:30px;">';
-            data += '<ul class="condominio-list">';
+            data += '<div class="line"></div>';
+            data += '<div class="col" style="padding:30px 0 0 0;">';
+            data += '<div class="row">';
+            data += '<div class="col-3"></div>';
+            data += '<div class="col-6"><ul class="condominio-list">';
             for(var clave in json['Loicas']['entorno'])
             {
                data += '<li>'+json['Loicas']['entorno'][clave]+'</li>';
             }
-            data += '</ul>';
-
-            data += '<h5>SEGURIDAD</h5>';
-            data += '<ul class="condominio-list">';
+            //data += '</ul>';
+            //data += '<h5>SEGURIDAD</h5>';
+            //data += '<ul class="condominio-list">';
             for(var clave in json['Loicas']['seguridad'])
             {
                data += '<li>'+json['Loicas']['seguridad'][clave]+'</li>';
             }
 
-            data += '</ul>';
+            data += '</ul></div>';
+            data += '<div class="col-3"></div>';
             data += '</div>';
             data += '</div>';
             data += '<div class="row condo-row" style="padding-top:60px;">';
@@ -474,7 +476,7 @@ function goInside(s,id){
                }
 
                data += '<div class="tab-pane fade '+clas+'" id="v-tabs-'+c+'" role="tabpanel" aria-labelledby="v-tabs-'+c+'">';
-               data += '<div class="row casas-tab">';
+               data += '<div class="row casas-tab align-items-center">';
                data += '<div class="col-9">';
                data += '<img src="img/loicas/casas/'+c+'.jpg" class="casas">';
                data += '</div>';  
