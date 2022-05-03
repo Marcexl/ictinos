@@ -312,8 +312,8 @@ function goInside(s,id){
          .then(json => {
             data += '<div class="row domotica align-items-center">';
             data += '<div class="col domotica-col">';
-            data += '<img src="img/loicas/terminaciones/1.jpg" class="terminaciones-back">';
-            data += '<div class="dom-circle-container" style="width:1333px;height:750px;">';
+            data += '<img src="img/loicas/terminaciones/1.jpg" class="domotica-back">';
+            data += '<div class="dom-circle-container">';
             for(var clave in json['Loicas']){
                d++;
                data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json['Loicas'][clave]['style']+'" onclick="showPopover('+d+',\''+json['Loicas'][clave]['title']+'\',\''+json['Loicas'][clave]['description']+'\')">';
@@ -368,7 +368,7 @@ function goInside(s,id){
          .then(response => response.json())
          .then(json => {
            
-            data += '<div class="row  align-items-center"><div class="col">';
+            data += '<div class="row align-items-center" style="margin:0;"><div class="col">';
             data += '<div class="row condo-row" style="flex-direction: column;justify-content:center">';
             data += '<div class="col" style="padding:0px;">';
             data += json['Loicas']['title'];
@@ -377,22 +377,23 @@ function goInside(s,id){
             data += '<div class="line"></div>';
             data += '<div class="col" style="padding:30px 0 0 0;">';
             data += '<div class="row">';
-            data += '<div class="col-3"></div>';
-            data += '<div class="col-6"><ul class="condominio-list">';
+            data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
             for(var clave in json['Loicas']['entorno'])
             {
                data += '<li>'+json['Loicas']['entorno'][clave]+'</li>';
             }
-            //data += '</ul>';
-            //data += '<h5>SEGURIDAD</h5>';
-            //data += '<ul class="condominio-list">';
+            data += '</ul></div>';
+           
+            data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
             for(var clave in json['Loicas']['seguridad'])
             {
                data += '<li>'+json['Loicas']['seguridad'][clave]+'</li>';
             }
 
             data += '</ul></div>';
-            data += '<div class="col-3"></div>';
+            data += '<div class="centrado-santi"><ul class="condominio-list">';
+            data += '<li>'+json['Loicas']['centrado']+'</li>';
+            data += '</ul></div>';
             data += '</div>';
             data += '</div>';
             data += '<div class="row condo-row" style="padding-top:60px;">';
@@ -447,34 +448,36 @@ function goInside(s,id){
             data += '<div class="row align-items-center">';
             data += '<div class="col-2" style="width:15%;padding-right:0;">';
             data += '<div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">';
+            data += '<a class="nav-link active" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-0" role="tab" aria-controls="v-tabs-0" aria-selected="true" style="display:none;"></a>';
             for(var clave in json['Loicas'])
             {
                c++
-               if(c == 1)
-               {
-                  data += '<a class="nav-link active" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-'+c+'" role="tab" aria-controls="v-tabs-'+c+'" aria-selected="true">'+json['Loicas'][clave]['title']+'</a>';
-               }
-               else
-               {
-                  data += '<a class="nav-link" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-'+c+'" role="tab" aria-controls="v-tabs-'+c+'" aria-selected="true">'+json['Loicas'][clave]['title']+'</a>';
-               }
+               data += '<a class="nav-link" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-'+c+'" role="tab" aria-controls="v-tabs-'+c+'" aria-selected="true">'+json['Loicas'][clave]['title']+'</a>';
+               
             }
             data += '</div></div>';
             data += '<div class="col-10" style="width:85%;">';
             data += '<div class="tab-content" id="v-tabs-tabContent">';  
+
+            data += '<div class="tab-pane fade show active" id="v-tabs-0" role="tabpanel" aria-labelledby="v-tabs-0">';
+            data += '<div class="row casas-tab align-items-center">';
+            data += '<div class="col" style="padding-left:90px">';  
+            data += '<h3 class="title-intro-casas">Casas de 2 pisos</h3>';  
+            data += '<h4 class="subtitle-intro-casas">Con espacios para toda la familia</h4>';  
+            data += '<ul class="accesos">';
+            data += '<li>Casas de 3 dormitorios</li>';
+            data += '<li>Espacios interiores integrados (Living, comedor, cocina y terraza)</li>';
+            data += '<li>Cocinas semi integradas e integradas</li>';
+            data += '<li>Escritorio en Dormitorio Principal</li>';
+            data += '<li>Amplias terrazas con porcelanato</li>';
+            data += '<li>2 baños, principal en suite, más baño de visita</li>';
+            data += '</ul>';  
+            data += '</div></div></div>';  
+
             c = 0;
             for(var clave in json['Loicas'])
             {
                c++
-               if(c == 1)
-               {
-                  clas = 'show active'; 
-               }
-               else
-               {
-                  clas = '';
-               }
-
                data += '<div class="tab-pane fade '+clas+'" id="v-tabs-'+c+'" role="tabpanel" aria-labelledby="v-tabs-'+c+'">';
                data += '<div class="row casas-tab align-items-center">';
                data += '<div class="col-9">';

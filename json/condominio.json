@@ -3,14 +3,14 @@
         "title":"<h3>AMPLIOS ESPACIOS PARA TODA TU FAMILIA</h3>",
         "subtitle":"<h4>VIVE EN UN BARRIO EXCLUSIVO A MINUTOS DE SANTIAGO</h4>",
         "entorno": [
-            "Entorno privilegiado",
-            "Areas de juegos infantiles"
+            "Areas de juegos infantiles",
+            "Control de acceso de APP SafeCard a comunidad Tierras Lindas"
         ],
         "seguridad": [
-            "Control de acceso de APP SafeCard a comunidad Tierras Lindas",
             "Sistema de lector de patentes en Acceso Condominio Las Loicas 1",
             "Seguridad por Foxtrot  en comunidad Tierras Lindas"
-        ]
+        ],
+        "centrado":"Entorno privilegiado"
     },
     "Piedras":{
         "title":"<h3>AMPLIOS ESPACIOS</h3> <h4>PARA TODA TU FAMILIA</h4>",

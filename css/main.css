@@ -301,6 +301,8 @@ li.s-i-8 a h3{
 
 .row.condo-row{
     height: auto;
+    padding-top: 60px;
+    padding-right: 0;
 }
 
 .main-container{
@@ -661,19 +663,16 @@ li.s-i-8 a h3{
     align-items: center;
 }
 
-.condominio-list,
 .accesos{
     list-style:none;
     list-style-position: outside;
 }
 
-.condominio-list li,
 .accesos li{
     padding: 5px 0;
     font-size: 1.3rem;
 }
 
-.condominio-list li::before,
 .accesos li::before{
     content: "»";
     color: #f38c23;
@@ -685,17 +684,35 @@ li.s-i-8 a h3{
 
 /* condominio */
 .condo-row h3{
-    font-size: 2.5rem;
-    color: #f58822;
+    font-size: 4rem;
+    color: #f7b851;
     font-family: 'Neva-Bold';
     text-align: center;
 }
 
 .condo-row h4{
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
+.condominio-list{
+    padding-top: 45px;
+    list-style-position: outside;
+}
+
+.condominio-list li{
+    font-size: 1.4rem;
+}
+
+.condominio-list li::marker{
+    /*margin-right: 5px;*/
+}
+.centrado-santi{
+    width: 325px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -45px;
+}
 /* gallery grid */
 .gallery{
     position: absolute;
@@ -854,6 +871,7 @@ li.s-i-8 a h3{
     bottom:90px;
     right: 0;
     transition: all 3s;
+    border-radius: .5rem;
 }
 
 .carousel-item.active .carousel-caption{
@@ -866,6 +884,7 @@ li.s-i-8 a h3{
     padding: 10px 45px;
     color: white;
     text-transform: uppercase;
+    border-radius: .5rem;
 }
 
 .carousel-indicators{
@@ -878,11 +897,11 @@ li.s-i-8 a h3{
 
 .line{
     display: block;
-    height: 7px;
+    height: 10px;
     margin: 10px auto;
-    width: 450px;
-    background: rgb(255,204,127);
-    background: linear-gradient(90deg, rgba(255,204,127,1) 0%, rgba(161,98,1,1) 100%);
+    width: 575px;
+    background: rgb(251,225,150);
+    background: linear-gradient(90deg, rgba(251,225,150,1) 0%, rgba(238,191,51,1) 100%);
 }
 
 .carousel-control-next-icon:after, .carousel-control-prev-icon:after{
@@ -936,6 +955,22 @@ li.s-i-8 a h3{
     font-size: 1.2rem;
     padding: 5px 0;
 }
+
+.title-intro-casas{
+    color: #f7b851;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Neva-Bold';
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 5rem;
+}
+
+.subtitle-intro-casas{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
 /* boxes */
 .circles{
     position: absolute;

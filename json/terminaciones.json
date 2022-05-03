@@ -4,49 +4,49 @@
             "title":"Revestimiento de Porcelanato",
             "description":"En muros de cocina.",
             "orientation":"poptop",
-            "style":"top:335px;left:150px;"
+            "style":"top:70px;left:225px;"
         },
         "2":{
             "title":"Pisos de Porcelanato",
             "description":"En living, comedor, terrazas, baños, cocina.",
             "orientation":"popleft",
-            "style":"top:660px;left:225px;"
+            "style":"top:510px;left:330px;"
         },
         "3":{
             "title":"Cocina equipada",
             "description":"Con encimera, horno con convector y campana piramidal.",
             "orientation":"poptop",
-            "style":"top:392px;left:377px;"
+            "style":"top:170px;left:540px;"
         },
         "4":{
             "title":"Griferia Roca",
             "description":"En cocina",
             "orientation":"poptop",
-            "style":"top:362px;left:575px;}"
+            "style":"top:110px;left:820px;"
         },
         "5":{
             "title":"Muros estructurales y perimetrales de albañileria",
             "description":"Panel interior tipo VOLCAPOL, poliestireno expandido y yeso-carton",
             "orientation":"popright",
-            "style":"top:335px;left:718px;"
+            "style":"top:70px;left:1025px;"
         },
         "6":{
             "title":"Mesones y cubiertas de quarztone blanco",
             "description":"",
-            "orientation":"popbottom",
-            "style":"top:477px;left:720px;"
+            "orientation":"popright",
+            "style":"top:275px;left:1012px;"
         },
         "7":{
             "title":"Ventanas de termopanel con marco de PVC foliado tipo madera",
             "description":"",
-            "orientation":"popright",
-            "style":"top:250px;left:1012px;"
+            "orientation":"poptop",
+            "style":"top:100px;left:1440px;"
         },
         "8":{
             "title":"Terraza",
             "description":"Incluye porcelanato en pisos y pilares estructurales",
-            "orientation":"popright",
-            "style":"top:555px;left:1240px;"
+            "orientation":"popleft",
+            "style":"top:350px;left:1760px;"
         }
     },
     "Piedras":{
