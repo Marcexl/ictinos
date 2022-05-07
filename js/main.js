@@ -391,9 +391,6 @@ function goInside(s,id){
             }
 
             data += '</ul></div>';
-            data += '<div class="centrado-santi"><ul class="condominio-list">';
-            data += '<li>'+json['Loicas']['centrado']+'</li>';
-            data += '</ul></div>';
             data += '</div>';
             data += '</div>';
             data += '<div class="row condo-row" style="padding-top:60px;">';
