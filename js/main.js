@@ -515,7 +515,7 @@ function goInside(s,id){
          .then(json => {
             data += '<div class="row align-items-center">';
             data += '<div class="col-8">';
-            data += '<img src="img/loicas/entorno/1.jpg" class="conect-img-2">';
+            data += '<img src="img/loicas/entorno/1.png" class="conect-img-2">';
             data += '</div>';  
             data += '<div class="col-4">';
             data += '<ul class="accesos" style="padding:60px 30px 0 0">';
@@ -557,7 +557,7 @@ function goInside(s,id){
          .then(json => {
             data += '<div class="row align-items-center">';
             data += '<div class="col-6">';
-            data += '<img src="img/loicas/conectividad/1.jpg" class="conect-img">';
+            data += '<img src="img/loicas/conectividad/1.png" class="conect-img">';
             data += '</div>';  
             data += '<div class="col-6">';
             data += '<ul class="accesos">';
