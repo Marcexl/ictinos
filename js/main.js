@@ -246,331 +246,323 @@ function goInside(s,id){
    let proyect = '';
    let caption = '';
    let clas = '';
-   let c = 0;
-   let d = 0;
+   let c    = 0;
+   let d    = 0;
+   let path = '';
+   let skey = '';
+
+   switch(s){
+      case 1:
+         path = 'loicas';
+         skey = 'Loicas';
+         break;
+      case 2:
+         path = 'macul';
+         skey = 'Macul';
+         break;
+      case 3:
+         path = 'piedras';
+         skey = 'Piedras';
+         break;
+   }
 
    if(id == 1)//galeria
    {
-      if(s == 1)
-      {
+      fetch('json/caption.json')
+      .then(response => response.json())
+      .then(json => {
+         data += '<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">';
+         data += '<div class="carousel-inner">';
 
-         fetch('json/caption.json')
-         .then(response => response.json())
-         .then(json => {
-            data += '<div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">';
-            data += '<div class="carousel-inner">';
-
-            for (var clave in json['Loicas']) 
+         for (var clave in json[skey]) 
+         {
+            c++
+            if(c == 1)
             {
-               c++
-               if(c == 1)
-               {
-                  data += '<div class="carousel-item active" >';
-                  data += '<img src="img/loicas/galeria/'+c+'.jpg" class="d-block w-100" alt="'+json['Loicas'][clave]['caption']+'"/>';
-                  data += '<div class="carousel-caption d-none d-md-block">';
-                  data += '<h5 id="loicas-caption-'+c+'">'+json['Loicas'][clave]['caption']+'</h5>';
-                  data += '</div>';
-                  data += '</div>';
-               }
-               else
-               {
-                  data += '<div class="carousel-item">';
-                  data += '<img src="img/loicas/galeria/'+c+'.jpg" class="d-block w-100" alt="'+json['Loicas'][clave]['caption']+'"/>';
-                  data += '<div class="carousel-caption d-none d-md-block">';
-                  data += '<h5 id="loicas-caption-'+c+'">'+json['Loicas'][clave]['caption']+'</h5>';
-                  data += '</div>';
-                  data += '</div>';
-               }
+               data += '<div class="carousel-item active" >';
+               data += '<img src="img/'+path+'/galeria/'+c+'.jpg" class="d-block w-100" alt="'+json[skey][clave]['caption']+'"/>';
+               data += '<div class="carousel-caption d-none d-md-block">';
+               data += '<h5 id="loicas-caption-'+c+'">'+json[skey][clave]['caption']+'</h5>';
+               data += '</div>';
+               data += '</div>';
             }
-   
-            data += '</div>';
-            data += '<button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">';
-            data += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
-            data += '<span class="visually-hidden">Previous</span>';
-            data += '</button>';
-            data += '<button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">';
-            data += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
-            data += '<span class="visually-hidden">Next</span>';
-            data += '</button>';
-            data += '</div>';
-            
-            setTimeout(function(){
-               $("#proyectos-container").html(data);
-               $("#proyectos-container").fadeIn();
-            },500);
-         })
-      }
-   }
-
-   if(id == 2)//terminaciones
-   {
-      if(s == 1)
-      { 
-
-         fetch('json/terminaciones.json')
-         .then(response => response.json())
-         .then(json => {
-            data += '<div class="row domotica align-items-center">';
-            data += '<div class="col domotica-col">';
-            data += '<img src="img/loicas/terminaciones/1.jpg" class="domotica-back">';
-            data += '<div class="dom-circle-container">';
-            for(var clave in json['Loicas']){
-               d++;
-               data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json['Loicas'][clave]['style']+'" onclick="showPopover('+d+',\''+json['Loicas'][clave]['title']+'\',\''+json['Loicas'][clave]['description']+'\')">';
-               data += '<div class="pophover '+json['Loicas'][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
-            }
-            data += '</div>';
-            data += '</div>';
-            data += '</div>';
-            setTimeout(function(){
-               $("#proyectos-container").html(data);
-               $("#proyectos-container").fadeIn();
-            },500);
-         })
-      }
-   }
-
-   if(id == 3)//domotica
-   {
-      if(s == 1)
-      { 
-
-         fetch('json/domotica.json')
-         .then(response => response.json())
-         .then(json => {
-            data += '<div class="row domotica align-items-center">';
-            data += '<div class="col domotica-col">';
-            data += '<img src="img/loicas/domotica/1.jpg" class="domotica-back">';
-            data += '<div class="dom-circle-container">';
-            for(var clave in json['Loicas']){
-               d++;
-               data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json['Loicas'][clave]['style']+'" onclick="showPopover('+d+',\''+json['Loicas'][clave]['title']+'\',\''+json['Loicas'][clave]['description']+'\')">';
-               data += '<div class="pophover '+json['Loicas'][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
-               
-            }
-            data += '</div>';
-            data += '</div>';
-            data += '</div>';
-            setTimeout(function(){
-               $("#proyectos-container").html(data);
-               $("#proyectos-container").fadeIn();
-            },500);
-         })
-      }
-   }
-
-   if(id == 4)//condominio
-   {
-      if(s == 1)
-      { 
-
-         fetch('json/condominio.json')
-         .then(response => response.json())
-         .then(json => {
-           
-            data += '<div class="row align-items-center" style="margin:0;"><div class="col">';
-            data += '<div class="row condo-row" style="flex-direction: column;justify-content:center">';
-            data += '<div class="col" style="padding:0px;">';
-            data += json['Loicas']['title'];
-            data += json['Loicas']['subtitle'];
-            data += '</div>';
-            data += '<div class="line"></div>';
-            data += '<div class="col" style="padding:30px 0 0 0;">';
-            data += '<div class="row">';
-            data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
-            for(var clave in json['Loicas']['entorno'])
+            else
             {
-               data += '<li>'+json['Loicas']['entorno'][clave]+'</li>';
+               data += '<div class="carousel-item">';
+               data += '<img src="img/'+path+'/galeria/'+c+'.jpg" class="d-block w-100" alt="'+json[skey][clave]['caption']+'"/>';
+               data += '<div class="carousel-caption d-none d-md-block">';
+               data += '<h5 id="loicas-caption-'+c+'">'+json[skey][clave]['caption']+'</h5>';
+               data += '</div>';
+               data += '</div>';
             }
-            data += '</ul></div>';
-           
-            data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
-            for(var clave in json['Loicas']['seguridad'])
-            {
-               data += '<li>'+json['Loicas']['seguridad'][clave]+'</li>';
-            }
+         }
 
-            data += '</ul></div>';
-            data += '</div>';
-            data += '</div>';
-            data += '<div class="row condo-row" style="padding-top:60px;">';
-            data += '<div class="col">';
-            data += '<div class="owl-carousel owl-theme">';
-
-            for (let index = 1; index <= 6; index++) 
-            {
-               data += '<div class="item">';
-               data += '<img src="img/loicas/thumbs/'+index+'.jpg" alt="Table Full of Spices"/>';
-               data += '</div>';               
-            }  
-            data += '</div>';
-            data += '</div>';
-            data += '</div>';
-            data += '</div></div>';//end of row--col--first
-
-            setTimeout(function(){
-               $("#proyectos-container").html(data);
-               $("#proyectos-container").fadeIn();
-               $('.owl-carousel').owlCarousel({
-                  loop:true,
-                  margin:10,
-                  nav:true,
-                  autoplay:true,
-                  autoplayTimeout:5000,
-                  autoplayHoverPause:true,
-                  responsive:{
-                      0:{
-                          items:1
-                      },
-                      600:{
-                          items:3
-                      },
-                      1000:{
-                          items:5
-                      }
-                  }
-              })
-            },500);
-         })
-      }
-   }
-
-   if(id == 5)//casas
-   {
-      if(s == 1)
-      {    
-         fetch('json/casas.json')
-         .then(response => response.json())
-         .then(json => {
-            data += '<div class="row align-items-center">';
-            data += '<div class="col-2" style="width:15%;padding-right:0;">';
-            data += '<div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">';
-            data += '<a class="nav-link active" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-0" role="tab" aria-controls="v-tabs-0" aria-selected="true" style="display:none;"></a>';
-            for(var clave in json['Loicas'])
-            {
-               c++
-               data += '<a class="nav-link" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-'+c+'" role="tab" aria-controls="v-tabs-'+c+'" aria-selected="true">'+json['Loicas'][clave]['title']+'</a>';
-               
-            }
-            data += '</div></div>';
-            data += '<div class="col-10" style="width:85%;">';
-            data += '<div class="tab-content" id="v-tabs-tabContent">';  
-
-            data += '<div class="tab-pane fade show active" id="v-tabs-0" role="tabpanel" aria-labelledby="v-tabs-0">';
-            data += '<div class="row casas-tab align-items-center">';
-            data += '<div class="col" style="padding-left:90px">';  
-            data += '<h3 class="title-intro-casas">Casas de 2 pisos</h3>';  
-            data += '<h4 class="subtitle-intro-casas">Con espacios para toda la familia</h4>';  
-            data += '<ul class="accesos">';
-            data += '<li>Casas de 3 dormitorios</li>';
-            data += '<li>Espacios interiores integrados (Living, comedor, cocina y terraza)</li>';
-            data += '<li>Cocinas semi integradas e integradas</li>';
-            data += '<li>Escritorio en Dormitorio Principal</li>';
-            data += '<li>Amplias terrazas con porcelanato</li>';
-            data += '<li>2 baños, principal en suite, más baño de visita</li>';
-            data += '</ul>';  
-            data += '</div></div></div>';  
-
-            c = 0;
-            for(var clave in json['Loicas'])
-            {
-               c++
-               data += '<div class="tab-pane fade '+clas+'" id="v-tabs-'+c+'" role="tabpanel" aria-labelledby="v-tabs-'+c+'">';
-               data += '<div class="row casas-tab align-items-center">';
-               data += '<div class="col-9">';
-               data += '<img src="img/loicas/casas/'+c+'.jpg" class="casas">';
-               data += '</div>';  
-               data += '<div class="col-3">';
-               data += '<h4>'+json['Loicas'][clave]['ambientes']+'</h4>';
-               data += '<h4>'+json['Loicas'][clave]['banos']+'</h4>';
-               data += '<h5>'+json['Loicas'][clave]['subtitle']+'</h5>';
-               data += '<ul>';
-               for(var subclave in json['Loicas'][clave]['superficie'])
-               {
-                  data += '<li>'+json['Loicas'][clave]['superficie'][subclave]+'</li>';
-               }
-               data += '</ul>';
-               data += '</div></div></div>';  
-            }
-
-            data +='</div></div></div>';
-            setTimeout(function(){
-               $("#proyectos-container").html(data);
-               $("#proyectos-container").fadeIn();
-            },500);
-         })
+         data += '</div>';
+         data += '<button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">';
+         data += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+         data += '<span class="visually-hidden">Previous</span>';
+         data += '</button>';
+         data += '<button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">';
+         data += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+         data += '<span class="visually-hidden">Next</span>';
+         data += '</button>';
+         data += '</div>';
          
-      }
-   }
-
-   if(id == 6) //entorno
-   {
-      if(s == 1)
-      {    
-         fetch('json/entorno.json')
-         .then(response => response.json())
-         .then(json => {
-            data += '<div class="row align-items-center">';
-            data += '<div class="col-8">';
-            data += '<img src="img/loicas/entorno/1.png" class="conect-img-2">';
-            data += '</div>';  
-            data += '<div class="col-4">';
-            data += '<ul class="accesos" style="padding:60px 30px 0 0">';
-            for(var clave in json['Loicas']['accesos'])
-            {
-               data += '<li>'+json['Loicas']['accesos'][clave]+'</li>';
-            }
-            data += '</ul>';
-            data += '</div></div>';  
-            
-            setTimeout(function(){
-               $("#proyectos-container").html(data);
-               $("#proyectos-container").fadeIn();
-            },500);
-         })
-      }
-   }
-
-   if(id == 7)//video
-   {
-      if(s == 1)
-      {    
-         data += '<video autoplay id="loicasvid" poster="img/play-icon.png">';
-         data += '<source src="video/loicas.mp4" type="video/mp4"/>';
-         data += '</video>';
          setTimeout(function(){
             $("#proyectos-container").html(data);
             $("#proyectos-container").fadeIn();
          },500);
-      }
+      })
+   }
+
+   if(id == 2)//terminaciones
+   {
+      fetch('json/terminaciones.json')
+      .then(response => response.json())
+      .then(json => {
+         data += '<div class="row domotica align-items-center">';
+         data += '<div class="col domotica-col">';
+         data += '<img src="img/'+path+'/terminaciones/1.jpg" class="domotica-back">';
+         data += '<div class="dom-circle-container">';
+         for(var clave in json[skey]){
+            d++;
+            data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showPopover('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
+            data += '<div class="pophover '+json[skey][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+         }
+         data += '</div>';
+         data += '</div>';
+         data += '</div>';
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      })
+   }
+
+   if(id == 3)//domotica
+   {
+      fetch('json/domotica.json')
+      .then(response => response.json())
+      .then(json => {
+         data += '<div class="row domotica align-items-center">';
+         data += '<div class="col domotica-col">';
+         data += '<img src="img/'+path+'/domotica/1.jpg" class="domotica-back">';
+         data += '<div class="dom-circle-container">';
+
+         for(var clave in json[skey]){
+            d++;
+            data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showPopover('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
+            data += '<div class="pophover '+json[skey][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+         }
+
+         data += '</div>';
+         data += '</div>';
+         data += '</div>';
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      })
+   }
+
+   if(id == 4)//condominio
+   {
+      fetch('json/condominio.json')
+      .then(response => response.json())
+      .then(json => {
+         
+         data += '<div class="row align-items-center" style="margin:0;"><div class="col">';
+         data += '<div class="row condo-row" style="flex-direction: column;justify-content:center">';
+         data += '<div class="col" style="padding:0px;">';
+         data += json[skey]['title'];
+         data += json[skey]['subtitle'];
+         data += '</div>';
+         data += '<div class="line"></div>';
+         data += '<div class="col" style="padding:30px 0 0 0;">';
+         data += '<div class="row">';
+         data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
+         for(var clave in json[skey]['entorno'])
+         {
+            data += '<li>'+json[skey]['entorno'][clave]+'</li>';
+         }
+         data += '</ul></div>';
+         
+         data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
+         for(var clave in json[skey]['seguridad'])
+         {
+            data += '<li>'+json[skey]['seguridad'][clave]+'</li>';
+         }
+
+         data += '</ul></div>';
+         data += '</div>';
+         data += '</div>';
+         data += '<div class="row condo-row" style="padding-top:60px;">';
+         data += '<div class="col">';
+         data += '<div class="owl-carousel owl-theme">';
+
+         for (let index = 1; index <= 6; index++) 
+         {
+            data += '<div class="item">';
+            data += '<img src="img/'+path+'/thumbs/'+index+'.jpg" alt="Table Full of Spices"/>';
+            data += '</div>';               
+         }  
+         data += '</div>';
+         data += '</div>';
+         data += '</div>';
+         data += '</div></div>';//end of row--col--first
+
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+            $('.owl-carousel').owlCarousel({
+               loop:true,
+               margin:10,
+               nav:true,
+               autoplay:true,
+               autoplayTimeout:5000,
+               autoplayHoverPause:true,
+               responsive:{
+                     0:{
+                        items:1
+                     },
+                     600:{
+                        items:3
+                     },
+                     1000:{
+                        items:5
+                     }
+               }
+            })
+         },500);
+      })
+   }
+}
+
+if(id == 5)//casas
+{
+   if(s == 1)
+   {    
+      fetch('json/casas.json')
+      .then(response => response.json())
+      .then(json => {
+         data += '<div class="row align-items-center">';
+         data += '<div class="col-2" style="width:15%;padding-right:0;">';
+         data += '<div class="nav flex-column nav-tabs text-center" id="v-tabs-tab" role="tablist" aria-orientation="vertical">';
+         data += '<a class="nav-link active" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-0" role="tab" aria-controls="v-tabs-0" aria-selected="true" style="display:none;"></a>';
+
+         for(var clave in json[skey])
+         {
+            c++
+            data += '<a class="nav-link" id="v-tabs-home-tab" data-mdb-toggle="tab" href="#v-tabs-'+c+'" role="tab" aria-controls="v-tabs-'+c+'" aria-selected="true">'+json[skey][clave]['title']+'</a>';
+         }
+
+         data += '</div></div>';
+         data += '<div class="col-10" style="width:85%;">';
+         data += '<div class="tab-content" id="v-tabs-tabContent">';  
+         data += '<div class="tab-pane fade show active" id="v-tabs-0" role="tabpanel" aria-labelledby="v-tabs-0">';
+         data += '<div class="row casas-tab align-items-center">';
+         data += '<div class="col" style="padding-left:90px">';  
+         data += '<h3 class="title-intro-casas">Casas de 2 pisos</h3>';  
+         data += '<h4 class="subtitle-intro-casas">Con espacios para toda la familia</h4>';  
+         data += '<ul class="accesos">';
+         data += '<li>Casas de 3 dormitorios</li>';
+         data += '<li>Espacios interiores integrados (Living, comedor, cocina y terraza)</li>';
+         data += '<li>Cocinas semi integradas e integradas</li>';
+         data += '<li>Escritorio en Dormitorio Principal</li>';
+         data += '<li>Amplias terrazas con porcelanato</li>';
+         data += '<li>2 baños, principal en suite, más baño de visita</li>';
+         data += '</ul>';  
+         data += '</div></div></div>';  
+
+         c = 0;
+         for(var clave in json[skey])
+         {
+            c++
+            data += '<div class="tab-pane fade '+clas+'" id="v-tabs-'+c+'" role="tabpanel" aria-labelledby="v-tabs-'+c+'">';
+            data += '<div class="row casas-tab align-items-center">';
+            data += '<div class="col-9">';
+            data += '<img src="img/'+path+'/casas/'+c+'.jpg" class="casas">';
+            data += '</div>';  
+            data += '<div class="col-3">';
+            data += '<h4>'+json[skey][clave]['ambientes']+'</h4>';
+            data += '<h4>'+json[skey][clave]['banos']+'</h4>';
+            data += '<h5>'+json[skey][clave]['subtitle']+'</h5>';
+            data += '<ul>';
+            for(var subclave in json[skey][clave]['superficie'])
+            {
+               data += '<li>'+json[skey][clave]['superficie'][subclave]+'</li>';
+            }
+            data += '</ul>';
+            data += '</div></div></div>';  
+         }
+
+         data +='</div></div></div>';
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      })
+   }
+
+   if(id == 6) //entorno
+   {
+      fetch('json/entorno.json')
+      .then(response => response.json())
+      .then(json => {
+         data += '<div class="row align-items-center">';
+         data += '<div class="col-8">';
+         data += '<img src="img/'+path+'/entorno/1.png" class="conect-img-2">';
+         data += '</div>';  
+         data += '<div class="col-4">';
+         data += '<ul class="accesos" style="padding:60px 30px 0 0">';
+         for(var clave in json[skey]['accesos'])
+         {
+            data += '<li>'+json[skey]['accesos'][clave]+'</li>';
+         }
+         data += '</ul>';
+         data += '</div></div>';  
+         
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      })
+   }
+
+   if(id == 7)//video
+   {
+      data += '<video autoplay id="loicasvid" poster="img/play-icon.png">';
+      data += '<source src="video/'+path+'/video.mp4" type="video/mp4"/>';
+      data += '</video>';
+      setTimeout(function(){
+         $("#proyectos-container").html(data);
+         $("#proyectos-container").fadeIn();
+      },500);
    }
 
    if(id == 8)//conectividad
-   {
-      if(s == 1)
-      {    
-         fetch('json/conectividad.json')
-         .then(response => response.json())
-         .then(json => {
-            data += '<div class="row align-items-center">';
-            data += '<div class="col-6">';
-            data += '<img src="img/loicas/conectividad/1.png" class="conect-img">';
-            data += '</div>';  
-            data += '<div class="col-6">';
-            data += '<ul class="accesos">';
-            for(var clave in json['Loicas']['accesos'])
-            {
-               data += '<li>'+json['Loicas']['accesos'][clave]+'</li>';
-            }
-            data += '</ul>';
-            data += '</div></div>';  
-            
-            setTimeout(function(){
-               $("#proyectos-container").html(data);
-               $("#proyectos-container").fadeIn();
-            },500);
-         })
-      }
+   {   
+      fetch('json/conectividad.json')
+      .then(response => response.json())
+      .then(json => {
+         data += '<div class="row align-items-center">';
+         data += '<div class="col-6">';
+         data += '<img src="img/'+path+'/conectividad/1.png" class="conect-img">';
+         data += '</div>';  
+         data += '<div class="col-6">';
+         data += '<ul class="accesos">';
+         for(var clave in json[skey]['accesos'])
+         {
+            data += '<li>'+json[skey]['accesos'][clave]+'</li>';
+         }
+         data += '</ul>';
+         data += '</div></div>';  
+         
+         setTimeout(function(){
+            $("#proyectos-container").html(data);
+            $("#proyectos-container").fadeIn();
+         },500);
+      })
    }
 }
 
