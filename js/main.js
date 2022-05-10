@@ -340,7 +340,7 @@ function goInside(s,id){
          .then(json => {
             data += '<div class="row domotica align-items-center">';
             data += '<div class="col domotica-col">';
-            data += '<img src="img/loicas/domotica/1.png" class="domotica-back">';
+            data += '<img src="img/loicas/domotica/1.jpg" class="domotica-back">';
             data += '<div class="dom-circle-container">';
             for(var clave in json['Loicas']){
                d++;
