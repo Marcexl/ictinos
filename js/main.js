@@ -435,13 +435,12 @@ function goInside(s,id){
             })
          },500);
       })
+   
    }
-}
 
-if(id == 5)//casas
-{
-   if(s == 1)
-   {    
+   if(id == 5)//casas
+   {
+  
       fetch('json/casas.json')
       .then(response => response.json())
       .then(json => {
@@ -503,6 +502,7 @@ if(id == 5)//casas
          },500);
       })
    }
+   
 
    if(id == 6) //entorno
    {
@@ -563,6 +563,7 @@ if(id == 5)//casas
             $("#proyectos-container").fadeIn();
          },500);
       })
+   
    }
 }
 
