@@ -203,10 +203,9 @@ function proyectShow(id)
    let cnt = 1;
       
    setTimeout(function(){
-      if(id == 1)
-      {
-        buildLoicas()
-      }
+      
+      buildContainer()
+      goInside(id,1)
 
       $("#sidenav-2 ul li a").each(function () {
          $(this).attr('id', function (index) {
@@ -610,7 +609,7 @@ function goOutside(){
    $(".arrows").css("display","none");
    $("#back").css("transform","scale(0)");
    $("#back").css("opacity","0");
-   buildLoicas();
+   buildContainer();
    interaction = localStorage.setItem("interaction","loicas");
 }
 
@@ -626,11 +625,10 @@ function hideSideNav(){
    },1000);
 }
 
-function buildLoicas(){
+function buildContainer(){
    $("#loicas").removeClass("fadeOut");
    $("#loicas").css("display","block");
-   interaction = localStorage.setItem("interaction","loicasinside");
-   goInside(1,1);
+   interaction = localStorage.setItem("interaction","inside");
    showHome();
 }
 

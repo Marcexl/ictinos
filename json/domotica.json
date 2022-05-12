@@ -34,45 +34,65 @@
     "Piedras":{
         "1":{
             "title":"Motion Sensor",
-            "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz."
+            "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz.",
+            "orientation":"poptop",
+            "style":"top: 23px; left: 144px;"
         },
         "2":{
             "title":"Home center 2",
-            "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva."
+            "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva.",
+            "orientation":"popright",
+            "style":"top: 530px; left: 260px;"
         },
         "3":{
-            "title":"Dimmer y Bypass",
-            "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo."
+            "title":"5 Dimmer 2 de FIBARO",
+            "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo.",
+            "orientation":"poptop",
+            "style":"top: 145px; left: 602px;"
         },
         "4":{
             "title":"Google Home Mini",
-            "description":"Asistente de voz compatible con el Sistema domotico TAMED"
+            "description":"Asistente de voz compatible con el Sistema domotico TAMED",
+            "orientation":"popbottom",
+            "style":"top: 520px; left: 1115px;"
         },
         "5":{
-            "title":"Camara Exterior",
-            "description":"Monitoreo en tiempo real de tu vivienda"
+            "title":"Cámara IP Exterior D-LINK",
+            "description":"Monitoreo en tiempo real de tu vivienda",
+            "orientation":"poptop",
+            "style":"top: 130px; left: 1140px;"
         }
     },
     "Macul":{
         "1":{
             "title":"Motion Sensor",
-            "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz."
+            "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz.",
+            "orientation":"poptop",
+            "style":"top: 23px; left: 144px;"
         },
         "2":{
             "title":"Home center 2",
-            "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva."
+            "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva.",
+            "orientation":"popright",
+            "style":"top: 530px; left: 260px;"
         },
         "3":{
-            "title":"Dimmer y Bypass",
-            "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo."
+            "title":"5 Dimmer 2 de FIBARO",
+            "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo.",
+            "orientation":"poptop",
+            "style":"top: 145px; left: 602px;"
         },
         "4":{
             "title":"Google Home Mini",
-            "description":"Asistente de voz compatible con el Sistema domotico TAMED"
+            "description":"Asistente de voz compatible con el Sistema domotico TAMED",
+            "orientation":"popbottom",
+            "style":"top: 520px; left: 1115px;"
         },
         "5":{
-            "title":"Camara Exterior",
-            "description":"Monitoreo en tiempo real de tu vivienda"
+            "title":"Cámara IP Exterior D-LINK",
+            "description":"Monitoreo en tiempo real de tu vivienda",
+            "orientation":"poptop",
+            "style":"top: 130px; left: 1140px;"
         }
     }
 }    
