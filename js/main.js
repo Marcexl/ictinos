@@ -402,11 +402,34 @@ function goInside(s,id){
 
          for (let index = 1; index <= 6; index++) 
          {
-            data += '<div class="item">';
+            data += '<div class="item" onclick="openCarousel('+index+')">';
             data += '<img src="img/'+path+'/thumbs/'+index+'.jpg" alt="Table Full of Spices"/>';
             data += '</div>';               
          }  
          data += '</div>';
+
+         /* carousel big*/
+         data += '<div id="carousel-condominio"><div id="carouselBasicExample2" class="carousel slide" data-mdb-ride="carousel">';
+         data += '<div class="carousel-inner">';
+
+         for (let index = 1; index <= 6; index++) 
+         {
+            data += '<div class="carousel-item" id="c-i-'+index+'">';
+            data += '<img src="img/'+path+'/thumbs/'+index+'.jpg" class="d-block w-100" />';
+            data += '</div>';
+         }
+
+         data += '</div>';
+         data += '<button class="carousel-control-prev left-100" type="button" data-mdb-target="#carouselBasicExample2" data-mdb-slide="prev">';
+         data += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+         data += '<span class="visually-hidden">Previous</span>';
+         data += '</button>';
+         data += '<button class="carousel-control-next right-100" type="button" data-mdb-target="#carouselBasicExample2" data-mdb-slide="next">';
+         data += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+         data += '<span class="visually-hidden">Next</span>';
+         data += '</button>';
+         data += '</div></div>';//end of carousel
+         
          data += '</div>';
          data += '</div>';
          data += '</div></div>';//end of row--col--first
@@ -566,6 +589,20 @@ function goInside(s,id){
    
    }
 }
+var loto = 0;
+function openCarousel(id){
+   $("#carousel-condominio").css("transform","scale(1)");
+   $("#carousel-condominio").css("opacity","1");
+   $("#c-i-"+id).addClass("active");
+   loto = 1;
+}
+
+function closeCarousel(){
+   $("#carousel-condominio").css("transform","scale(0)");
+   $("#carousel-condominio").css("opacity","0");
+   $("#carouselBasicExample2 .carousel-item").removeClass("active");
+   loto = 0;
+}
 
 function goOutside(){
    $("#sidenav-2 ul li").removeClass("small");
@@ -626,4 +663,18 @@ function showPopover(id,title,text)
       $("#p-"+id+" p").remove();
    }
 }
- 
+
+$(document).ready(function(){
+   $(document).mouseup(function(e){
+
+      var container1 = $("#carouselBasicExample2");
+      
+      if(loto == 1)
+      {
+        if (!container1.is(e.target) && container1.has(e.target).length === 0) 
+        {
+            closeCarousel();
+        }
+      }
+    });
+})
