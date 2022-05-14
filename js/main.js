@@ -183,7 +183,7 @@ function showPresentation(id){
 
 function proyectShow(id)
 {
-   const logos  = ['','loicas.png','piedra.jpg','macul.jpg'];
+   const logos  = ['','loicas.png','piedra.png','macul.png'];
    logocenter.innerHTML = `<img src="img/logos/${logos[id]}"/>`;
 
    let menunav  = '<li class="sidenav-item s-i-1" onclick="goInside('+id+',1)"><a href="#">Galeria</a></li>';
@@ -256,12 +256,12 @@ function goInside(s,id){
          skey = 'Loicas';
          break;
       case 2:
-         path = 'macul';
-         skey = 'Macul';
-         break;
-      case 3:
          path = 'piedras';
          skey = 'Piedras';
+         break;
+      case 3:
+         path = 'macul';
+         skey = 'Macul';
          break;
    }
 
