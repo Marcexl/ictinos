@@ -256,8 +256,8 @@ function goInside(s,id){
          skey = 'Loicas';
          break;
       case 2:
-         path = 'piedras';
-         skey = 'Piedras';
+            path = 'piedras';
+            skey = 'Piedras';
          break;
       case 3:
          path = 'macul';

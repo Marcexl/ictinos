@@ -50,101 +50,86 @@
         }
     },
     "Piedras":{
-        "1":{
-            "title":"Revestimiento de Porcelanato",
-            "description":"En muros de cocina.",
-            "orientation":"poptop",
-            "style":"top:70px;left:225px;"
+    
+        "1": {
+            "title": "Pisos de gres porcelánico:",
+            "description": "En living, comedor, cocina, terrazas y baños",
+            "orientation": "popleft",
+            "style": "top:510px;left:330px;"
         },
-        "2":{
-            "title":"Pisos de Porcelanato",
-            "description":"En living, comedor, terrazas, baños, cocina.",
-            "orientation":"popleft",
-            "style":"top:510px;left:330px;"
+        "2": {
+            "title": "Cocina equipada:",
+            "description": "Con encimera vitrocerámica, horno con convector y campana",
+            "orientation": "poptop",
+            "style": "top:170px;left:540px;"
         },
-        "3":{
-            "title":"Cocina equipada",
-            "description":"Con encimera, horno con convector y campana piramidal.",
-            "orientation":"poptop",
-            "style":"top:170px;left:540px;"
+        "3": {
+            "title": "Cubiertas de granito en cocina",
+            "description": "",
+            "orientation": "poptop",
+            "style": "top:110px;left:820px;"
         },
-        "4":{
-            "title":"Griferia Roca",
-            "description":"En cocina",
-            "orientation":"poptop",
-            "style":"top:110px;left:820px;"
+        "4": {
+            "title": "Muros pintados",
+            "description": "",
+            "orientation": "popright",
+            "style": "top:70px;left:1025px;"
         },
-        "5":{
-            "title":"Muros estructurales y perimetrales de albañileria",
-            "description":"Panel interior tipo VOLCAPOL, poliestireno expandido y yeso-carton",
-            "orientation":"popright",
-            "style":"top:70px;left:1025px;"
+      
+        "5": {
+            "title": "Ventanas de termo panel con marco de PVC foliado tipo madera",
+            "description": "",
+            "orientation": "poptop",
+            "style": "top:100px;left:1440px;"
         },
-        "6":{
-            "title":"Mesones y cubiertas de quarztone blanco",
-            "description":"",
-            "orientation":"popright",
-            "style":"top:275px;left:1012px;"
-        },
-        "7":{
-            "title":"Ventanas de termopanel con marco de PVC foliado tipo madera",
-            "description":"",
-            "orientation":"poptop",
-            "style":"top:100px;left:1440px;"
-        },
-        "8":{
-            "title":"Terraza",
-            "description":"Incluye porcelanato en pisos y pilares estructurales",
-            "orientation":"popleft",
-            "style":"top:350px;left:1760px;"
+        "6": {
+            "title": "Terraza con antepecho y barandas vidriadas",
+            "description": "",
+            "orientation": "popleft",
+            "style": "top:350px;left:1760px;"
         }
     },
     "Macul":{
         "1":{
-            "title":"Revestimiento de Porcelanato",
-            "description":"En muros de cocina.",
+            "title":"Cubiertas de granito en cocina",
+            "description":"",
             "orientation":"poptop",
             "style":"top:70px;left:225px;"
         },
         "2":{
-            "title":"Pisos de Porcelanato",
-            "description":"En living, comedor, terrazas, baños, cocina.",
+            "title":"Piso gres porcelánico",
+            "description":"en cocina, terraza y baños.",
             "orientation":"popleft",
             "style":"top:510px;left:330px;"
         },
         "3":{
-            "title":"Cocina equipada",
-            "description":"Con encimera, horno con convector y campana piramidal.",
+            "title":"Cocina equipada:",
+            "description":"Con encimera vitrocerámica, horno con convector y campana.",
             "orientation":"poptop",
             "style":"top:170px;left:540px;"
         },
+   
         "4":{
-            "title":"Griferia Roca",
-            "description":"En cocina",
-            "orientation":"poptop",
-            "style":"top:110px;left:820px;"
-        },
-        "5":{
-            "title":"Muros estructurales y perimetrales de albañileria",
-            "description":"Panel interior tipo VOLCAPOL, poliestireno expandido y yeso-carton",
+            "title":"Muros pintados",
+            "description":"",
             "orientation":"popright",
             "style":"top:70px;left:1025px;"
         },
-        "6":{
-            "title":"Mesones y cubiertas de quarztone blanco",
+        "5":{
+            "title":"Piso flotante en living comedor y dormitorios",
             "description":"",
             "orientation":"popright",
             "style":"top:275px;left:1012px;"
         },
-        "7":{
-            "title":"Ventanas de termopanel con marco de PVC foliado tipo madera",
+        "6":{
+            "title":"Ventanas de termopanel con marco de PVC",
             "description":"",
             "orientation":"poptop",
             "style":"top:100px;left:1440px;"
         },
-        "8":{
+        "7":{
             "title":"Terraza",
-            "description":"Incluye porcelanato en pisos y pilares estructurales",
+            "description":"con antepecho.",
             "orientation":"popleft",
             "style":"top:350px;left:1760px;"
         }

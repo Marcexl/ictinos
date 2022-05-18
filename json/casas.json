@@ -74,151 +74,145 @@
         }
     },
     "Piedras":{
-        "1":{
-            "title":"Casa A",
-            "ambientes":"3 Dormitorios",
-            "banos":"4 Baños",
-            "subtitle":"Casa A - 139",
+        "1": {
+            "title": "Departamento Ai",
+            "ambientes": "3 Dormitorios",
+            "banos": "2 Baños",
+            "subtitle": "Superficie Interior: 81,02 m2 aprox",
             "superficie:": [
-                "Superficie Piso 1: 90,65 m2 aprox",
-                "Superficie Piso 2: 49,97 m2 aprox",
-                "Superficie Útil Total: 140,62 m2 aprox",
-                "Superficie Municipal: 139,51 m2 aprox"
-                ]
+                "Superficie Interior: 81,02 m2 aprox",
+                "Logia: 1,08 m2 aprox",
+                "Terraza: 8,99 m2 aprox",
+                "Patio + Terrza en primer piso: 32,39 m2 aprox",
+                "Superficie Total: 91,09 m2"
+            ]
         },
-        "2":{
-            "title":"Casa A1",
-            "ambientes":"3 Dormitorios",
-            "banos":"4 Baños",
-            "subtitle":"Casa A1 - 139",
+        "2": {
+            "title": "Departamento Ai1",
+            "ambientes": "3 Dormitorios",
+            "banos": "2 Baños",
+            "subtitle": "",
             "superficie:": [
-                "Superficie Piso 1: 90,65 m2 aprox",
-                "Superficie Piso 2: 49,97 m2 aprox",
-                "Superficie Útil Total: 140,62 m2 aprox",
-                "Superficie Municipal: 139,51 m2 aprox"
-                ]
+                "Superficie Interior: 71,68 m2 aprox",
+                "Logia: 1,19 m2 aprox",
+                "Terraza: 6,15 m2 aprox",
+                "Patio + Terrza en primer piso: 31,24 m2 aprox",
+                "Superficie Total: 79,02 m2"
+            ]
         },
         "3":{
-            "title":"Casa B",
-            "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa B - 127",
+            "title": "Departamento Bi",
+            "ambientes": "2 Dormitorios",
+            "banos": "2 Baños",
+            "subtitle": "",
             "superficie:": [
-                "Superficie Piso 1: 83,84 m2 aprox",
-                "Superficie Piso 2: 44,99 m2 aprox",
-                "Superficie Útil Total: 128,83 m2 aprox",
-                "Superficie Municipal: 126,98 m2 aprox"
-                ]
+                "Superficie Interior: 61,33 m2 aprox",
+                "Logia: 1,03 m2 aprox",
+                "Terraza: 4,30 m2 aprox",
+                "Patio + Terrza en primer piso: 26,26 m2 aprox",
+                "Superficie Total: 66,66 m2"
+            ]
         },
-        "4":{
-            "title":"Casa B1",
-            "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa B1 - 127",
+        "4": {
+            "title": "Departamento Bi1",
+            "ambientes": "2 Dormitorios",
+            "banos": "2 Baños",
+            "subtitle": "",
             "superficie:": [
-                "Superficie Piso 1: 83,84 m2 aprox",
-                "Superficie Piso 2: 44,99 m2 aprox",
-                "Superficie Útil Total: 128,83 m2 aprox",
-                "Superficie Municipal: 126,98 m2 aprox"
-                ]
+                "Superficie Interior: 57,27 m2 aprox",
+                "Logia: 1,08 m2 aprox",
+                "Terraza: 6,13 m2 aprox",
+                "Patio + Terrza en primer piso: 24,87 m2 aprox",
+                "Superficie Total: 64,48 m2"
+            ]
         },
-        "5":{
-            "title":"Casa C",
-            "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa C - 116",
+        "5": {
+            "title": "Departamento Bm",
+            "ambientes": "2 Dormitorios",
+            "banos": "2 Baños",
+            "subtitle": "",
             "superficie:": [
-                "Superficie Piso 1: 74,32 m2 aprox",
-                "Superficie Piso 2: 45,67 m2 aprox",
-                "Superficie Útil Total: 119,99 m2 aprox",
-                "Superficie Municipal: 116,53 m2 aprox"
-                ]
-        },
-        "6":{
-            "title":"Casa C1",
-            "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa C1 - 116",
-            "superficie:": [
-                "Superficie Piso 1: 74,32 m2 aprox",
-                "Superficie Piso 2: 45,67 m2 aprox",
-                "Superficie Útil Total: 119,99 m2 aprox",
-                "Superficie Municipal: 116,53 m2 aprox"
-                ]
+                "Superficie Interior: 51,94 m2 aprox",
+                "Logia: 1,08 m2 aprox",
+                "Terraza: 4,23 m2 aprox",
+                "Patio + Terrza en primer piso: 19,13 m2 aprox",
+                "Superficie Total: 57,25 m2"
+            ]
         }
+     
     },
     "Macul":{
         "1":{
-            "title":"Casa A",
+            "title":"Modelo A",
             "ambientes":"3 Dormitorios",
-            "banos":"4 Baños",
-            "subtitle":"Casa A - 139",
+            "banos":"2 Baños",
+            "subtitle":"Torre A7",
             "superficie:": [
-                "Superficie Piso 1: 90,65 m2 aprox",
-                "Superficie Piso 2: 49,97 m2 aprox",
-                "Superficie Útil Total: 140,62 m2 aprox",
-                "Superficie Municipal: 139,51 m2 aprox"
+                "Superficie Interior: 64,65 m2 aprox",
+                "Logia: 1,22 m2 aprox",
+                "Terraza: 5,77 m2 aprox",
+                "Patio + Terraza en primer piso: 30,97 m2 aprox"
                 ]
         },
         "2":{
-            "title":"Casa A1",
+        "title":"Modelo B",
             "ambientes":"3 Dormitorios",
-            "banos":"4 Baños",
-            "subtitle":"Casa A1 - 139",
+            "banos":"2 Baños",
+            "subtitle":"Torre A",
             "superficie:": [
-                "Superficie Piso 1: 90,65 m2 aprox",
-                "Superficie Piso 2: 49,97 m2 aprox",
-                "Superficie Útil Total: 140,62 m2 aprox",
-                "Superficie Municipal: 139,51 m2 aprox"
+                "Superficie Interior: 59,9 m2 aprox",
+                "Logia: 1,24 m2 aprox",
+                "Terraza: 5,12 m2 aprox",
+                "Patio + Terraza en primer piso: 27,63 m2 aprox"
                 ]
         },
         "3":{
-            "title":"Casa B",
+      "title":"Modelo C",
             "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa B - 127",
+            "banos":"2 Baños",
+            "subtitle":"Torre A",
             "superficie:": [
-                "Superficie Piso 1: 83,84 m2 aprox",
-                "Superficie Piso 2: 44,99 m2 aprox",
-                "Superficie Útil Total: 128,83 m2 aprox",
-                "Superficie Municipal: 126,98 m2 aprox"
-                ]
+                "Superficie Interior: 60,34 m2 aprox",
+                "Logia: 1,13 m2 aprox",
+                "Terraza: 5,12 m2 aprox",
+                "Patio + Terraza en primer piso: 27,63 m2 aprox"
+				]
         },
         "4":{
-            "title":"Casa B1",
+                 "title":"Modelo D",
             "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa B1 - 127",
+            "banos":"2 Baños",
+            "subtitle":"Torre A7",
             "superficie:": [
-                "Superficie Piso 1: 83,84 m2 aprox",
-                "Superficie Piso 2: 44,99 m2 aprox",
-                "Superficie Útil Total: 128,83 m2 aprox",
-                "Superficie Municipal: 126,98 m2 aprox"
-                ]
+                "Superficie Interior: 68,27 m2 aprox",
+                "Logia: 1,97 m2 aprox",
+                "Terraza: 6,83 m2 aprox",
+                "Patio + Terraza en primer piso: 24,28 m2 aprox"
+				]
         },
         "5":{
-            "title":"Casa C",
-            "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa C - 116",
+            "title":"Modelo E",
+            "ambientes":"2 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre B",
             "superficie:": [
-                "Superficie Piso 1: 74,32 m2 aprox",
-                "Superficie Piso 2: 45,67 m2 aprox",
-                "Superficie Útil Total: 119,99 m2 aprox",
-                "Superficie Municipal: 116,53 m2 aprox"
-                ]
+                "Superficie Interior: 57,74 m2 aprox",
+                "Logia: 1,14 m2 aprox",
+                "Terraza: 5,13 m2 aprox",
+                "Patio + Terraza en primer piso: 26,45 m2 aprox"
+				]
         },
         "6":{
-            "title":"Casa C1",
-            "ambientes":"3 Dormitorios",
-            "banos":"3 Baños",
-            "subtitle":"Casa C1 - 116",
+              "title":"Modelo F",
+            "ambientes":"2 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre B",
             "superficie:": [
-                "Superficie Piso 1: 74,32 m2 aprox",
-                "Superficie Piso 2: 45,67 m2 aprox",
-                "Superficie Útil Total: 119,99 m2 aprox",
-                "Superficie Municipal: 116,53 m2 aprox"
-                ]
+                "Superficie Interior: 51,03 m2 aprox",
+                "Logia: 1,13 m2 aprox",
+                "Terraza: 3,67 m2 aprox",
+                "Patio + Terraza en primer piso: 24,47 m2 aprox"
+				]
         }
     }
 }    

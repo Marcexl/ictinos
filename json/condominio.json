@@ -16,26 +16,30 @@
         "title":"<h3>AMPLIOS ESPACIOS PARA TODA TU FAMILIA</h3>",
         "subtitle":"<h4>VIVE EN UN BARRIO EXCLUSIVO A MINUTOS DE SANTIAGO</h4>",
         "entorno": [
-            "Areas de juegos infantiles",
-            "Control de acceso de APP SafeCard a comunidad Tierras Lindas",
-            "Entorno privilegiado"
+            "Acceso principal condominio",
+            "Piscina para adultos y niños",
+            "Quincho"
         ],
         "seguridad": [
-            "Sistema de lector de patentes en Acceso Condominio Las Loicas 1",
-            "Seguridad por Foxtrot  en comunidad Tierras Lindas"
+            "Salón Gourmet",
+            "Salón de Eventos",
+            "Gimnasio",
+            "Emplazamiento Condominio Plaza Piedra"
         ]
     },
     "Macul":{
         "title":"<h3>AMPLIOS ESPACIOS PARA TODA TU FAMILIA</h3>",
         "subtitle":"<h4>VIVE EN UN BARRIO EXCLUSIVO A MINUTOS DE SANTIAGO</h4>",
         "entorno": [
-            "Areas de juegos infantiles",
-            "Control de acceso de APP SafeCard a comunidad Tierras Lindas",
-            "Entorno privilegiado"
+            "Zonas de juegos infantiles",
+            "Porteria",
+            "Quinchos Equipados"
         ],
         "seguridad": [
-            "Sistema de lector de patentes en Acceso Condominio Las Loicas 1",
-            "Seguridad por Foxtrot  en comunidad Tierras Lindas"
+            "Salas de usos múltiples",
+			   "Piscina adultos y niños",
+			   "Condominio de alta seguridad",
+            "Más de 5000 m2 de áreas verdes"
         ]
     }
 }    
