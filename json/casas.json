@@ -1,4 +1,40 @@
 {
+    "Loicas-intro":{
+        "title":"Casas de 2 pisos",
+        "subtitle":"Con espacios para toda la familia",
+        "accesos": [
+            "Casas de 3 dormitorios",
+            "Espacios interiores integrados (Living, comedor, cocina y terraza)",
+            "Cocinas semi integradas e integradas",
+            "Escritorio en Dormitorio Principal",
+            "Amplias terrazas con porcelanato",
+            "2 baños, principal en suite, más baño de visita"
+        ]
+    },
+    "Piedras-intro":{
+        "title":"Casas de 55 pisos",
+        "subtitle":"Con espacios para toda la familia",
+        "accesos": [
+            "Casas de 3 dormitorios",
+            "Espacios interiores integrados (Living, comedor, cocina y terraza)",
+            "Cocinas semi integradas e integradas",
+            "Escritorio en Dormitorio Principal",
+            "Amplias terrazas con porcelanato",
+            "2 baños, principal en suite, más baño de visita"
+        ]
+    },
+    "Macul-intro":{
+        "title":"Casas de 2 pisos",
+        "subtitle":"Con espacios para toda la familia",
+        "accesos": [
+            "Casas de 3 dormitorios",
+            "Espacios interiores integrados (Living, comedor, cocina y terraza)",
+            "Cocinas semi integradas e integradas",
+            "Escritorio en Dormitorio Principal",
+            "Amplias terrazas con porcelanato",
+            "2 baños, principal en suite, más baño de visita"
+        ]
+    },
     "Loicas":{
         "1":{
             "title":"Casa A",
@@ -92,7 +128,7 @@
             "ambientes": "3 Dormitorios",
             "banos": "2 Baños",
             "subtitle": "",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 71,68 m2 aprox",
                 "Logia: 1,19 m2 aprox",
                 "Terraza: 6,15 m2 aprox",
@@ -105,7 +141,7 @@
             "ambientes": "2 Dormitorios",
             "banos": "2 Baños",
             "subtitle": "",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 61,33 m2 aprox",
                 "Logia: 1,03 m2 aprox",
                 "Terraza: 4,30 m2 aprox",
@@ -118,7 +154,7 @@
             "ambientes": "2 Dormitorios",
             "banos": "2 Baños",
             "subtitle": "",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 57,27 m2 aprox",
                 "Logia: 1,08 m2 aprox",
                 "Terraza: 6,13 m2 aprox",
@@ -131,7 +167,7 @@
             "ambientes": "2 Dormitorios",
             "banos": "2 Baños",
             "subtitle": "",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 51,94 m2 aprox",
                 "Logia: 1,08 m2 aprox",
                 "Terraza: 4,23 m2 aprox",
@@ -147,7 +183,7 @@
             "ambientes":"3 Dormitorios",
             "banos":"2 Baños",
             "subtitle":"Torre A7",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 64,65 m2 aprox",
                 "Logia: 1,22 m2 aprox",
                 "Terraza: 5,77 m2 aprox",
@@ -159,7 +195,7 @@
             "ambientes":"3 Dormitorios",
             "banos":"2 Baños",
             "subtitle":"Torre A",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 59,9 m2 aprox",
                 "Logia: 1,24 m2 aprox",
                 "Terraza: 5,12 m2 aprox",
@@ -171,7 +207,7 @@
             "ambientes":"3 Dormitorios",
             "banos":"2 Baños",
             "subtitle":"Torre A",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 60,34 m2 aprox",
                 "Logia: 1,13 m2 aprox",
                 "Terraza: 5,12 m2 aprox",
@@ -183,7 +219,7 @@
             "ambientes":"3 Dormitorios",
             "banos":"2 Baños",
             "subtitle":"Torre A7",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 68,27 m2 aprox",
                 "Logia: 1,97 m2 aprox",
                 "Terraza: 6,83 m2 aprox",
@@ -195,7 +231,7 @@
             "ambientes":"2 Dormitorios",
             "banos":"2 Baños",
             "subtitle":"Torre B",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 57,74 m2 aprox",
                 "Logia: 1,14 m2 aprox",
                 "Terraza: 5,13 m2 aprox",
@@ -203,11 +239,11 @@
 				]
         },
         "6":{
-              "title":"Modelo F",
+            "title":"Modelo F",
             "ambientes":"2 Dormitorios",
             "banos":"2 Baños",
             "subtitle":"Torre B",
-            "superficie:": [
+            "superficie": [
                 "Superficie Interior: 51,03 m2 aprox",
                 "Logia: 1,13 m2 aprox",
                 "Terraza: 3,67 m2 aprox",

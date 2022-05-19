@@ -155,7 +155,7 @@ function hideGalleryGrid(){
    },1000);
 }
 
-function showPresentation(id){
+function showPresentation(p){
    hideSideNav();
    hideGalleryGrid()
    //hideBoxesBackground()
@@ -173,7 +173,7 @@ function showPresentation(id){
                $(".progress").css("display","none");
                $("#progress-bar").removeClass("loading");
                $("#"+index).css("display","none");
-               proyectShow(id);
+               proyectShow(p);
             },300);
          },4000);
       },500);      
@@ -181,19 +181,29 @@ function showPresentation(id){
 
 }
 
-function proyectShow(id)
+function proyectShow(p)
 {
    const logos  = ['','loicas.png','piedra.png','macul.png'];
-   logocenter.innerHTML = `<img src="img/logos/${logos[id]}"/>`;
+   logocenter.innerHTML = `<img src="img/logos/${logos[p]}"/>`;
+   let item = '';
+   switch(p){
+      case 1:
+         item = 'Casas';
+         break;
+      case 2:
+      case 3:
+         item = 'Departamentos';
+         break;
+   }
 
-   let menunav  = '<li class="sidenav-item s-i-1" onclick="goInside('+id+',1)"><a href="#">Galeria</a></li>';
-       menunav += '<li class="sidenav-item s-i-2" onclick="goInside('+id+',2)"><a href="#">Terminaciones</a></li>';
-       menunav += '<li class="sidenav-item s-i-3" onclick="goInside('+id+',3)"><a href="#">Domotica</a></li>';
-       menunav += '<li class="sidenav-item s-i-4" onclick="goInside('+id+',4)"><a href="#">Condominio</a></li>';
-       menunav += '<li class="sidenav-item s-i-5" onclick="goInside('+id+',5)"><a href="#">Casas</a></li>';
-       menunav += '<li class="sidenav-item s-i-6" onclick="goInside('+id+',6)"><a href="#">Entorno</a></li>';
-       menunav += '<li class="sidenav-item s-i-8" onclick="goInside('+id+',8)"><a href="#">Conectividad</a></li>';
-       menunav += '<li class="sidenav-item s-i-7" onclick="goInside('+id+',7)"><a href="#">Video</a></li>';
+   let menunav  = '<li class="sidenav-item s-i-1" onclick="goInside('+p+',1)"><a href="#">Galeria</a></li>';
+       menunav += '<li class="sidenav-item s-i-2" onclick="goInside('+p+',2)"><a href="#">Terminaciones</a></li>';
+       menunav += '<li class="sidenav-item s-i-3" onclick="goInside('+p+',3)"><a href="#">Domotica</a></li>';
+       menunav += '<li class="sidenav-item s-i-4" onclick="goInside('+p+',4)"><a href="#">Condominio</a></li>';
+       menunav += '<li class="sidenav-item s-i-5" onclick="goInside('+p+',5)"><a href="#">'+item+'</a></li>';
+       menunav += '<li class="sidenav-item s-i-6" onclick="goInside('+p+',6)"><a href="#">Entorno</a></li>';
+       menunav += '<li class="sidenav-item s-i-8" onclick="goInside('+p+',8)"><a href="#">Conectividad</a></li>';
+       menunav += '<li class="sidenav-item s-i-7" onclick="goInside('+p+',7)"><a href="#">Video</a></li>';
 
    let elem = document.querySelector("#sidenav-2"); 
    elem.innerHTML = '<ul class="sidenav-menu">' + menunav + '</ul>';
@@ -205,7 +215,7 @@ function proyectShow(id)
    setTimeout(function(){
       
       buildContainer()
-      goInside(id,1)
+      goInside(p,1)
 
       $("#sidenav-2 ul li a").each(function () {
          $(this).attr('id', function (index) {
@@ -252,16 +262,19 @@ function goInside(s,id){
 
    switch(s){
       case 1:
-         path = 'loicas';
-         skey = 'Loicas';
+         path   = 'loicas';
+         skey   = 'Loicas';
+         skeyin = 'Loicas-intro';
          break;
       case 2:
-            path = 'piedras';
-            skey = 'Piedras';
+         path   = 'piedras';
+         skey   = 'Piedras';
+         skeyin = 'Piedras-intro';
          break;
       case 3:
-         path = 'macul';
-         skey = 'Macul';
+         path   = 'macul';
+         skey   = 'Macul';
+         skeyin = 'Macul-intro';
          break;
    }
 
@@ -483,15 +496,14 @@ function goInside(s,id){
          data += '<div class="tab-pane fade show active" id="v-tabs-0" role="tabpanel" aria-labelledby="v-tabs-0">';
          data += '<div class="row casas-tab align-items-center">';
          data += '<div class="col" style="padding-left:90px">';  
-         data += '<h3 class="title-intro-casas">Casas de 2 pisos</h3>';  
-         data += '<h4 class="subtitle-intro-casas">Con espacios para toda la familia</h4>';  
+         
+         data += '<h3 class="title-intro-casas">'+json[skeyin]['title']+'</h3>';  
+         data += '<h4 class="subtitle-intro-casas">'+json[skeyin]['subtitle']+'</h4>';  
          data += '<ul class="accesos">';
-         data += '<li>Casas de 3 dormitorios</li>';
-         data += '<li>Espacios interiores integrados (Living, comedor, cocina y terraza)</li>';
-         data += '<li>Cocinas semi integradas e integradas</li>';
-         data += '<li>Escritorio en Dormitorio Principal</li>';
-         data += '<li>Amplias terrazas con porcelanato</li>';
-         data += '<li>2 baños, principal en suite, más baño de visita</li>';
+         for(var clave in json[skeyin]['accesos'])
+         {
+            data += '<li>'+json[skeyin]['accesos'][clave]+'</li>';
+         }
          data += '</ul>';  
          data += '</div></div></div>';  
 
