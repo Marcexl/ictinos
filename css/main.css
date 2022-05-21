@@ -4,33 +4,29 @@
 }
 
 @font-face {
-  font-family: 'Neva-Light';
-  src: url('../fonts/Nexa/NexaDemo-Light.otf');
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto/Roboto-Light.ttf');
 }
 
 @font-face {
-    font-family: 'Neva-Bold';
-    src: url('../fonts/Nexa/NexaDemo-Bold.otf');
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
 }
 
 @font-face {
-    font-family: 'Neva-Extra-Bold';
-    src: url('../fonts/Nexa/Nexa-Trial-ExtraBold.otf');
+    font-family: 'Roboto-Black';
+    src: url('../fonts/Roboto/Roboto-Black.ttf');
 }
 
-@font-face {
-    font-family: 'Neva-Heavy';
-    src: url('../fonts/Nexa/Nexa-Trial-Heavy.otf');
-}
 
 html,body{
-    font-family: 'Neva-Light',sans-serif;
+    font-family: 'Roboto-Light',sans-serif;
     font-size: 1rem;
     overflow: hidden;
 }
 
 h1{
-    font-family: 'Neva-Light',sans-serif;
+    font-family: 'Roboto-Light',sans-serif;
     /*text-transform: uppercase;*/
     font-size: 4rem;
     line-height: 4rem;
@@ -686,7 +682,7 @@ li.s-i-8 a h3{
 .condo-row h3{
     font-size: 4rem;
     color: #f7b851;
-    font-family: 'Neva-Bold';
+    font-family: 'Roboto-Bold';
     text-align: center;
 }
 
@@ -786,7 +782,7 @@ li.s-i-8 a h3{
     padding-left: 15px;
     left: 0;
     bottom: 0px;
-    font-family: 'Neva-Bold', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-size: 1.2rem;
     opacity: 0;
     transition: all .5s ease-in-out;
@@ -794,7 +790,7 @@ li.s-i-8 a h3{
 
 .gallery li .thumb-gallery h5,
 .gallery li .thumb-gallery h4{
-    font-family:'Neva-Light', sans-serif;
+    font-family:'Roboto-Light', sans-serif;
 }
 
 .gallery li .thumb-gallery h4{
@@ -990,7 +986,7 @@ li.s-i-8 a h3{
     color: #f7b851;
     font-size: 5rem;
     text-transform: uppercase;
-    font-family: 'Neva-Bold';
+    font-family: 'Roboto-Bold';
     margin-bottom: 0;
     padding: 0;
     line-height: 5rem;
