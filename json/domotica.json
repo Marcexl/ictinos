@@ -36,31 +36,31 @@
             "title":"Sensor de Humo",
             "description":"Detecta alguna densidad de humo y sonará la bocina, mientras tanto, se enviará una notificación al móvil.",
             "orientation":"poptop",
-            "style":"top: 23px; left: 144px;"
+            "style":"top:33px; left: 200px;"
         },
         "2":{
             "title":"Interruptor",
             "description":"Se puede manejar de forma manual o remota a través de la Aplicaciób móvil.",
             "orientation":"popright",
-            "style":"top: 530px; left: 260px;"
+            "style":"top: 200px; left: 102px;"
         },
         "3":{
             "title":"Enchufe Inteligente",
             "description":"Podrás controlar el encendido y apagado de cualquier equipo electrónico conectado a él. Maneja el dispositivo desde cualquier parte del mundo con tu celular.",
             "orientation":"poptop",
-            "style":"top: 145px; left: 602px;"
+            "style":"top: 336px; left: 981px;"
         },
         "4": {
             "title": "Sensor de Movimiento",
             "description": "Envia una notificación de forma inmediata a tu celular en caso de que seas vulnerado",
             "orientation": "popbottom",
-            "style": "top: 520px; left: 1115px;"
+            "style": "top: 13px; left: 1158px;"
         },
         "5":{
             "title":"Sensor de Apertura",
             "description":"Podrás detectar el estado de una puerta o ventada (abierto/cerrado) el cual será informado a tu celular",
             "orientation":"poptop",
-            "style":"top: 130px; left: 1140px;"
+            "style":"top: 225px; left: 14px;"
         }
     },
     "Macul":{
@@ -68,37 +68,37 @@
             "title":"Motion Sensor",
             "description":"Detector de movimiento, acelerómetro, temperatura y luminosidad.",
             "orientation":"poptop",
-            "style":"top: 23px; left: 144px;"
+            "style":"top: 31px; left: 735px;"
         },
         "2":{
             "title":"Smoke Sensor",
             "description":"Detecta humo y cambios drásticos de temperatura",
             "orientation":"popright",
-            "style":"top: 530px; left: 260px;"
+            "style":"top: 134px; left: 1288px;"
         },
         "3":{
             "title":"Flood sensor",
             "description":"Control de inundación",
             "orientation":"poptop",
-            "style":"top: 145px; left: 602px;"
+            "style":"top: 547px; left: 166px;"
         },
         "4":{
             "title":"Home Center Lite",
             "description":"Control principal del sistema Fibaro-Tamed",
             "orientation":"popbottom",
-            "style":"top: 520px; left: 1115px;"
+            "style":"top: 388px; left: 582px;"
         },
         "5":{
             "title":"Door Window Sensor",
             "description":"Detecta apertura de puertas y ventanas",
             "orientation":"poptop",
-            "style":"top: 130px; left: 1140px;"
+            "style":"top: 58px; left: 738px;"
         },
         "6":{
             "title":"Wall Plug",
             "description":"Enchufe multiuso con control de consumo.",
             "orientation":"poptop",
-            "style":"top: 130px; left: 1140px;"
+            "style":"top: 291px; left: 697px;"
         }
 		
     }

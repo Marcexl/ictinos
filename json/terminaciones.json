@@ -55,7 +55,7 @@
             "title": "Pisos de gres porcelánico:",
             "description": "En living, comedor, cocina, terrazas y baños",
             "orientation": "popleft",
-            "style": "top:510px;left:330px;"
+            "style": "top:532px;left:330px;"
         },
         "2": {
             "title": "Cocina equipada:",
@@ -67,26 +67,26 @@
             "title": "Cubiertas de granito en cocina",
             "description": "",
             "orientation": "poptop",
-            "style": "top:110px;left:820px;"
+            "style": "top:266px;left:554px;"
         },
         "4": {
             "title": "Muros pintados",
             "description": "",
             "orientation": "popright",
-            "style": "top:70px;left:1025px;"
+            "style": "top:195px;left:1025px;"
         },
       
         "5": {
             "title": "Ventanas de termo panel con marco de PVC foliado tipo madera",
             "description": "",
             "orientation": "poptop",
-            "style": "top:100px;left:1440px;"
+            "style": "top:100px;left:1454px;"
         },
         "6": {
             "title": "Terraza con antepecho y barandas vidriadas",
             "description": "",
             "orientation": "popleft",
-            "style": "top:350px;left:1760px;"
+            "style": "top:319px;left:1513px;"
         }
     },
     "Macul":{
@@ -94,7 +94,7 @@
             "title":"Cubiertas de granito en cocina",
             "description":"",
             "orientation":"poptop",
-            "style":"top:70px;left:225px;"
+            "style":"top:250px;left:506px;"
         },
         "2":{
             "title":"Piso gres porcelánico",
@@ -105,33 +105,33 @@
         "3":{
             "title":"Cocina equipada:",
             "description":"Con encimera vitrocerámica, horno con convector y campana.",
-            "orientation":"poptop",
-            "style":"top:170px;left:540px;"
+            "orientation":"popright",
+            "style":"top:264px;left:79px;"
         },
    
         "4":{
             "title":"Muros pintados",
             "description":"",
             "orientation":"popright",
-            "style":"top:70px;left:1025px;"
+            "style":"top:60px;left:1025px;"
         },
         "5":{
             "title":"Piso flotante en living comedor y dormitorios",
             "description":"",
             "orientation":"popright",
-            "style":"top:275px;left:1012px;"
+            "style":"top:417px;left:1012px;"
         },
         "6":{
             "title":"Ventanas de termopanel con marco de PVC",
             "description":"",
             "orientation":"poptop",
-            "style":"top:100px;left:1440px;"
+            "style":"top:100px;left:1267px;"
         },
         "7":{
             "title":"Terraza",
             "description":"con antepecho.",
             "orientation":"popleft",
-            "style":"top:350px;left:1760px;"
+            "style":"top:273px;left:1386px;"
         }
     }
 }    

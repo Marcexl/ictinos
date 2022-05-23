@@ -12,22 +12,24 @@
         ]
     },
     "Piedras-intro":{
-        "title":"departamentos de 1 piso",
-        "subtitle":"Con espacios para toda la familia",
+        "title":"Amplios espacios",
+        "subtitle":"para compartir y disfrutar",
         "accesos": [
-            "Casas de 3 dormitorios",
-            "Espacios interiores integrados (Living, comedor, cocina y terraza)",
-            "Cocinas semi integradas e integradas",
-            "Escritorio en Dormitorio Principal",
-            "Amplias terrazas con porcelanato",
-            "2 baños, principal en suite, más baño de visita"
+            "2 y 3 dormitorios",
+            "2 baños, principal en suite",
+            "Cocinas integradas en todos los departamentos",
+            "Amplias terrazas",
+            "Edificios de 6 pisos con ascensores",
+            "Deptos. En primer piso con jardìn de uso y goce exclusivo",
+            "Logia en exterior",
+            "Bodegas en subterraneo"
         ]
     },
     "Macul-intro":{
-        "title":"Casas de  55 pisos",
-        "subtitle":"Con espacios para toda la familia",
+        "title":"Amplios espacios",
+        "subtitle":"para compartir y disfrutar",
         "accesos": [
-            "Casas de 3 dormitorios",
+            "2 y 3 dormitorios",
             "Espacios interiores integrados (Living, comedor, cocina y terraza)",
             "Cocinas semi integradas e integradas",
             "Escritorio en Dormitorio Principal",
