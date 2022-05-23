@@ -178,7 +178,6 @@ function showPresentation(p){
          },4000);
       },500);      
    },500);
-
 }
 
 function proyectShow(p)
@@ -227,6 +226,64 @@ function proyectShow(p)
    },500);
 }
 
+function showRealizedWork()
+{
+   hideSideNav();
+   hideGalleryGrid()
+   let index = localStorage.getItem("interaction");
+   $("#"+index).addClass("fadeOut");
+
+   setTimeout(function(){
+      $("#proyectos").css("display","none");   
+      $(".progress").css("display","block");
+      setTimeout(function(){
+         $("#progress-bar").addClass("loading");
+         setTimeout(function(){
+            setTimeout(function(){
+               $(".progress").css("display","none");
+               $("#progress-bar").removeClass("loading");
+               $("#"+index).css("display","none");
+               showRW();
+            },300);
+         },4000);
+      },500);      
+   },500);
+}
+
+function showRW(){
+   $("#proyectos-container").fadeOut();
+   $("#proyectos-container").html('');
+
+   let data    = '';
+   let d    = 0;
+   let path = '';
+   let skey = '';
+   
+      
+   fetch('json/realizados.json')
+   .then(response => response.json())
+   .then(json => {
+      data += '<div class="row domotica align-items-center">';
+      data += '<div class="col domotica-col">';
+      data += '<img src="img/realizados/1.png" class="realizados-back">';
+      data += '<div class="dom-circle-realizados">';
+
+      for(var clave in json[skey]){
+         d++;
+         data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showPopover('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
+         data += '<div class="pophover '+json[skey][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+      }
+
+      data += '</div>';
+      data += '</div>';
+      data += '</div>';
+      setTimeout(function(){
+         $("#proyectos-container").html(data);
+         $("#proyectos-container").fadeIn();
+      },500);
+   })
+      
+}
 function showBoxesBackground(){
    setTimeout(function(){
       $(".area").css("display","block");
