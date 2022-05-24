@@ -60,7 +60,7 @@
             "title":"Sensor de Apertura",
             "description":"Podrás detectar el estado de una puerta o ventada (abierto/cerrado) el cual será informado a tu celular",
             "orientation":"poptop",
-            "style":"top: 225px; left: 14px;"
+            "style":"top: 226px; left: 1452px;"
         }
     },
     "Macul":{
@@ -92,7 +92,7 @@
             "title":"Door Window Sensor",
             "description":"Detecta apertura de puertas y ventanas",
             "orientation":"poptop",
-            "style":"top: 58px; left: 738px;"
+            "style":"top: 58px; left: 381px;"
         },
         "6":{
             "title":"Wall Plug",
