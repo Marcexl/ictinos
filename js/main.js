@@ -205,8 +205,7 @@ function showPresentation(p){
 
 function proyectShow(p)
 {
-   const logos  = ['','loicas.png','piedra.png','macul.png'];
-   logocenter.innerHTML = `<img src="img/logos/${logos[p]}"/>`;
+   logocenter.innerHTML = `<img src="img/logos/${p}.png"/>`;
    let item = 'Casas';
    switch(p){
       case 2:
