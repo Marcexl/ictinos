@@ -112,7 +112,7 @@ function sectionOpen(id){
       {
          $("#proyectos").removeClass("fadeOut");
          $("#proyectos").css("margin-left","0");
-         showGalleryGrid()
+         getGalleryGrid()
          showBoxesBackground()
       }
    },500);
@@ -121,7 +121,30 @@ function sectionOpen(id){
 function sectionClose(index){
    $("#"+index).css("display","none");
 }
+function getGalleryGrid(){
+   let data = '';
+   let d = 0;
+  
+   fetch('json/proyectos.json')
+   .then(response => response.json())
+   .then(json => {
 
+      for(var clave in json){
+         d++
+         data += '<li class="gallery-item" onclick="showPresentation('+d+')" style="'+json[clave]['style']+'">';
+         data += '<div class="thumb-gallery">';
+         data += '<img src="img/proyectos/'+d+'.jpg">';
+         data += '<h4>'+json[clave]['type']+'</h5>';
+         data += '<h3>'+json[clave]['title']+'</h3>';
+         data += '<h5>'+json[clave]['location']+'</h5>';
+         data += '</div>';
+         data += '</li>';
+      }
+
+      $("#gallery-result").html(data);
+      showGalleryGrid()
+   })
+}
 function showGalleryGrid(){
    $("#proyectos h1").removeClass("fadeOut");
    let cnt = 1;
@@ -184,11 +207,8 @@ function proyectShow(p)
 {
    const logos  = ['','loicas.png','piedra.png','macul.png'];
    logocenter.innerHTML = `<img src="img/logos/${logos[p]}"/>`;
-   let item = '';
+   let item = 'Casas';
    switch(p){
-      case 1:
-         item = 'Casas';
-         break;
       case 2:
       case 3:
          item = 'Departamentos';
@@ -333,6 +353,11 @@ function goInside(s,id){
          path   = 'macul';
          skey   = 'Macul';
          skeyin = 'Macul-intro';
+         break;
+      case 4:
+         path   = 'nuevo';
+         skey   = 'Nuevo';
+         skeyin = 'Nuevo-intro';
          break;
    }
 

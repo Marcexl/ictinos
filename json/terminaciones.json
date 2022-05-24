@@ -133,5 +133,50 @@
             "orientation":"popleft",
             "style":"top:273px;left:1386px;"
         }
+    },
+    "Nuevo":{
+        "1":{
+            "title":"Cubiertas de granito en cocina",
+            "description":"",
+            "orientation":"poptop",
+            "style":"top:250px;left:506px;"
+        },
+        "2":{
+            "title":"Piso gres porcelánico",
+            "description":"en cocina, terraza y baños.",
+            "orientation":"popleft",
+            "style":"top:510px;left:330px;"
+        },
+        "3":{
+            "title":"Cocina equipada:",
+            "description":"Con encimera vitrocerámica, horno con convector y campana.",
+            "orientation":"popright",
+            "style":"top:264px;left:79px;"
+        },
+   
+        "4":{
+            "title":"Muros pintados",
+            "description":"",
+            "orientation":"popright",
+            "style":"top:60px;left:1025px;"
+        },
+        "5":{
+            "title":"Piso flotante en living comedor y dormitorios",
+            "description":"",
+            "orientation":"popright",
+            "style":"top:417px;left:1012px;"
+        },
+        "6":{
+            "title":"Ventanas de termopanel con marco de PVC",
+            "description":"",
+            "orientation":"poptop",
+            "style":"top:100px;left:1267px;"
+        },
+        "7":{
+            "title":"Terraza",
+            "description":"con antepecho.",
+            "orientation":"popleft",
+            "style":"top:273px;left:1386px;"
+        }
     }
 }    

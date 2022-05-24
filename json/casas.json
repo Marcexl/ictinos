@@ -37,6 +37,18 @@
             "2 baños, principal en suite, más baño de visita"
         ]
     },
+    "Nuevo-intro":{
+        "title":"Title nuevo",
+        "subtitle":"subtitle nuevo",
+        "accesos": [
+            "2 y 3 dormitorios",
+            "Espacios interiores integrados (Living, comedor, cocina y terraza)",
+            "Cocinas semi integradas e integradas",
+            "Escritorio en Dormitorio Principal",
+            "Amplias terrazas con porcelanato",
+            "2 baños, principal en suite, más baño de visita"
+        ]
+    },
     "Loicas":{
         "1":{
             "title":"Casa A",
@@ -218,6 +230,80 @@
         },
         "4":{
                  "title":"Modelo D",
+            "ambientes":"3 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre A7",
+            "superficie": [
+                "Superficie Interior: 68,27 m2 aprox",
+                "Logia: 1,97 m2 aprox",
+                "Terraza: 6,83 m2 aprox",
+                "Patio + Terraza en primer piso: 24,28 m2 aprox"
+				]
+        },
+        "5":{
+            "title":"Modelo E",
+            "ambientes":"2 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre B",
+            "superficie": [
+                "Superficie Interior: 57,74 m2 aprox",
+                "Logia: 1,14 m2 aprox",
+                "Terraza: 5,13 m2 aprox",
+                "Patio + Terraza en primer piso: 26,45 m2 aprox"
+				]
+        },
+        "6":{
+            "title":"Modelo F",
+            "ambientes":"2 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre B",
+            "superficie": [
+                "Superficie Interior: 51,03 m2 aprox",
+                "Logia: 1,13 m2 aprox",
+                "Terraza: 3,67 m2 aprox",
+                "Patio + Terraza en primer piso: 24,47 m2 aprox"
+				]
+        }
+    },
+    "Nuevo":{
+        "1":{
+            "title":"Modelo A",
+            "ambientes":"3 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre A7",
+            "superficie": [
+                "Superficie Interior: 64,65 m2 aprox",
+                "Logia: 1,22 m2 aprox",
+                "Terraza: 5,77 m2 aprox",
+                "Patio + Terraza en primer piso: 30,97 m2 aprox"
+                ]
+        },
+        "2":{
+            "title":"Modelo B",
+            "ambientes":"3 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre A",
+            "superficie": [
+                "Superficie Interior: 59,9 m2 aprox",
+                "Logia: 1,24 m2 aprox",
+                "Terraza: 5,12 m2 aprox",
+                "Patio + Terraza en primer piso: 27,63 m2 aprox"
+                ]
+        },
+        "3":{
+            "title":"Modelo C",
+            "ambientes":"3 Dormitorios",
+            "banos":"2 Baños",
+            "subtitle":"Torre A",
+            "superficie": [
+                "Superficie Interior: 60,34 m2 aprox",
+                "Logia: 1,13 m2 aprox",
+                "Terraza: 5,12 m2 aprox",
+                "Patio + Terraza en primer piso: 27,63 m2 aprox"
+				]
+        },
+        "4":{
+            "title":"Modelo D",
             "ambientes":"3 Dormitorios",
             "banos":"2 Baños",
             "subtitle":"Torre A7",

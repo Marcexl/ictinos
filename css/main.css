@@ -736,11 +736,15 @@ li.s-i-8 a h3{
     margin-top: -45px;
 }
 /* gallery grid */
+.col-gallery{
+    position:relative;
+    height: 100%;
+}
 .gallery{
     position: absolute;
-    right: 140px;
-    top: 0;
-    width: 50%;
+    right: 45px;
+    bottom: 0;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     list-style: none;
@@ -750,13 +754,13 @@ li.s-i-8 a h3{
 
 .gallery li{
     position: relative;
-    width: calc(33.3333% - 20px);
+    width: calc(25% - 20px);
     height: 100%;
     margin-right: 5px;
     overflow: hidden;
     padding: 0;
     transition: all .3s;
-    bottom: 0;
+    top: 0;
     opacity: 0;
     padding-top: 120px;
     display: none;
@@ -787,14 +791,6 @@ li.s-i-8 a h3{
     animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-}
-
-.gallery li:first-child{
-    padding-top: 250px;
-}
-
-.gallery li:last-child{
-    padding-top: 160px;
 }
 
 .gallery li .thumb-gallery h5,
@@ -1132,6 +1128,14 @@ li.s-i-8 a h3{
 
 #item-up-3{
     animation-delay: .8s;
+}
+
+#item-up-4{
+    animation-delay: 1.2s;
+}
+
+#item-up-5{
+    animation-delay: 1.6s;
 }
 
 /* social */

@@ -25,5 +25,13 @@
             "Cercano a grandes avenidas (Av. Macul, Av. La Florida, Av. Departamental)",
             "Autopista Vespucio Sur Express"
         ]
+    },
+    "Nuevo":{
+        "accesos": [
+            "A pasos del Metro Macul, a una estación de conexiones líneas 4A (Vicuña Mackenna) y a línea 5 (Vicente Váldes)",
+            "Tre comunas (Macul, La Florida y Peñalolén)", 
+            "Cercano a grandes avenidas (Av. Macul, Av. La Florida, Av. Departamental)",
+            "Autopista Vespucio Sur Express"
+        ]
     }
 }    

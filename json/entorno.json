@@ -39,5 +39,19 @@
 			"Duoc UC",
             "Estaciones de servicio"
         ]
+    },
+    "Nuevo":{
+        "accesos": [
+            "Mall Plaza Vespucio",
+            "Mall Florida Center",
+            "Hospital", 
+            "Parques",
+            "Restaurants",
+			 "Supermercados (Tottus, Lider, Mayorista, etc)",
+			 "Bomberos",
+			 "Colegios",
+			"Duoc UC",
+            "Estaciones de servicio"
+        ]
     }
 }    

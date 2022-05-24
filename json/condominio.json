@@ -41,5 +41,20 @@
 			   "Condominio de alta seguridad",
             "Más de 5000 m2 de áreas verdes"
         ]
+    },
+    "Condominio":{
+        "title":"<h3>AMPLIOS ESPACIOS PARA TODA TU FAMILIA</h3>",
+        "subtitle":"<h4>VIVE EN UN BARRIO EXCLUSIVO A MINUTOS DE SANTIAGO</h4>",
+        "entorno": [
+            "Zonas de juegos infantiles",
+            "Porteria",
+            "Quinchos Equipados"
+        ],
+        "seguridad": [
+            "Salas de usos múltiples",
+			   "Piscina adultos y niños",
+			   "Condominio de alta seguridad",
+            "Más de 5000 m2 de áreas verdes"
+        ]
     }
 }    

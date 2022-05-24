@@ -101,5 +101,44 @@
             "style":"top: 291px; left: 697px;"
         }
 		
+    },
+    "Nuevo":{
+        "1":{
+            "title":"Motion Sensor",
+            "description":"Detector de movimiento, acelerómetro, temperatura y luminosidad.",
+            "orientation":"poptop",
+            "style":"top: 31px; left: 735px;"
+        },
+        "2":{
+            "title":"Smoke Sensor",
+            "description":"Detecta humo y cambios drásticos de temperatura",
+            "orientation":"popright",
+            "style":"top: 134px; left: 1288px;"
+        },
+        "3":{
+            "title":"Flood sensor",
+            "description":"Control de inundación",
+            "orientation":"poptop",
+            "style":"top: 547px; left: 166px;"
+        },
+        "4":{
+            "title":"Home Center Lite",
+            "description":"Control principal del sistema Fibaro-Tamed",
+            "orientation":"popbottom",
+            "style":"top: 388px; left: 582px;"
+        },
+        "5":{
+            "title":"Door Window Sensor",
+            "description":"Detecta apertura de puertas y ventanas",
+            "orientation":"poptop",
+            "style":"top: 58px; left: 738px;"
+        },
+        "6":{
+            "title":"Wall Plug",
+            "description":"Enchufe multiuso con control de consumo.",
+            "orientation":"poptop",
+            "style":"top: 291px; left: 697px;"
+        }
+		
     }
 }    
