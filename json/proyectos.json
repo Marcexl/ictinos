@@ -3,24 +3,28 @@
         "title":"Las Loicas I",
         "type":"Condominio",
         "location":"Santa Elena Chicureo",
-        "style":"padding-top: 250px;"
+        "style":"padding-top: 250px;",
+        "display":true
     },
     "2":{
         "title":"Plaza Piedra",
         "type":"Condominio",
         "location":"Huechuraba",
-        "style":""
+        "style":"",
+        "display":true
     },
     "3":{
         "title":"San Luis Macul",
         "type":"Condominio",
         "location":"Peñalolen",
-        "style":"padding-top: 160px;"
+        "style":"padding-top: 160px;",
+        "display":true
     },
     "4":{
         "title":"New Proyect",
         "type":"New proyect type",
         "location":"New Location",
-        "style":"padding-top: 220px;"
+        "style":"padding-top: 220px;",
+        "display":false
     }
 }   

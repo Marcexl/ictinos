@@ -129,16 +129,20 @@ function getGalleryGrid(){
    .then(response => response.json())
    .then(json => {
 
-      for(var clave in json){
-         d++
-         data += '<li class="gallery-item" onclick="showPresentation('+d+')" style="'+json[clave]['style']+'">';
-         data += '<div class="thumb-gallery">';
-         data += '<img src="img/proyectos/'+d+'.jpg">';
-         data += '<h4>'+json[clave]['type']+'</h5>';
-         data += '<h3>'+json[clave]['title']+'</h3>';
-         data += '<h5>'+json[clave]['location']+'</h5>';
-         data += '</div>';
-         data += '</li>';
+      for(var clave in json)
+      {
+         if(json[clave]['display'] == true)
+         {
+            d++
+            data += '<li class="gallery-item" onclick="showPresentation('+d+')" style="'+json[clave]['style']+'">';
+            data += '<div class="thumb-gallery">';
+            data += '<img src="img/proyectos/'+d+'.jpg">';
+            data += '<h4>'+json[clave]['type']+'</h5>';
+            data += '<h3>'+json[clave]['title']+'</h3>';
+            data += '<h5>'+json[clave]['location']+'</h5>';
+            data += '</div>';
+            data += '</li>';
+         }
       }
 
       $("#gallery-result").html(data);
@@ -288,9 +292,11 @@ function showRW(){
       data += '<div class="dom-circle-realizados">';
 
       for(var clave in json){
+
          d++;
          data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[clave]['style']+'" onclick="showPopover('+d+',\''+json[clave]['title']+'\',\''+json[clave]['description']+'\')">';
          data += '<div class="pophover '+json[clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+         
       }
 
       data += '</div>';
