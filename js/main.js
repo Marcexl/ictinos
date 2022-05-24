@@ -268,16 +268,17 @@ function showRW(){
       data += '<img src="img/realizados/1.png" class="realizados-back">';
       data += '<div class="dom-circle-realizados">';
 
-      for(var clave in json[skey]){
+      for(var clave in json){
          d++;
-         data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showPopover('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
-         data += '<div class="pophover '+json[skey][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+         data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[clave]['style']+'" onclick="showPopover('+d+',\''+json[clave]['title']+'\',\''+json[clave]['description']+'\')">';
+         data += '<div class="pophover '+json[clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
       }
 
       data += '</div>';
       data += '</div>';
       data += '</div>';
       setTimeout(function(){
+         showHome();
          $("#proyectos-container").html(data);
          $("#proyectos-container").fadeIn();
       },500);

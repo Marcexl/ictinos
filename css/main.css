@@ -373,6 +373,7 @@ li.s-i-8 a h3{
     position: absolute;
     bottom: 30px;
     cursor: pointer;
+    z-index: 11;
 }
 .old-proyectos h3{
     padding-bottom: 0;

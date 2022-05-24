@@ -1,105 +1,44 @@
 {
-    "Loicas":{
-        "1":{
-            "title":"Motion Sensor",
-            "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz.",
-            "orientation":"poptop",
-            "style":"top: 23px; left: 144px;"
-        },
-        "2":{
-            "title":"Home center 2",
-            "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva.",
-            "orientation":"popright",
-            "style":"top: 530px; left: 260px;"
-        },
-        "3":{
-            "title":"5 Dimmer 2 de FIBARO",
-            "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo.",
-            "orientation":"poptop",
-            "style":"top: 145px; left: 602px;"
-        },
-        "4":{
-            "title":"Google Home Mini",
-            "description":"Asistente de voz compatible con el Sistema domotico TAMED",
-            "orientation":"popbottom",
-            "style":"top: 520px; left: 1115px;"
-        },
-        "5":{
-            "title":"Cámara IP Exterior D-LINK",
-            "description":"Monitoreo en tiempo real de tu vivienda",
-            "orientation":"poptop",
-            "style":"top: 130px; left: 1140px;"
-        }
+    "1":{
+        "title":"Motion Sensor",
+        "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz.",
+        "orientation":"poptop",
+        "style":"top: 177px; left: 714px;"
     },
-    "Piedras":{
-        "1":{
-            "title":"Sensor de Humo",
-            "description":"Detecta alguna densidad de humo y sonará la bocina, mientras tanto, se enviará una notificación al móvil.",
-            "orientation":"poptop",
-            "style":"top: 23px; left: 144px;"
-        },
-        "2":{
-            "title":"Interruptor",
-            "description":"Se puede manejar de forma manual o remota a través de la Aplicaciób móvil.",
-            "orientation":"popright",
-            "style":"top: 530px; left: 260px;"
-        },
-        "3":{
-            "title":"Enchufe Inteligente",
-            "description":"Podrás controlar el encendido y apagado de cualquier equipo electrónico conectado a él. Maneja el dispositivo desde cualquier parte del mundo con tu celular.",
-            "orientation":"poptop",
-            "style":"top: 145px; left: 602px;"
-        },
-        "4": {
-            "title": "Sensor de Movimiento",
-            "description": "Envia una notificación de forma inmediata a tu celular en caso de que seas vulnerado",
-            "orientation": "popbottom",
-            "style": "top: 520px; left: 1115px;"
-        },
-        "5":{
-            "title":"Sensor de Apertura",
-            "description":"Podrás detectar el estado de una puerta o ventada (abierto/cerrado) el cual será informado a tu celular",
-            "orientation":"poptop",
-            "style":"top: 130px; left: 1140px;"
-        }
+    "2":{
+        "title":"Home center 2",
+        "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva.",
+        "orientation":"popright",
+        "style":"top: 320px; left: 825px;"
     },
-    "Macul":{
-        "1":{
-            "title":"Motion Sensor",
-            "description":"Detector de movimiento, acelerómetro, temperatura y luminosidad.",
-            "orientation":"poptop",
-            "style":"top: 23px; left: 144px;"
-        },
-        "2":{
-            "title":"Smoke Sensor",
-            "description":"Detecta humo y cambios drásticos de temperatura",
-            "orientation":"popright",
-            "style":"top: 530px; left: 260px;"
-        },
-        "3":{
-            "title":"Flood sensor",
-            "description":"Control de inundación",
-            "orientation":"poptop",
-            "style":"top: 145px; left: 602px;"
-        },
-        "4":{
-            "title":"Home Center Lite",
-            "description":"Control principal del sistema Fibaro-Tamed",
-            "orientation":"popbottom",
-            "style":"top: 520px; left: 1115px;"
-        },
-        "5":{
-            "title":"Door Window Sensor",
-            "description":"Detecta apertura de puertas y ventanas",
-            "orientation":"poptop",
-            "style":"top: 130px; left: 1140px;"
-        },
-        "6":{
-            "title":"Wall Plug",
-            "description":"Enchufe multiuso con control de consumo.",
-            "orientation":"poptop",
-            "style":"top: 130px; left: 1140px;"
-        }
-		
+    "3":{
+        "title":"5 Dimmer 2 de FIBARO",
+        "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo.",
+        "orientation":"poptop",
+        "style":"top: 468px; left: 896px;"
+    },
+    "4":{
+        "title":"Google Home Mini",
+        "description":"Asistente de voz compatible con el Sistema domotico TAMED",
+        "orientation":"popbottom",
+        "style":"top: 505px; left: 1035px;"
+    },
+    "5":{
+        "title":"Cámara IP Exterior D-LINK",
+        "description":"Monitoreo en tiempo real de tu vivienda",
+        "orientation":"poptop",
+        "style":"top: 288px; left: 1067px;"
+    },
+    "6":{
+        "title":"pop 6",
+        "description":"el mas grande sigue siendo river plate el campeon mas poderoso de la historiaaaaaa",
+        "orientation":"poptop",
+        "style":"top: 400px; left: 1100px;"
+    },
+    "7":{
+        "title":"pop 7",
+        "description":"Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "orientation":"poptop",
+        "style":"top: 500px; left: 1200px;"
     }
 }    
