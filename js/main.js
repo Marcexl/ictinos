@@ -129,8 +129,8 @@ function getGalleryGrid(){
    .then(response => response.json())
    .then(json => {
 
-      for(var clave in json)
-      {
+      for(var clave in json){
+
          if(json[clave]['display'] == true)
          {
             d++
@@ -292,11 +292,9 @@ function showRW(){
       data += '<div class="dom-circle-realizados">';
 
       for(var clave in json){
-
          d++;
          data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[clave]['style']+'" onclick="showPopover('+d+',\''+json[clave]['title']+'\',\''+json[clave]['description']+'\')">';
          data += '<div class="pophover '+json[clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
-         
       }
 
       data += '</div>';
@@ -487,7 +485,7 @@ function goInside(s,id){
          }
          data += '</ul></div>';
          
-         data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
+         data += '<div class="col-6" style="padding:0px;"><ul class="condominio-list">';
          for(var clave in json[skey]['seguridad'])
          {
             data += '<li>'+json[skey]['seguridad'][clave]+'</li>';
@@ -636,7 +634,7 @@ function goInside(s,id){
          data += '<img src="img/'+path+'/entorno/1.png" class="conect-img-2">';
          data += '</div>';  
          data += '<div class="col-4">';
-         data += '<ul class="accesos" style="padding:60px 30px 0 0">';
+         data += '<ul class="accesos" style="padding:0 30px 0 0">';
          for(var clave in json[skey]['accesos'])
          {
             data += '<li>'+json[skey]['accesos'][clave]+'</li>';

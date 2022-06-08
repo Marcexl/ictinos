@@ -40,7 +40,7 @@
         },
         "2":{
             "title":"Interruptor",
-            "description":"Se puede manejar de forma manual o remota a través de la Aplicaciób móvil.",
+            "description":"Se puede manejar de forma manual o remota a través de la aplicación móvil.",
             "orientation":"popright",
             "style":"top: 200px; left: 102px;"
         },
@@ -58,7 +58,7 @@
         },
         "5":{
             "title":"Sensor de Apertura",
-            "description":"Podrás detectar el estado de una puerta o ventada (abierto/cerrado) el cual será informado a tu celular",
+            "description":"Podrás detectar el estado de una puerta o ventana (abierto/cerrado) el cual será informado a tu celular",
             "orientation":"poptop",
             "style":"top: 226px; left: 1452px;"
         }

@@ -21,10 +21,10 @@
         "display":true
     },
     "4":{
-        "title":"New Proyect",
-        "type":"New proyect type",
-        "location":"New Location",
+        "title":"PLaza del Arbol",
+        "type":"Condominio",
+        "location":"Próximamente",
         "style":"padding-top: 220px;",
-        "display":false
+        "display":true
     }
 }   

@@ -1,44 +1,89 @@
 {
     "1":{
-        "title":"Motion Sensor",
-        "description":"Detecta el mas minimo movimiento. Ademas funciona como sensor de temperatura, vibracion e intensidad de luz.",
+        "title":"Condominio PLaza Azul",
+        "description":"La urbanización incluye juegos infantiles y una cancha de fútbol, para que usted y los suyos disfruten de una vida familiar. El condominio se encuentra inmerso en un entorno de excepción, que garantiza los servicios básicos indispensables.",
         "orientation":"poptop",
-        "style":"top: 177px; left: 714px;"
+        "style":"top: 243px; left: 275px;"
     },
     "2":{
-        "title":"Home center 2",
-        "description":"El Home center 2 es el cerebro del Sistema FIBARO o de cualquier sistema domotico basado en tecnologia Z-Wave, es innovador y facil de usar a traves de una interfaz amigable e intuitiva.",
-        "orientation":"popright",
-        "style":"top: 320px; left: 825px;"
+        "title":"Condominio PLaza Verde",
+        "description":"La urbanización incluye juegos infantiles y una cancha de futbol, para que usted y los suyos disfruten de la vida familiar. El condominio se encuentra inmerso en un entorno de excepción, que garantiza lo servicios básicos indispensables. Cada una de sus sólidas casas está construída con los más altos estándares de calidad, con atractivos diseños y con minuciosos detalles que aportan un valor agregado a cada vivienda. Plaza Verde es un lugar ideal para desarrollar una vida en amónica e integral.",
+        "orientation":"poptop",
+        "style":"top: 243px; left: 361px;"
     },
     "3":{
-        "title":"5 Dimmer 2 de FIBARO",
-        "description":"El dimmer varia la intensidad de las luces y Bypass permite que este trabaje con luces de bajo consumo.",
+        "title":"Condominio PLaza Verde 2",
+        "description":"Condominio exclusivo de 72 casas, instalado al lado de la exitosa primera etapa de este proyecto. La urbanización del conjunto está diseñada para el desarrollo de la vida familiar y comunitaria con nuevas áreas verdes con juegos para la recreación infantil. Las casas tienen amplios espacios comunes para que la familia pueda sentirse cómoda. Están equipadas con elementos de la mejor calidad y cuentan con el aval de una inmobiliaria que siempre se ha destacado por su excelente ejecución.",
         "orientation":"poptop",
-        "style":"top: 468px; left: 896px;"
+        "style":"top: 243px; left: 443px;"
     },
     "4":{
-        "title":"Google Home Mini",
-        "description":"Asistente de voz compatible con el Sistema domotico TAMED",
+        "title":"Condominio Plaza Verde 3",
+        "description":"Condominio PLaza verde cuenta con casas de 3 dormitorios más mansarda y plazas inferiores que orfecen un acogedor ambiente familiar. La excelente ubicación en el barrrio Pedro Fontoba ofrece una excelente conectividad y todo tipo de servicios cómo: colegios, bombas de bencina, farmacias, centros comerciales y supermercados.",
         "orientation":"popbottom",
-        "style":"top: 505px; left: 1035px;"
+        "style":"top: 328px; left: 281px;"
     },
     "5":{
-        "title":"Cámara IP Exterior D-LINK",
-        "description":"Monitoreo en tiempo real de tu vivienda",
-        "orientation":"poptop",
-        "style":"top: 288px; left: 1067px;"
+        "title":"Edificio PLaza Verde III",
+        "description":"Edificios PLaza Verde III cuenta con departamentos de 2 y 3 dormitorios, cada uno con 2 baños, principal en suite. Son edificios de 5 pisos con ascensor y cuenta con Club House y piscina.",
+        "orientation":"popbottom",
+        "style":"top: 328px; left: 358px;"
     },
     "6":{
-        "title":"pop 6",
-        "description":"el mas grande sigue siendo river plate el campeon mas poderoso de la historiaaaaaa",
-        "orientation":"poptop",
-        "style":"top: 400px; left: 1100px;"
+        "title":"Condominio PLaza El Roble",
+        "description":"En uno de los mejores sectores de Huechuraba, se emplaza Condominio Plaza El Roble con 79 departamentos en edificios de solo 4pisos con ascensor y 20 exclusivos townhouse. Condominio PLaza El Roble se escapa del bullicio de la gran ciudad a una apacible y moderna vida de barrio, sin salir de Santiago.",
+        "orientation":"popbottom",
+        "style":"top: 328px; left: 441px;"
     },
     "7":{
-        "title":"pop 7",
-        "description":"Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "title":"Condominio Los Cactus de la Dehesa",
+        "description":"Exclusivas viviendas pensadas para las personas que gustan de la calidad de la construcción, la comodidad y la seguridad. Son 9 casas de 198 mt2, distribuidas en tres pisos, con diseños únicos e innovadores y con los más altos estándares de calidad de desarrollo urbano. Un lugar ideal para vivir apartado de la congestión de Santiago, pero con todas las comodidades y servicios que proporciona la ciudad",
         "orientation":"poptop",
-        "style":"top: 500px; left: 1200px;"
+        "style":"top: 194px; left: 1292px;"
+    },
+    "8":{
+        "title":"Varas Gallardo Edificio",
+        "description":"Efificio Varas Gallardo se encuentra ubicado en el corazón de Providencia y cuenta con espacios flexibles y amplios. Cuenta con equipamiento de primer nivel como piscina, sala multiuso, juegos infantíle sy áreas verdes. Es un proyecto sustentable, ya que cuenta con paneles solares para el agua caliente, iluminación led en espacios comunes, calefacción eléctrica con termostato y sistema de bicicletas compartidas de libre uso.",
+        "orientation":"poptop",
+        "style":"top: 392px; left: 1373px;"
+    },
+    "9":{
+        "title":"Condominio Rosales de la Reina",
+        "description":"La paz y tranquilidad inmersa en la naturaleza es la mejor forma de describir la experiencia que hoy viven los usuarios del condominio Rosales de la Reina. Son 9 casas con acogedores diseños que ofrecen preimra calidad, armonía y seguridad.",
+        "orientation":"poptop",
+        "style":"top: 500px; left: 1409px;"
+    },
+    "10":{
+        "title":"Condominio Vientos de Gales",
+        "description":"Son extensos terrenos de 140 mt2, pensados para integrar una piscina, una terraza, un quincho, una pérgola o cualquier espacios destinado a compartir con la familia. Vientos de gales se encuentra en un barrio tranquilo y seguro, con colegios, supermercados y centros comerciales. Tiee una excelente conectividad y abundantes áreas verdes en los alrededores donde niños y adultos pueden disfrutar sin problemas.",
+        "orientation":"poptop",
+        "style":"top: 500px; left: 1501px;"
+    },
+    "11":{
+        "title":"Edificio La Reina",
+        "description":"En el corazón de La Reina, en un sector rodeado por la naturaleza, se encuentra el exclusivo edificio La Reina. Son 24 acogedores departamentos distribuidos en cuatro pisos. El edificio cuenta con variados espacios comunes, como una agradable piscina, estacionamientos subterráneos, salas multiuso para compartir en familia o con amigos y abundantes áreas. Un entorno tranquilo y seguro, con variados centros comerciales, exclusivos establecimientos educacionales y una excelente movilización.",
+        "orientation":"poptop",
+        "style":"top: 500px; left: 1593px;"
+    },
+    "12":{
+        "title":"Condominio Jardines de Freire",
+        "description":"el condominio se ubica en el paradero 16 de la Florida. Son 32 casas que van desde los 91 mt2. Todas poseen un confortable piso laminado, cocinas totalmente equipadas, habitaciones amplias e iluminadas, además de práctivas salas subterráneas. Un condominio cerrado con máxima seguridad, áreas verdes donde los niños pueden disfrutar con tranquilidad y una comunidad en la que abunda la armonía..",
+        "orientation":"poptop",
+        "style":"top: 717px; left: 1290px;"
+    },
+
+    "13":{
+        "title":"Condominio Jardines de la Florida",
+        "description":"Jardines de La Florida es un exlusivo condominio ubicado en el corazón de la comuna de La Florida, son 110 acogedoras viviendas de hasta 235 mt2. Cada una de estas casas, hechas de Cedro y Nogal, se construyó con los más altos estándares de calidad. Poseen piso flotante, además de amplás cocinas amobladas. Un lugar perfecto para vivir en familia, con accesos controlados pra brindar la mayor seguridad y plazas con jugos interiores para que los niños puedan disfrutar..",
+        "orientation":"poptop",
+        "style":"top: 717px; left: 1376px;"
+    },
+    "14":{
+        "title":"Condominio Plaza Verde La Florida",
+        "description":"En los extensos terreons deun antiguo club de campo rodeado por encantadores jardines, nace condominio Plaza Verde, un lugar único en la comuna de La Florida. Son 69 casas con tres innnovadores modelos que ofrecen una acogedora y funcional arquitectura, con terminaciones de primer nivel. Es un condominio cerrado, custodiado en todas sus entradas las 24 horas del día. Además cuenta con múltiples áreas verdes, cada una con juegos infantíles, para disfrutar de la vida de barrio que siempre quise para sus hijos.",
+        "orientation":"poptop",
+        "style":"top: 717px; left: 1460px;"
     }
+ 
+
 }    
