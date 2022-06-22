@@ -478,14 +478,30 @@ function goInside(s,id){
          data += '<div class="line"></div>';
          data += '<div class="col" style="padding:30px 0 0 0;">';
          data += '<div class="row">';
-         data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
+         if( (s == 2) || (s == 3)) 
+         {
+            data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list" style="float:right;padding-right: 30px;">';
+         }
+         else
+         {
+            data += '<div class="col-6" style="padding:0 0 0 150px;"><ul class="condominio-list">';
+         }
+
          for(var clave in json[skey]['entorno'])
          {
             data += '<li>'+json[skey]['entorno'][clave]+'</li>';
          }
          data += '</ul></div>';
          
-         data += '<div class="col-6" style="padding:0px;"><ul class="condominio-list">';
+         if( (s == 2) || (s == 3) ) 
+         {
+            data += '<div class="col-6" style="padding:0px 30px;"><ul class="condominio-list">';
+         }
+         else
+         {
+            data += '<div class="col-6" style="padding:0px;"><ul class="condominio-list">';
+         }
+
          for(var clave in json[skey]['seguridad'])
          {
             data += '<li>'+json[skey]['seguridad'][clave]+'</li>';
@@ -599,10 +615,27 @@ function goInside(s,id){
             c++
             data += '<div class="tab-pane fade '+clas+'" id="v-tabs-'+c+'" role="tabpanel" aria-labelledby="v-tabs-'+c+'">';
             data += '<div class="row casas-tab align-items-center">';
-            data += '<div class="col-9">';
+            
+            if(s == 2)
+            {
+               data += '<div class="col-8">';
+            }
+            else
+            {
+               data += '<div class="col-9">';
+            }
             data += '<img src="img/'+path+'/casas/'+c+'.jpg" class="casas">';
             data += '</div>';  
-            data += '<div class="col-3">';
+
+            if(s == 2)
+            {
+               data += '<div class="col-4">';
+            }
+            else
+            {
+               data += '<div class="col-3">';
+            }
+
             data += '<h4>'+json[skey][clave]['ambientes']+'</h4>';
             data += '<h4>'+json[skey][clave]['banos']+'</h4>';
             data += '<h5>'+json[skey][clave]['subtitle']+'</h5>';
@@ -630,15 +663,46 @@ function goInside(s,id){
       .then(response => response.json())
       .then(json => {
          data += '<div class="row align-items-center">';
-         data += '<div class="col-8">';
-         data += '<img src="img/'+path+'/entorno/1.png" class="conect-img-2">';
+
+         if(s == 2)
+         {
+            data += '<div class="col-6" style="padding:30px;">';
+            data += '<img src="img/'+path+'/entorno/1.png" class="conect-img-2" style="max-width: 750px;float: right;">';
+         }
+         else if(s == 3)
+         {
+            data += '<div class="col-7" style="padding:30px;">';
+            data += '<img src="img/'+path+'/entorno/1.png" class="conect-img-2" style="max-width:auto;width: 830px;float:right;">';
+         }
+         else
+         {
+            data += '<div class="col-8">';
+            data += '<img src="img/'+path+'/entorno/1.png" class="conect-img-2">';
+         }
+
          data += '</div>';  
-         data += '<div class="col-4">';
-         data += '<ul class="accesos" style="padding:0 30px 0 0">';
+
+         if (s == 2) 
+         {
+            data += '<div class="col-6">';
+            data += '<ul class="accesos" style="padding:0 130px 0 35px;">';
+         }
+         else if(s == 3)
+         {
+            data += '<div class="col-5">';
+            data += '<ul class="accesos" style="padding:0 30px 0 0">';
+         }
+         else
+         {
+            data += '<div class="col-4">';
+            data += '<ul class="accesos" style="padding:0 30px 0 0">';
+         }
+
          for(var clave in json[skey]['accesos'])
          {
             data += '<li>'+json[skey]['accesos'][clave]+'</li>';
          }
+
          data += '</ul>';
          data += '</div></div>';  
          
@@ -661,19 +725,44 @@ function goInside(s,id){
    }
 
    if(id == 8)//conectividad
-   {   
+   {    
       fetch('json/conectividad.json')
       .then(response => response.json())
       .then(json => {
          data += '<div class="row align-items-center">';
          data += '<div class="col-6">';
-         data += '<img src="img/'+path+'/conectividad/1.png" class="conect-img">';
+         
+         if( (s == 2) || (s == 3)) 
+         {
+            data += '<img src="img/'+path+'/conectividad/1.png" class="conect-img" style="max-width: 650px;float: right;margin-right: 30px;">';
+         }
+         else
+         {
+            data += '<img src="img/'+path+'/conectividad/1.png" class="conect-img">';
+         }
+
          data += '</div>';  
          data += '<div class="col-6">';
-         data += '<ul class="accesos">';
+         
+         if((s == 2) || (s == 3)) 
+         {
+            data += '<ul class="accesos" style="padding-left:4rem">';
+         }
+         else
+         {
+            data += '<ul class="accesos">';
+         }
+
          for(var clave in json[skey]['accesos'])
          {
-            data += '<li>'+json[skey]['accesos'][clave]+'</li>';
+            if(s == 2)
+            {
+               data += '<li style="font-size:1.7rem;">'+json[skey]['accesos'][clave]+'</li>';
+            }
+            else
+            {
+               data += '<li>'+json[skey]['accesos'][clave]+'</li>';
+            }
          }
          data += '</ul>';
          data += '</div></div>';  

@@ -581,7 +581,6 @@ li.s-i-8 a h3{
     height: 50px;
     border-radius: 50%;
     border: 3px solid #ebb346;
-    z-index: 1;
     cursor: pointer;
     transition: all .3s;
     animation: shining 3s ease-in-out 0s infinite;
@@ -602,6 +601,7 @@ li.s-i-8 a h3{
     -moz-box-shadow: 4px 4px 10px 3px rgba(0,0,0,0.39);
     opacity: 0;
     transition: all .3s;
+    z-index: 1;
 }
 .pophover.popright{
     animation: popright .5s ease-in-out 0s forwards;
