@@ -294,7 +294,14 @@ function showRW(){
       for(var clave in json){
          d++;
          data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[clave]['style']+'" onclick="showPopover('+d+',\''+json[clave]['title']+'\',\''+json[clave]['description']+'\')">';
-         data += '<div class="pophover '+json[clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+         if ( (d == 12) || (d == 10) || (d == 8) )
+         {
+            data += '<div class="pophover p-a p-b '+json[clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+         }
+         else
+         {
+            data += '<div class="pophover p-a '+json[clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
+         }
       }
 
       data += '</div>';
@@ -616,7 +623,7 @@ function goInside(s,id){
             data += '<div class="tab-pane fade '+clas+'" id="v-tabs-'+c+'" role="tabpanel" aria-labelledby="v-tabs-'+c+'">';
             data += '<div class="row casas-tab align-items-center">';
             
-            if(s == 2)
+            if( (s == 2) || (s == 3) ) 
             {
                data += '<div class="col-8">';
             }
@@ -627,7 +634,7 @@ function goInside(s,id){
             data += '<img src="img/'+path+'/casas/'+c+'.jpg" class="casas">';
             data += '</div>';  
 
-            if(s == 2)
+            if( (s == 2) || (s == 3)) 
             {
                data += '<div class="col-4">';
             }

@@ -8,13 +8,13 @@
     "2":{
         "title":"Condominio PLaza Verde",
         "description":"La urbanización incluye juegos infantiles y una cancha de futbol, para que usted y los suyos disfruten de la vida familiar. El condominio se encuentra inmerso en un entorno de excepción, que garantiza lo servicios básicos indispensables. Cada una de sus sólidas casas está construída con los más altos estándares de calidad, con atractivos diseños y con minuciosos detalles que aportan un valor agregado a cada vivienda. Plaza Verde es un lugar ideal para desarrollar una vida en amónica e integral.",
-        "orientation":"poptop",
+        "orientation":"popbottom",
         "style":"top: 243px; left: 361px;"
     },
     "3":{
         "title":"Condominio PLaza Verde 2",
         "description":"Condominio exclusivo de 72 casas, instalado al lado de la exitosa primera etapa de este proyecto. La urbanización del conjunto está diseñada para el desarrollo de la vida familiar y comunitaria con nuevas áreas verdes con juegos para la recreación infantil. Las casas tienen amplios espacios comunes para que la familia pueda sentirse cómoda. Están equipadas con elementos de la mejor calidad y cuentan con el aval de una inmobiliaria que siempre se ha destacado por su excelente ejecución.",
-        "orientation":"poptop",
+        "orientation":"popbottom",
         "style":"top: 243px; left: 443px;"
     },
     "4":{
@@ -38,7 +38,7 @@
     "7":{
         "title":"Condominio Los Cactus de la Dehesa",
         "description":"Exclusivas viviendas pensadas para las personas que gustan de la calidad de la construcción, la comodidad y la seguridad. Son 9 casas de 198 mt2, distribuidas en tres pisos, con diseños únicos e innovadores y con los más altos estándares de calidad de desarrollo urbano. Un lugar ideal para vivir apartado de la congestión de Santiago, pero con todas las comodidades y servicios que proporciona la ciudad",
-        "orientation":"poptop",
+        "orientation":"popbottom",
         "style":"top: 194px; left: 1292px;"
     },
     "8":{
@@ -62,7 +62,7 @@
     "11":{
         "title":"Edificio La Reina",
         "description":"En el corazón de La Reina, en un sector rodeado por la naturaleza, se encuentra el exclusivo edificio La Reina. Son 24 acogedores departamentos distribuidos en cuatro pisos. El edificio cuenta con variados espacios comunes, como una agradable piscina, estacionamientos subterráneos, salas multiuso para compartir en familia o con amigos y abundantes áreas. Un entorno tranquilo y seguro, con variados centros comerciales, exclusivos establecimientos educacionales y una excelente movilización.",
-        "orientation":"poptop",
+        "orientation":"popleft",
         "style":"top: 500px; left: 1593px;"
     },
     "12":{
@@ -75,13 +75,13 @@
     "13":{
         "title":"Condominio Jardines de la Florida",
         "description":"Jardines de La Florida es un exlusivo condominio ubicado en el corazón de la comuna de La Florida, son 110 acogedoras viviendas de hasta 235 mt2. Cada una de estas casas, hechas de Cedro y Nogal, se construyó con los más altos estándares de calidad. Poseen piso flotante, además de amplás cocinas amobladas. Un lugar perfecto para vivir en familia, con accesos controlados pra brindar la mayor seguridad y plazas con jugos interiores para que los niños puedan disfrutar..",
-        "orientation":"poptop",
+        "orientation":"popbottom",
         "style":"top: 717px; left: 1376px;"
     },
     "14":{
         "title":"Condominio Plaza Verde La Florida",
         "description":"En los extensos terreons deun antiguo club de campo rodeado por encantadores jardines, nace condominio Plaza Verde, un lugar único en la comuna de La Florida. Son 69 casas con tres innnovadores modelos que ofrecen una acogedora y funcional arquitectura, con terminaciones de primer nivel. Es un condominio cerrado, custodiado en todas sus entradas las 24 horas del día. Además cuenta con múltiples áreas verdes, cada una con juegos infantíles, para disfrutar de la vida de barrio que siempre quise para sus hijos.",
-        "orientation":"poptop",
+        "orientation":"popbottom",
         "style":"top: 717px; left: 1460px;"
     }
  

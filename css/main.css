@@ -653,7 +653,7 @@ li.s-i-8 a h3{
     color: white;
     position: absolute;
     left: 140px;
-    bottom: -18px;
+    bottom: -17px;
     transform: rotate(180deg);
 }
 
@@ -661,9 +661,57 @@ li.s-i-8 a h3{
     content: '\25B2';
     color: white;
     position: absolute;
-    top: -18px;
+    top: -17px;
     left: 140px;
     transform: rotate(0deg);
+}
+
+.pophover.p-a{
+    width: 600px;
+}
+
+.pophover.p-a.popbottom{
+    margin-left: -285px;
+}
+
+.pophover.p-a.poptop{
+    margin-left: -285px;
+}
+
+.pophover.p-a.popleft{
+    margin-left: -600px;
+    animation: poplefta .5s ease-in-out 0s forwards;
+}
+
+.pophover.p-a.p-b.poptop{
+    animation: poptopa .5s ease-in-out 0s forwards;
+    margin-top: -285px;
+}
+
+.pophover.p-a.popbottom::before{
+    content: '\25B2';
+    color: white;
+    position: absolute;
+    top: -17px;
+    left: 300px;
+    transform: rotate(0deg);
+}
+
+.pophover.p-a.poptop::before {
+    content: '\25B2';
+    color: white;
+    position: absolute;
+    left: 300px;
+    bottom: -17px;
+    transform: rotate(180deg);
+}
+
+.pophover.p-a.popleft::before {
+    content: '\25B2';
+    color: white;
+    position: absolute;
+    top: 7px;
+    left: 595px;
 }
 
 /* conectividad */
@@ -1301,6 +1349,16 @@ i.social-item{
     }
 }
 
+@keyframes poplefta {
+    from{
+        opacity: 0;
+        margin-left: -650px;
+    }to{
+        opacity: 1;
+        margin-left: -600px;
+    }
+}
+
 @keyframes popright {
     from{
         opacity: 0;
@@ -1318,6 +1376,16 @@ i.social-item{
     }to{
         opacity: 1;
         margin-top: -145px;
+    }
+}
+
+@keyframes poptopa {
+    from{
+        opacity: 0;
+        margin-top: -285px;
+    }to{
+        opacity: 1;
+        margin-top: -235px;
     }
 }
 
