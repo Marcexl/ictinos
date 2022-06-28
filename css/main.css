@@ -853,10 +853,9 @@ li.s-i-8 a h3{
     text-align: left;
     padding-left: 15px;
     left: 0;
-    bottom: 0px;
     font-family: 'Nexa-Bold', sans-serif;
     font-size: 1.2rem;
-    opacity: 0;
+    opacity: 1;
     transition: all .5s ease-in-out;
 }
 
@@ -873,19 +872,15 @@ li.s-i-8 a h3{
     font-size: .9rem;
 }
 
-
-.gallery li .thumb-gallery:hover h5{
-    opacity: 1;
+.gallery li .thumb-gallery h5{
     bottom: 5px;
 }
 
-.gallery li .thumb-gallery:hover h4{
-    opacity: 1;
+.gallery li .thumb-gallery h4{
     bottom: 50px;
 }
 
-.gallery li .thumb-gallery:hover h3{
-    opacity: 1;
+.gallery li .thumb-gallery h3{
     bottom: 25px;
 }
 
