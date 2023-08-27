@@ -293,7 +293,7 @@ function showRW(){
 
       for(var clave in json){
          d++;
-         data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[clave]['style']+'" onclick="showPopover('+d+',\''+json[clave]['title']+'\',\''+json[clave]['description']+'\')">';
+         data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[clave]['style']+'" onclick="showCartel('+d+',\''+json[clave]['title']+'\',\''+json[clave]['description']+'\')">';
          if ( (d == 12) || (d == 10) || (d == 8) )
          {
             data += '<div class="pophover p-a p-b '+json[clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
@@ -431,7 +431,7 @@ function goInside(s,id){
          data += '<div class="dom-circle-container">';
          for(var clave in json[skey]){
             d++;
-            data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showPopover('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
+            data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showCartel('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
             data += '<div class="pophover '+json[skey][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
          }
          data += '</div>';
@@ -456,7 +456,7 @@ function goInside(s,id){
 
          for(var clave in json[skey]){
             d++;
-            data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showPopover('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
+            data += '<div class="dom-circle" id="d-c-'+d+'" style="'+json[skey][clave]['style']+'" onclick="showCartel('+d+',\''+json[skey][clave]['title']+'\',\''+json[skey][clave]['description']+'\')">';
             data += '<div class="pophover '+json[skey][clave]['orientation']+'" id="p-'+d+'" style="display:none;"><div class="pophover-header"></div><p></p></div></div>';
          }
 
@@ -841,7 +841,7 @@ function showHome(){
    },300);
 }
 
-function showPopover(id,title,text)
+function showCartel(id,title,text)
 {
    $(".pophover").fadeOut();
    $("#p-"+id).css("display","block");
